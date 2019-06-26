@@ -10,22 +10,24 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2891,         81]
-NotebookOptionsPosition[      1736,         45]
-NotebookOutlinePosition[      2701,         78]
-CellTagsIndexPosition[      2635,         73]
+NotebookDataLength[     21657,        547]
+NotebookOptionsPosition[     17227,        465]
+NotebookOutlinePosition[     18190,        498]
+CellTagsIndexPosition[     18122,        493]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Regarding Transparency of Transaction Amounts ", "Title",
+Cell["Transparent Trx Amounts ", "Title",
  CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
   3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770373672636671*^9, 
   3.7703737875292807`*^9}, {3.770492207568202*^9, 3.770492236136033*^9}, {
   3.770492310275885*^9, 3.770492327652067*^9}, {3.770492376429565*^9, 
-  3.770492397810824*^9}, {3.770492437237214*^9, 3.770492448262926*^9}},
+  3.770492397810824*^9}, {3.770492437237214*^9, 3.770492448262926*^9}, {
+  3.770494394348069*^9, 3.770494398666205*^9}, {3.77049470036812*^9, 
+  3.770494702591886*^9}},
  CellTags->"Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
 
 Cell["An analysis of blockchain transactions", "Subtitle",
@@ -34,17 +36,435 @@ Cell["An analysis of blockchain transactions", "Subtitle",
   3.7704924248191643`*^9}},ExpressionUUID->"8d15dbd2-3b05-4a27-b208-\
 8b865837d52f"],
 
-Cell["Tony Koop", "Text",
+Cell["By Tony Koop", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
   3.77005561844785*^9, 3.7700556489651537`*^9}, {3.7704921827394743`*^9, 
-  3.7704921841862497`*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
-fa93ec9acae9"]
+  3.7704921841862497`*^9}, {3.770494413172056*^9, 
+  3.770494413428653*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+fa93ec9acae9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"twitter", "[", 
+   RowBox[{"\"\<GetTweet\>\"", ",", " ", 
+    RowBox[{"\"\<TweetID\>\"", " ", "->", " ", "1142922525560754177"}]}], 
+   "]"}], "\n"}]], "Input",
+ CellChangeTimes->{{3.770494421318532*^9, 3.770494421321306*^9}, {
+  3.770494715980941*^9, 3.770494727056013*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"798a49ca-0980-4a25-ad69-2e787f4fdf69"],
+
+Cell[BoxData[
+ RowBox[{"twitter", "[", 
+  RowBox[{"\<\"GetTweet\"\>", ",", 
+   RowBox[{"\<\"TweetID\"\>", "\[Rule]", "1142922525560754177"}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{
+  3.770494424895451*^9, {3.77049472175042*^9, 3.7704947295439243`*^9}},
+ CellLabel->"Out[45]=",ExpressionUUID->"e057c2a7-740e-4d8e-b89d-893004b965e1"]
+}, Open  ]],
+
+Cell[BoxData["Blockchai"], "Input",
+ CellChangeTimes->{{3.770495086265156*^9, 3.770495087071939*^9}, {
+  3.7704985261559343`*^9, 
+  3.770498526451375*^9}},ExpressionUUID->"4c369dd9-b9a7-4781-9dd3-\
+323130071eaf"],
+
+Cell["\<\
+Little one line pieces of code to use computational language to explore \
+something you already know. \[LineSeparator]Blockchain transaction analysis
+\t- On the Ethereum Blockchain, in the past 24 hours, what is the spread of \
+coins being transferred in regards to coin age, number of previous transfers.
+\t- Any coins obviously wash trading? Going from A-B-C-A, or A-B-A-B-A-B
+\t- Average amount per transaction\
+\>", "Text",
+ CellChangeTimes->{
+  3.770494691130166*^9},ExpressionUUID->"8ab9c9c8-07e9-476d-ba59-\
+b7ffdb414999"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"lastblock", "=", 
+    RowBox[{"BlockchainTransactionData", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"BlockchainBlockData", "[", 
+        RowBox[{
+         RowBox[{"-", "1"}], ",", 
+         RowBox[{"BlockchainBase", "\[Rule]", "\"\<Ethereum\>\""}]}], "]"}], 
+       "[", "\"\<TransactionList\>\"", "]"}], ",", "\"\<Amount\>\"", ",", 
+      RowBox[{"BlockchainBase", "\[Rule]", "\"\<Ethereum\>\""}]}], "]"}]}], 
+   ";"}]}]], "Input",
+ CellChangeTimes->{{3.770498696988802*^9, 3.770498765700493*^9}, {
+  3.770498873397513*^9, 3.770498958380189*^9}, {3.770499006168503*^9, 
+  3.770499010125309*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"c8579b7b-0951-4979-bcf5-6d41cd973d74"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Mean", "[", "lastblock", "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.770499045137762*^9, 3.770499053727088*^9}, {
+  3.7704991209763927`*^9, 3.770499135884083*^9}, {3.770499180475177*^9, 
+  3.770499190051516*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"daf519fe-f781-418a-9cb2-b552c8371a4e"],
+
+Cell[BoxData[
+ TemplateBox[{"1.8476966588111498`*^18",RowBox[{"\[VeryThinSpace]", 
+     FormBox["\" wei\"", TraditionalForm]}],"wei","\"Wei\""},
+  "QuantityPostfix"]], "Output",
+ CellChangeTimes->{3.770499056116222*^9, 3.770499127094513*^9, 
+  3.770499192567399*^9},
+ CellLabel->"Out[73]=",ExpressionUUID->"78594f59-96d8-4a91-b746-560cb2a1d0fe"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pastblocks", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"BlockchainBlockData", "[", " ", 
+      RowBox[{"n", ",", "\"\<TransactionList\>\"", ",", " ", 
+       RowBox[{"BlockchainBase", "\[Rule]", "\"\<Ethereum\>\""}]}], "]"}], 
+     ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", " ", 
+       RowBox[{"-", "10"}], ",", 
+       RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.770499227076683*^9, 3.770499229642768*^9}, {
+  3.770499611115086*^9, 3.770499678577565*^9}, {3.770499899866272*^9, 
+  3.770499909161479*^9}, {3.7705017682425413`*^9, 3.7705017796725807`*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"06c8a8dc-0c9d-406d-a9ec-a31db680d14b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainBlockData","errcon",
+   "\"Error connecting to server (StatusCode: \
+\\!\\(\\*RowBox[{\\\"429\\\"}]\\)): \\!\\(\\*RowBox[{\\\"\\\\\\\"Limit \
+exceeded\\\\\\\"\\\"}]\\)\"",2,81,38,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705018871380672`*^9, 3.770502217770081*^9},
+ CellLabel->
+  "During evaluation of \
+In[81]:=",ExpressionUUID->"0bbfd93d-1283-4244-99c1-8147d03bf7a4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainBlockData","errcon",
+   "\"Error connecting to server (StatusCode: \
+\\!\\(\\*RowBox[{\\\"429\\\"}]\\)): \\!\\(\\*RowBox[{\\\"\\\\\\\"Limit \
+exceeded\\\\\\\"\\\"}]\\)\"",2,81,39,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705018871380672`*^9, 3.7705022179307003`*^9},
+ CellLabel->
+  "During evaluation of \
+In[81]:=",ExpressionUUID->"7179363e-a49e-45d3-8144-80fad2d93c26"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainBlockData","errcon",
+   "\"Error connecting to server (StatusCode: \
+\\!\\(\\*RowBox[{\\\"429\\\"}]\\)): \\!\\(\\*RowBox[{\\\"\\\\\\\"Limit \
+exceeded\\\\\\\"\\\"}]\\)\"",2,81,40,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705018871380672`*^9, 3.770502218093239*^9},
+ CellLabel->
+  "During evaluation of \
+In[81]:=",ExpressionUUID->"c5985f94-83b2-47c3-8c0a-800c758d97c1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \
+\\!\\(\\*StyleBox[RowBox[{\\\"BlockchainBlockData\\\", \\\"::\\\", \\\"errcon\
+\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,81,41,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705018871380672`*^9, 3.770502218101068*^9},
+ CellLabel->
+  "During evaluation of \
+In[81]:=",ExpressionUUID->"224bd831-f186-48b6-9615-e77a8ab890d0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["pastblocks"], "Input",
+ CellChangeTimes->{{3.7704999620089407`*^9, 3.770499962989032*^9}, {
+  3.770502208471003*^9, 3.770502209228627*^9}},
+ CellLabel->"In[80]:=",ExpressionUUID->"b2426534-e47d-4b12-8d12-10a291769f87"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "$Failed", ",", "$Failed", ",", "$Failed", ",", "$Failed", ",", "$Failed", 
+   ",", "$Failed", ",", "$Failed", ",", "$Failed", ",", "$Failed", ",", 
+   "$Failed"}], "}"}]], "Output",
+ CellChangeTimes->{3.770499964135974*^9, 3.770502209647912*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"5fc7ddf4-4edd-4722-b99a-8a8773dd9a16"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pastmeans", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Mean", "[", 
+     RowBox[{"BlockchainTransactionData", "[", 
+      RowBox[{
+       RowBox[{"RandomSample", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"UpTo", "[", "100", "]"}]}], "]"}], ",", " ", 
+       "\"\<Amount\>\""}], "]"}], "]"}], " ", "&"}], "/@", 
+   "pastblocks"}]}]], "Input",
+ CellChangeTimes->{{3.770500147946282*^9, 3.770500158091442*^9}, {
+  3.770500219681981*^9, 3.7705002594646606`*^9}, {3.770501589089616*^9, 
+  3.770501632570414*^9}, {3.770501981202935*^9, 3.7705019896764917`*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"d25efd5c-bf6a-4e49-be89-8c9c1698237a"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "RandomSample","lrwl",
+   "\"The set of items to sample from, \\!\\(\\*RowBox[{\\\"$Failed\\\"}]\\), \
+should be a non-empty list or a rule weights -> choices.\"",2,79,30,
+   31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163705662*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"b2ea12aa-ca1e-4359-9cb8-bf49bfe3002b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainTransactionData","invarg",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"A transaction ID\\\\\\\"\\\"}]\\) is \
+expected at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\).\"",2,79,31,
+   31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163716586*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"bf61902f-5b74-4b8d-88d3-f6eb9f370fc6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "RandomSample","lrwl",
+   "\"The set of items to sample from, \\!\\(\\*RowBox[{\\\"$Failed\\\"}]\\), \
+should be a non-empty list or a rule weights -> choices.\"",2,79,32,
+   31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705021637278223`*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"3dcee399-cfa4-4781-b0b8-74c7990531f0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainTransactionData","invarg",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"A transaction ID\\\\\\\"\\\"}]\\) is \
+expected at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\).\"",2,79,33,
+   31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163735993*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"0314c96c-2181-4fb4-953e-b72cf3a3fc87"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "RandomSample","lrwl",
+   "\"The set of items to sample from, \\!\\(\\*RowBox[{\\\"$Failed\\\"}]\\), \
+should be a non-empty list or a rule weights -> choices.\"",2,79,34,
+   31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163744976*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"97d291c0-4768-4bee-80f9-3b481a4228ab"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"RandomSample\\\", \
+\\\"::\\\", \\\"lrwl\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,79,35,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163754158*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"c08293f6-7055-42a1-b3b3-83ea1cbc5089"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainTransactionData","invarg",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"A transaction ID\\\\\\\"\\\"}]\\) is \
+expected at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\).\"",2,79,36,
+   31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163760954*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"7701ec0a-2403-4f4f-a48a-2b6d11b93872"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \
+\\!\\(\\*StyleBox[RowBox[{\\\"BlockchainTransactionData\\\", \\\"::\\\", \
+\\\"invarg\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,79,37,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.770502163767569*^9},
+ CellLabel->
+  "During evaluation of \
+In[79]:=",ExpressionUUID->"c9028d05-95bc-4f4e-b3eb-ce33570fca11"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}], ",", 
+   RowBox[{"Mean", "[", "$Failed", "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7705021637750463`*^9},
+ CellLabel->"Out[79]=",ExpressionUUID->"1d1cb35d-5f16-4533-b90d-ec1ea7d1bdc5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"pastmeans", ",", " ", 
+   RowBox[{"PlotRange", "->", "All"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.770502097667041*^9, 
+  3.770502153084505*^9}},ExpressionUUID->"6f970530-b722-4225-8a1d-\
+5a86ce850163"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainTransactionData","errcon",
+   "\"Error connecting to server (StatusCode: \
+\\!\\(\\*RowBox[{\\\"429\\\"}]\\)): \\!\\(\\*RowBox[{\\\"\\\\\\\"Limit \
+exceeded\\\\\\\"\\\"}]\\)\"",2,77,22,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705014808659143`*^9, 3.7705016363230753`*^9},
+ CellLabel->
+  "During evaluation of \
+In[77]:=",ExpressionUUID->"8a34a906-860c-4ce6-876d-8fe0ca8834f9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainTransactionData","errcon",
+   "\"Error connecting to server (StatusCode: \
+\\!\\(\\*RowBox[{\\\"429\\\"}]\\)): \\!\\(\\*RowBox[{\\\"\\\\\\\"Limit \
+exceeded\\\\\\\"\\\"}]\\)\"",2,77,23,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705014808659143`*^9, 3.770501636479067*^9},
+ CellLabel->
+  "During evaluation of \
+In[77]:=",ExpressionUUID->"25f25bc7-7040-47a6-b7bb-71e1f936f304"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "BlockchainTransactionData","errcon",
+   "\"Error connecting to server (StatusCode: \
+\\!\\(\\*RowBox[{\\\"429\\\"}]\\)): \\!\\(\\*RowBox[{\\\"\\\\\\\"Limit \
+exceeded\\\\\\\"\\\"}]\\)\"",2,77,24,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705014808659143`*^9, 3.770501636634753*^9},
+ CellLabel->
+  "During evaluation of \
+In[77]:=",ExpressionUUID->"3b8f97e0-d07a-4a1a-8154-3645a864f91e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \
+\\!\\(\\*StyleBox[RowBox[{\\\"BlockchainTransactionData\\\", \\\"::\\\", \
+\\\"errcon\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,77,25,31020099413942478536,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7705014808659143`*^9, 3.770501636649118*^9},
+ CellLabel->
+  "During evaluation of \
+In[77]:=",ExpressionUUID->"e5f65905-1275-45ec-a58c-f6741e3503d2"],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.7705015431042433`*^9, 3.770501645044325*^9},
+ CellLabel->"Out[77]=",ExpressionUUID->"1aa2c72f-a192-4226-90a7-5f9aa172250c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{"pastmeans", ",", "\"\<USDollars\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.770502445003303*^9, 3.770502457294611*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"0fc18f78-2b71-4d45-b9a1-7a9330d02b99"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], "]"}],
+    ",", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"Mean", "[", "$Failed", "]"}], ",", "\<\"USDollars\"\>"}], 
+    "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.77050246338418*^9},
+ CellLabel->"Out[82]=",ExpressionUUID->"149c3c2f-ab46-4994-8282-35d00cb09b23"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{720, 755},
-WindowMargins->{{Automatic, -134}, {Automatic, -920}},
+WindowMargins->{{Automatic, 131}, {Automatic, 40}},
 DockedCells->{
   Cell[
    TextData[{
@@ -66,22 +486,68 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "Title"->{
-  Cell[580, 22, 498, 6, 160, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+  Cell[580, 22, 573, 8, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
    CellTags->"Title"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 2495, 67}
+ {"Title", 17983, 487}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 498, 6, 160, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+Cell[580, 22, 573, 8, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
  CellTags->"Title"],
-Cell[1081, 30, 235, 4, 53, "Subtitle",ExpressionUUID->"8d15dbd2-3b05-4a27-b208-8b865837d52f"],
-Cell[1319, 36, 401, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"]
+Cell[1156, 32, 235, 4, 53, "Subtitle",ExpressionUUID->"8d15dbd2-3b05-4a27-b208-8b865837d52f"],
+Cell[1394, 38, 453, 7, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[CellGroupData[{
+Cell[1872, 49, 389, 8, 52, "Input",ExpressionUUID->"798a49ca-0980-4a25-ad69-2e787f4fdf69"],
+Cell[2264, 59, 335, 7, 34, "Output",ExpressionUUID->"e057c2a7-740e-4d8e-b89d-893004b965e1"]
+}, Open  ]],
+Cell[2614, 69, 212, 4, 30, "Input",ExpressionUUID->"4c369dd9-b9a7-4781-9dd3-323130071eaf"],
+Cell[2829, 75, 539, 10, 173, "Text",ExpressionUUID->"8ab9c9c8-07e9-476d-ba59-b7ffdb414999"],
+Cell[3371, 87, 754, 17, 94, "Input",ExpressionUUID->"c8579b7b-0951-4979-bcf5-6d41cd973d74"],
+Cell[CellGroupData[{
+Cell[4150, 108, 334, 6, 30, "Input",ExpressionUUID->"daf519fe-f781-418a-9cb2-b552c8371a4e"],
+Cell[4487, 116, 345, 6, 38, "Output",ExpressionUUID->"78594f59-96d8-4a91-b746-560cb2a1d0fe"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4869, 127, 733, 16, 73, "Input",ExpressionUUID->"06c8a8dc-0c9d-406d-a9ec-a31db680d14b"],
+Cell[5605, 145, 463, 10, 24, "Message",ExpressionUUID->"0bbfd93d-1283-4244-99c1-8147d03bf7a4"],
+Cell[6071, 157, 465, 10, 24, "Message",ExpressionUUID->"7179363e-a49e-45d3-8144-80fad2d93c26"],
+Cell[6539, 169, 463, 10, 24, "Message",ExpressionUUID->"c5985f94-83b2-47c3-8c0a-800c758d97c1"],
+Cell[7005, 181, 485, 11, 24, "Message",ExpressionUUID->"224bd831-f186-48b6-9615-e77a8ab890d0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7527, 197, 232, 3, 30, "Input",ExpressionUUID->"b2426534-e47d-4b12-8d12-10a291769f87"],
+Cell[7762, 202, 367, 7, 56, "Output",ExpressionUUID->"5fc7ddf4-4edd-4722-b99a-8a8773dd9a16"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8166, 214, 665, 15, 73, "Input",ExpressionUUID->"d25efd5c-bf6a-4e49-be89-8c9c1698237a"],
+Cell[8834, 231, 424, 10, 42, "Message",ExpressionUUID->"b2ea12aa-ca1e-4359-9cb8-bf49bfe3002b"],
+Cell[9261, 243, 430, 10, 24, "Message",ExpressionUUID->"bf61902f-5b74-4b8d-88d3-f6eb9f370fc6"],
+Cell[9694, 255, 426, 10, 42, "Message",ExpressionUUID->"3dcee399-cfa4-4781-b0b8-74c7990531f0"],
+Cell[10123, 267, 430, 10, 24, "Message",ExpressionUUID->"0314c96c-2181-4fb4-953e-b72cf3a3fc87"],
+Cell[10556, 279, 424, 10, 42, "Message",ExpressionUUID->"97d291c0-4768-4bee-80f9-3b481a4228ab"],
+Cell[10983, 291, 450, 10, 24, "Message",ExpressionUUID->"c08293f6-7055-42a1-b3b3-83ea1cbc5089"],
+Cell[11436, 303, 430, 10, 24, "Message",ExpressionUUID->"7701ec0a-2403-4f4f-a48a-2b6d11b93872"],
+Cell[11869, 315, 467, 11, 24, "Message",ExpressionUUID->"c9028d05-95bc-4f4e-b3eb-ce33570fca11"],
+Cell[12339, 328, 656, 14, 56, "Output",ExpressionUUID->"1d1cb35d-5f16-4533-b90d-ec1ea7d1bdc5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13032, 347, 262, 6, 30, "Input",ExpressionUUID->"6f970530-b722-4225-8a1d-5a86ce850163"],
+Cell[13297, 355, 471, 10, 24, "Message",ExpressionUUID->"8a34a906-860c-4ce6-876d-8fe0ca8834f9"],
+Cell[13771, 367, 469, 10, 24, "Message",ExpressionUUID->"25f25bc7-7040-47a6-b7bb-71e1f936f304"],
+Cell[14243, 379, 469, 10, 24, "Message",ExpressionUUID->"3b8f97e0-d07a-4a1a-8154-3645a864f91e"],
+Cell[14715, 391, 491, 11, 24, "Message",ExpressionUUID->"e5f65905-1275-45ec-a58c-f6741e3503d2"],
+Cell[15209, 404, 180, 2, 34, "Output",ExpressionUUID->"1aa2c72f-a192-4226-90a7-5f9aa172250c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15426, 411, 256, 4, 30, "Input",ExpressionUUID->"0fc18f78-2b71-4d45-b9a1-7a9330d02b99"],
+Cell[15685, 417, 1514, 44, 258, "Output",ExpressionUUID->"149c3c2f-ab46-4994-8282-35d00cb09b23"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

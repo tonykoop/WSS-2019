@@ -10,41 +10,51 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2891,         81]
-NotebookOptionsPosition[      1736,         45]
-NotebookOutlinePosition[      2701,         78]
-CellTagsIndexPosition[      2635,         73]
+NotebookDataLength[      3218,         92]
+NotebookOptionsPosition[      1977,         55]
+NotebookOutlinePosition[      2938,         88]
+CellTagsIndexPosition[      2872,         83]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Regarding Transparency of Transaction Amounts ", "Title",
+Cell["Weather Data", "Title",
  CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
   3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770373672636671*^9, 
   3.7703737875292807`*^9}, {3.770492207568202*^9, 3.770492236136033*^9}, {
   3.770492310275885*^9, 3.770492327652067*^9}, {3.770492376429565*^9, 
-  3.770492397810824*^9}, {3.770492437237214*^9, 3.770492448262926*^9}},
+  3.770492397810824*^9}, {3.770492437237214*^9, 3.770492448262926*^9}, {
+  3.7704984690274*^9, 3.770498470627694*^9}},
  CellTags->"Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
 
-Cell["An analysis of blockchain transactions", "Subtitle",
+Cell["Is it hotter", "Subtitle",
  CellChangeTimes->{{3.770456499774561*^9, 3.770456517839725*^9}, {
-  3.770492415874639*^9, 
-  3.7704924248191643`*^9}},ExpressionUUID->"8d15dbd2-3b05-4a27-b208-\
+  3.770492415874639*^9, 3.7704924248191643`*^9}, {3.770498488972262*^9, 
+  3.7704984935310802`*^9}},ExpressionUUID->"8d15dbd2-3b05-4a27-b208-\
 8b865837d52f"],
 
-Cell["Tony Koop", "Text",
+Cell["By Tony Koop", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
   3.77005561844785*^9, 3.7700556489651537`*^9}, {3.7704921827394743`*^9, 
-  3.7704921841862497`*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
-fa93ec9acae9"]
+  3.7704921841862497`*^9}, {3.77049465993686*^9, 
+  3.77049466023269*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+fa93ec9acae9"],
+
+Cell["\<\
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.7704946223752337`*^9, 
+  3.770494656489277*^9}},ExpressionUUID->"1305f99c-58d2-4efb-b65a-\
+587c1c123fb9"]
 }, Open  ]]
 },
 WindowSize->{720, 755},
-WindowMargins->{{Automatic, -134}, {Automatic, -920}},
+WindowMargins->{{Automatic, 267}, {Automatic, 69}},
 DockedCells->{
   Cell[
    TextData[{
@@ -66,22 +76,23 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "Title"->{
-  Cell[580, 22, 498, 6, 160, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+  Cell[580, 22, 511, 7, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
    CellTags->"Title"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 2495, 67}
+ {"Title", 2733, 77}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 498, 6, 160, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
+Cell[580, 22, 511, 7, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd",
  CellTags->"Title"],
-Cell[1081, 30, 235, 4, 53, "Subtitle",ExpressionUUID->"8d15dbd2-3b05-4a27-b208-8b865837d52f"],
-Cell[1319, 36, 401, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"]
+Cell[1094, 31, 257, 4, 53, "Subtitle",ExpressionUUID->"8d15dbd2-3b05-4a27-b208-8b865837d52f"],
+Cell[1354, 37, 451, 7, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[1808, 46, 153, 6, 58, "Text",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"]
 }, Open  ]]
 }
 ]
