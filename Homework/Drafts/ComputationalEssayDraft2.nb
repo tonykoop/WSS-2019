@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1501064,      24999]
-NotebookOptionsPosition[   1497022,      24922]
-NotebookOutlinePosition[   1497987,      24955]
-CellTagsIndexPosition[   1497915,      24950]
+NotebookDataLength[   1500415,      24994]
+NotebookOptionsPosition[   1496235,      24914]
+NotebookOutlinePosition[   1497206,      24947]
+CellTagsIndexPosition[   1497134,      24942]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22472,59 +22472,51 @@ Cell[BoxData["tit"], "Input",
   3.770496807939013*^9}},ExpressionUUID->"4677b143-0222-40ac-8247-\
 7ec580e4c2cb"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"points", "=", 
   RowBox[{"EntityValue", "[", 
    RowBox[{
-    NamespaceBox["LinguisticAssistant",
-     DynamicModuleBox[{Typeset`query$$ = "Mississippi River", 
-      Typeset`boxes$$ = TemplateBox[{"\"Mississippi River\"", 
-        RowBox[{"Entity", "[", 
-          RowBox[{"\"River\"", ",", "\"MississippiRiver::mnr4z\""}], "]"}], 
-        "\"Entity[\\\"River\\\", \\\"MississippiRiver::mnr4z\\\"]\"", 
-        "\"river\""}, "Entity"], 
-      Typeset`allassumptions$$ = {{
-       "type" -> "SubCategory", "word" -> "Mississippi River", "template" -> 
-        "Assuming ${desc1}. Use ${desc2} instead", "count" -> "2", 
-        "Values" -> {{
-          "name" -> "MississippiRiver::mnr4z", "desc" -> 
-           "Mississippi River (United States)", "input" -> 
-           "*DPClash.RiverE.Mississippi+River-_*MississippiRiver%3A%3Amnr4z-"}\
-, {"name" -> "MississippiRiver::4h9fg", "desc" -> 
-           "Mississippi River (Canada)", "input" -> 
-           "*DPClash.RiverE.Mississippi+River-_*MississippiRiver%3A%3A4h9fg-"}\
-}}}, Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
-      Typeset`querystate$$ = {
-      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-       2.0054`6.753746004101355, "Messages" -> {}}}, 
-      DynamicBox[ToBoxes[
-        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
-         Dynamic[Typeset`query$$], 
-         Dynamic[Typeset`boxes$$], 
-         Dynamic[Typeset`allassumptions$$], 
-         Dynamic[Typeset`assumptions$$], 
-         Dynamic[Typeset`open$$], 
-         Dynamic[Typeset`querystate$$]], StandardForm],
-       ImageSizeCache->{198., {7., 15.}},
-       TrackedSymbols:>{
-        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
-         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
-      DynamicModuleValues:>{},
-      UndoTrackedVariables:>{Typeset`open$$}],
-     BaseStyle->{"Deploy"},
-     DeleteWithContents->True,
-     Editable->False,
-     SelectWithContents->True], ",", " ", 
+    TemplateBox[{"\"Mississippi River\"",RowBox[{"Entity", "[", 
+        RowBox[{"\"River\"", ",", "\"MississippiRiver::mnr4z\""}], "]"}],
+      "\"Entity[\\\"River\\\", \\\"MississippiRiver::mnr4z\\\"]\"",
+      "\"river\""},
+     "Entity"], ",", " ", 
     RowBox[{"{", 
      RowBox[{
      "\"\<NorthernmostPoint\>\"", ",", " ", "\"\<SouthernmostPoint\>\"", ",", 
       " ", "\"\<EasternmostPoint\>\"", ",", " ", "\"\<WesternmostPoint\>\""}],
       "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.770496799934803*^9, 3.77049685945522*^9}, {
-  3.770496899888892*^9, 3.770496988421051*^9}, {3.77049719973878*^9, 
-  3.770497204628422*^9}, {3.770498220176344*^9, 
-  3.770498265921912*^9}},ExpressionUUID->"95badbbe-8ede-4bb5-b0ea-\
-7f01120a07fa"],
+   3.770496899888892*^9, 3.770496988421051*^9}, {3.77049719973878*^9, 
+   3.770497204628422*^9}, {3.770498220176344*^9, 3.770498265921912*^9}, 
+   3.770498414827585*^9},
+ CellLabel->"In[65]:=",ExpressionUUID->"95badbbe-8ede-4bb5-b0ea-7f01120a07fa"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"GeoPosition", "[", 
+    RowBox[{"{", 
+     RowBox[{"45.13364801651346`", ",", 
+      RowBox[{"-", "76.15857668281785`"}]}], "}"}], "]"}], ",", 
+   RowBox[{"GeoPosition", "[", 
+    RowBox[{"{", 
+     RowBox[{"45.016663016404436`", ",", 
+      RowBox[{"-", "76.19987468285638`"}]}], "}"}], "]"}], ",", 
+   RowBox[{"GeoPosition", "[", 
+    RowBox[{"{", 
+     RowBox[{"45.09190001647448`", ",", 
+      RowBox[{"-", "76.15016968281009`"}]}], "}"}], "]"}], ",", 
+   RowBox[{"GeoPosition", "[", 
+    RowBox[{"{", 
+     RowBox[{"45.05674701644193`", ",", 
+      RowBox[{"-", "76.25675968290932`"}]}], "}"}], "]"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.770498425976904*^9},
+ CellLabel->"Out[65]=",ExpressionUUID->"78db7cbb-524a-4952-a9b8-294f9f62e313"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -24921,7 +24913,7 @@ uqN6JTBXNsO5Kn4/KkGgtQMQa3WihEhmaYHPuO0/FnJQsA==\
 }, Open  ]]
 },
 WindowSize->{887, 755},
-WindowMargins->{{85, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, -181}, {Automatic, -1032}},
 DockedCells->{
   Cell[
    TextData[{
@@ -24949,7 +24941,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 1497776, 24944}
+ {"Title", 1496995, 24936}
  }
 *)
 (*NotebookFileOutline
@@ -24993,12 +24985,15 @@ Cell[1105455, 18409, 1390, 27, 68, "Input",ExpressionUUID->"3aae9082-ce45-452b-9
 Cell[1106848, 18438, 244453, 4028, 1396, 27370, 469, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"a6cb9da2-fe51-429b-b209-f1091ed8811f"]
 }, Open  ]],
 Cell[1351316, 22469, 155, 3, 30, "Input",ExpressionUUID->"4677b143-0222-40ac-8247-7ec580e4c2cb"],
-Cell[1351474, 22474, 2499, 52, 67, "Input",ExpressionUUID->"95badbbe-8ede-4bb5-b0ea-7f01120a07fa"],
-Cell[1353976, 22528, 859, 23, 115, InheritFromParent,ExpressionUUID->"0b262a09-19a2-4f9f-8263-4364de8d4191"],
-Cell[1354838, 22553, 147, 3, 52, "Input",ExpressionUUID->"235bb2b3-4e7c-4db0-b7e4-18f1726dc009"],
 Cell[CellGroupData[{
-Cell[1355010, 22560, 1099, 28, 52, "Code",ExpressionUUID->"940ff2ca-016a-41ee-8b48-f10f78f9582d"],
-Cell[1356112, 22590, 140882, 2328, 437, 62303, 1040, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"0d832f5c-41ce-4858-9e51-3c9f4c3b7f76"]
+Cell[1351496, 22476, 874, 18, 68, "Input",ExpressionUUID->"95badbbe-8ede-4bb5-b0ea-7f01120a07fa"],
+Cell[1352373, 22496, 801, 21, 90, "Output",ExpressionUUID->"78db7cbb-524a-4952-a9b8-294f9f62e313"]
+}, Open  ]],
+Cell[1353189, 22520, 859, 23, 115, InheritFromParent,ExpressionUUID->"0b262a09-19a2-4f9f-8263-4364de8d4191"],
+Cell[1354051, 22545, 147, 3, 52, "Input",ExpressionUUID->"235bb2b3-4e7c-4db0-b7e4-18f1726dc009"],
+Cell[CellGroupData[{
+Cell[1354223, 22552, 1099, 28, 52, "Code",ExpressionUUID->"940ff2ca-016a-41ee-8b48-f10f78f9582d"],
+Cell[1355325, 22582, 140882, 2328, 437, 62303, 1040, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"0d832f5c-41ce-4858-9e51-3c9f4c3b7f76"]
 }, Open  ]]
 }, Open  ]]
 }
