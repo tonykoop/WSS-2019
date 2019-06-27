@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21657,        547]
+NotebookDataLength[     21655,        547]
 NotebookOptionsPosition[     17227,        465]
-NotebookOutlinePosition[     18190,        498]
-CellTagsIndexPosition[     18122,        493]
+NotebookOutlinePosition[     18188,        498]
+CellTagsIndexPosition[     18120,        493]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -464,7 +464,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{720, 755},
-WindowMargins->{{Automatic, 131}, {Automatic, 40}},
+WindowMargins->{{Automatic, 61}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -492,7 +492,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 17983, 487}
+ {"Title", 17981, 487}
  }
 *)
 (*NotebookFileOutline
@@ -546,7 +546,7 @@ Cell[15209, 404, 180, 2, 34, "Output",ExpressionUUID->"1aa2c72f-a192-4226-90a7-5
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[15426, 411, 256, 4, 30, "Input",ExpressionUUID->"0fc18f78-2b71-4d45-b9a1-7a9330d02b99"],
-Cell[15685, 417, 1514, 44, 258, "Output",ExpressionUUID->"149c3c2f-ab46-4994-8282-35d00cb09b23"]
+Cell[15685, 417, 1514, 44, 224, "Output",ExpressionUUID->"149c3c2f-ab46-4994-8282-35d00cb09b23"]
 }, Open  ]]
 }, Open  ]]
 }
