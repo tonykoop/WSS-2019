@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    625792,      10624]
-NotebookOptionsPosition[    620979,      10534]
-NotebookOutlinePosition[    621942,      10567]
-CellTagsIndexPosition[    621871,      10562]
+NotebookDataLength[    627129,      10648]
+NotebookOptionsPosition[    622219,      10557]
+NotebookOutlinePosition[    623182,      10590]
+CellTagsIndexPosition[    623111,      10585]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,7 +61,7 @@ the control of the flute maker such as air temperature, pressure, and \
 humidity where the flute player plays. Most of today\[CloseCurlyQuote]s \
 Native American Flute (NAF) are tuned to play in both the mode 1 and mode 4 \
 pentatonic scales. Use the computational input below, decided which keyed \
-flute you\[CloseCurlyQuote]d like to make and\
+flute you\[CloseCurlyQuote]d like to make.\
 \>", "Text",
  CellChangeTimes->{{3.770668212813489*^9, 3.770668289468783*^9}, {
   3.770668322790382*^9, 3.7706683938921432`*^9}, {3.770668544181076*^9, 
@@ -71,8 +71,9 @@ flute you\[CloseCurlyQuote]d like to make and\
   3.770672734515748*^9, 3.770672765070822*^9}, {3.770673131658058*^9, 
   3.77067314360819*^9}, {3.770675960650165*^9, 3.770675977846994*^9}, {
   3.770715249445512*^9, 3.7707153799228477`*^9}, {3.770715423280017*^9, 
-  3.770715438614869*^9}, {3.770715504590293*^9, 
-  3.770715607442348*^9}},ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-\
+  3.770715438614869*^9}, {3.770715504590293*^9, 3.770715607442348*^9}, {
+  3.770722196391103*^9, 
+  3.770722198698646*^9}},ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-\
 1e90c2e78c08"],
 
 Cell[BoxData[{
@@ -158,48 +159,47 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
+   RowBox[{"f", "[", "n_", "]"}], ":=", 
    RowBox[{
-    RowBox[{"f", "[", "n_", "]"}], ":=", 
-    RowBox[{
-     FormBox[
-      SuperscriptBox[
-       RadicalBox["2", "12"], 
-       RowBox[{"n", "-", "49"}]],
-      TraditionalForm], "\[Times]", 
-     NamespaceBox["LinguisticAssistant",
-      DynamicModuleBox[{Typeset`query$$ = "440 Hertz", Typeset`boxes$$ = 
-       TemplateBox[{"440", "\"Hz\"", "hertz", "\"Hertz\""}, "Quantity", 
-        SyntaxForm -> Mod], 
-       Typeset`allassumptions$$ = {{
-        "type" -> "Clash", "word" -> "Hertz", "template" -> 
-         "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
-         "2", "Values" -> {{
-           "name" -> "Unit", "desc" -> "a unit", "input" -> 
-            "*C.Hertz-_*Unit-"}, {
-           "name" -> "RetailLocationClass", "desc" -> "an auto rental agency",
-             "input" -> "*C.Hertz-_*RetailLocationClass-"}}}}, 
-       Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
-       Typeset`querystate$$ = {
-       "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-        0.390186`6.04281667620741, "Messages" -> {}}}, 
-       DynamicBox[ToBoxes[
-         AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
-          Dynamic[Typeset`query$$], 
-          Dynamic[Typeset`boxes$$], 
-          Dynamic[Typeset`allassumptions$$], 
-          Dynamic[Typeset`assumptions$$], 
-          Dynamic[Typeset`open$$], 
-          Dynamic[Typeset`querystate$$]], StandardForm],
-        ImageSizeCache->{109., {8., 16.}},
-        TrackedSymbols:>{
-         Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
-          Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
-       DynamicModuleValues:>{},
-       UndoTrackedVariables:>{Typeset`open$$}],
-      BaseStyle->{"Deploy"},
-      DeleteWithContents->True,
-      Editable->False,
-      SelectWithContents->True]}]}], ";"}], " ", 
+    FormBox[
+     SuperscriptBox[
+      RadicalBox["2", "12"], 
+      RowBox[{"n", "-", "49"}]],
+     TraditionalForm], "\[Times]", 
+    NamespaceBox["LinguisticAssistant",
+     DynamicModuleBox[{Typeset`query$$ = "440 Hertz", Typeset`boxes$$ = 
+      TemplateBox[{"440", "\"Hz\"", "hertz", "\"Hertz\""}, "Quantity", 
+       SyntaxForm -> Mod], 
+      Typeset`allassumptions$$ = {{
+       "type" -> "Clash", "word" -> "Hertz", "template" -> 
+        "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+        "2", "Values" -> {{
+          "name" -> "Unit", "desc" -> "a unit", "input" -> 
+           "*C.Hertz-_*Unit-"}, {
+          "name" -> "RetailLocationClass", "desc" -> "an auto rental agency", 
+           "input" -> "*C.Hertz-_*RetailLocationClass-"}}}}, 
+      Typeset`assumptions$$ = {}, Typeset`open$$ = {1, 2}, 
+      Typeset`querystate$$ = {
+      "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
+       0.390186`6.04281667620741, "Messages" -> {}}}, 
+      DynamicBox[ToBoxes[
+        AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
+         Dynamic[Typeset`query$$], 
+         Dynamic[Typeset`boxes$$], 
+         Dynamic[Typeset`allassumptions$$], 
+         Dynamic[Typeset`assumptions$$], 
+         Dynamic[Typeset`open$$], 
+         Dynamic[Typeset`querystate$$]], StandardForm],
+       ImageSizeCache->{109., {8., 16.}},
+       TrackedSymbols:>{
+        Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
+         Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
+      DynamicModuleValues:>{},
+      UndoTrackedVariables:>{Typeset`open$$}],
+     BaseStyle->{"Deploy"},
+     DeleteWithContents->True,
+     Editable->False,
+     SelectWithContents->True]}]}], ";", " ", 
   RowBox[{"(*", 
    RowBox[{
    "Find", " ", "the", " ", "frequency", " ", "of", " ", "a", " ", "given", 
@@ -217,8 +217,9 @@ Cell[BoxData[{
    3.770676370615274*^9, 3.7706763733533916`*^9}, {3.770677674174375*^9, 
    3.770677703004682*^9}, {3.770677876748393*^9, 3.770677877930873*^9}, {
    3.770678099515964*^9, 3.770678104442648*^9}, 3.770678143014583*^9, {
-   3.7706782257313423`*^9, 3.770678227951601*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
+   3.7706782257313423`*^9, 3.770678227951601*^9}, {3.77072244287003*^9, 
+   3.77072246116494*^9}, {3.770722623144567*^9, 3.770722655326932*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
 
 Cell[CellGroupData[{
 
@@ -257,7 +258,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`pianokey$$ = 75, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`pianokey$$ = 49, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -295,7 +296,7 @@ Cell[BoxData[
        "A\[Sharp]0/B\[Flat]0", 1 -> "A0", 97 -> "G\[Sharp]0/A\[Flat]0", 96 -> 
        "G0", 95 -> "F\[Sharp]0/G\[Flat]0", 94 -> "F0", 93 -> "E0", 92 -> 
        "D\[Sharp]0/E\[Flat]0", 91 -> "D0", 90 -> "C\[Sharp]0/D\[Flat]0", 89 -> 
-       "C0 Double Pedal C"}}}, Typeset`size$$ = {40., {2.44384765625, 10.}}, 
+       "C0 Double Pedal C"}}}, Typeset`size$$ = {44., {4., 12.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
     True, $CellContext`pianokey$5639$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -369,14 +370,15 @@ The first step in crafting a NAF is to determine which piano key one wants to \
 create. This decision calculates the frequency emitted when all finger holes \
 are covered. This leaves both the bore diameter and bore length to be \
 determined. and After having chosen a piano key to match the flute to, next \
-one needs to determine the bore of the flute. Generally most flute makers.... \
-20:1 to 24:1. \
+one needs to determine the bore of the flute. Generally most flute makers \
+choose a flute bore 18:1 to 24:1. \
 \>", "Text",
  CellChangeTimes->{{3.770676430822741*^9, 3.770676496164699*^9}, {
   3.770676557998217*^9, 3.770676732576376*^9}, {3.770676899329463*^9, 
   3.7706769313524303`*^9}, {3.770676967321451*^9, 3.770676977689211*^9}, {
   3.770677350118155*^9, 3.770677368595327*^9}, {3.7706776241725407`*^9, 
-  3.7706776569659758`*^9}},ExpressionUUID->"5585bfd0-ffe5-49eb-8259-\
+  3.7706776569659758`*^9}, {3.770722588278345*^9, 
+  3.770722613286421*^9}},ExpressionUUID->"5585bfd0-ffe5-49eb-8259-\
 6b06145718f0"],
 
 Cell[CellGroupData[{
@@ -6467,9 +6469,19 @@ Cell[BoxData[
  CellLabel->"Out[26]=",ExpressionUUID->"73c8070a-d344-4fa6-832d-20506b06d580"]
 }, Open  ]],
 
-Cell["blah blah blah stuff about wood materials ", "Text",
- CellChangeTimes->{{3.7706713912738*^9, 
-  3.770671402352399*^9}},ExpressionUUID->"f74c8efa-7127-45e3-bd7c-\
+Cell["\<\
+When adding the finger holes, its important to place them the correct \
+distance from the sound hole as measured from the splitting edge. This \
+ensures a pleasant sounding scale that is in tune. The diameter of each \
+finger hole may be unique. If the frequency produced by a particular finger \
+hole is too low, the diameter needs to be increased. And visa versa, if the \
+frequency is too high, the diameter needs to be decreased - typically a much \
+more difficult task.\
+\>", "Text",
+ CellChangeTimes->{{3.7706713912738*^9, 3.770671402352399*^9}, {
+  3.770722797453768*^9, 3.7707230333799562`*^9}, {3.770723073117875*^9, 
+  3.7707231687254477`*^9}, {3.770723202396325*^9, 
+  3.770723235067102*^9}},ExpressionUUID->"f74c8efa-7127-45e3-bd7c-\
 79f82756139d"],
 
 Cell[BoxData[
@@ -6961,6 +6973,17 @@ and-4.html\>\""}]], "Input",
   3.770718739354816*^9}},ExpressionUUID->"06e7422c-7e24-4b8d-9e44-\
 28e5e9554bf0"],
 
+Cell["\<\
+The GIF shown below shows laminar air flow coming from a thin flue (1 mm) \
+being blown towards the splitting edge just 4mm away. As can be seen, the air \
+oscillates between flowing above and below the splitting edge which generates \
+sound. \
+\>", "Text",
+ CellChangeTimes->{{3.7707236003457603`*^9, 3.770723653825045*^9}, {
+  3.770723822456944*^9, 3.770723842311758*^9}, {3.770723881741646*^9, 
+  3.7707239329270077`*^9}},ExpressionUUID->"372073ce-4592-4aaa-bc9b-\
+d123ebf3ca18"],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -6980,7 +7003,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i18$$ = 12, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i18$$ = 3, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
     "\"min\"" :> {$CellContext`i18$$ = 1}, 
      "\"max\"" :> {$CellContext`i18$$ = 19}}, Typeset`bookmarkMode$$ = "Menu",
@@ -6999,10 +7022,10 @@ Cell[BoxData[
              StyleBox[GridBox[{
                 {"\<\"\"\>", 
                  AnimatorBox[Dynamic[$CellContext`i18$$], {1, 19, 1},
-                  AnimationRate->5.,
+                  AnimationRate->1.0485760000000004`,
                   AnimationRepetitions->DirectedInfinity[1],
-                  AnimationRunTime->927.4739055633545,
-                  AnimationTimeIndex->2.154252243041583,
+                  AnimationRunTime->8379.615931247474,
+                  AnimationTimeIndex->2.5407359349774197`,
                   
                   AppearanceElements->{
                    "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons",
@@ -10561,7 +10584,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 621732, 10556}
+ {"Title", 622972, 10579}
  }
 *)
 (*NotebookFileOutline
@@ -10571,60 +10594,61 @@ Cell[580, 22, 576, 8, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3
  CellTags->"Title"],
 Cell[1159, 32, 432, 6, 53, "Subtitle",ExpressionUUID->"8d15dbd2-3b05-4a27-b208-8b865837d52f"],
 Cell[1594, 40, 451, 7, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[2048, 49, 1781, 26, 242, "Text",ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-1e90c2e78c08"],
-Cell[3832, 77, 6631, 143, 135, "Input",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
+Cell[2048, 49, 1827, 27, 242, "Text",ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-1e90c2e78c08"],
+Cell[3878, 78, 6670, 143, 135, "Input",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
 Cell[CellGroupData[{
-Cell[10488, 224, 1291, 30, 94, "Input",ExpressionUUID->"e6bd07f7-95dd-4cb8-908c-73d90327c2dc"],
-Cell[11782, 256, 7123, 107, 127, "Output",ExpressionUUID->"5c28ea7a-7b09-4a3c-8bd2-834271bb42f4"]
+Cell[10573, 225, 1291, 30, 94, "Input",ExpressionUUID->"e6bd07f7-95dd-4cb8-908c-73d90327c2dc"],
+Cell[11867, 257, 7112, 107, 127, "Output",ExpressionUUID->"5c28ea7a-7b09-4a3c-8bd2-834271bb42f4"]
 }, Open  ]],
-Cell[18920, 366, 798, 13, 104, "Text",ExpressionUUID->"5585bfd0-ffe5-49eb-8259-6b06145718f0"],
+Cell[18994, 367, 863, 14, 104, "Text",ExpressionUUID->"5585bfd0-ffe5-49eb-8259-6b06145718f0"],
 Cell[CellGroupData[{
-Cell[19743, 383, 368, 6, 73, InheritFromParent,ExpressionUUID->"fd0fb78b-c579-4ee8-b664-d215a99012f8"],
-Cell[20114, 391, 363656, 5967, 283, "Output",ExpressionUUID->"3d8d76fc-8efa-4f6e-9707-7e1a876ca610"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[383807, 6363, 979, 23, 73, "Input",ExpressionUUID->"ba98a83d-8069-4c7a-aeee-ccc6ee2b1bfb"],
-Cell[384789, 6388, 652, 16, 44, "Output",ExpressionUUID->"6df75647-15d8-4eb1-9564-43c5307d5d8e"]
+Cell[19882, 385, 368, 6, 73, InheritFromParent,ExpressionUUID->"fd0fb78b-c579-4ee8-b664-d215a99012f8"],
+Cell[20253, 393, 363656, 5967, 283, "Output",ExpressionUUID->"3d8d76fc-8efa-4f6e-9707-7e1a876ca610"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[385478, 6409, 629, 16, 40, "Input",ExpressionUUID->"c6a60db0-bb72-479f-9f07-ee1d395314a2"],
-Cell[386110, 6427, 650, 16, 44, "Output",ExpressionUUID->"aef43711-3b88-451c-ab02-d6f67f6162ff"]
+Cell[383946, 6365, 979, 23, 73, "Input",ExpressionUUID->"ba98a83d-8069-4c7a-aeee-ccc6ee2b1bfb"],
+Cell[384928, 6390, 652, 16, 44, "Output",ExpressionUUID->"6df75647-15d8-4eb1-9564-43c5307d5d8e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[386797, 6448, 248, 4, 30, "Input",ExpressionUUID->"7da5d049-d174-4021-bbb5-67e64d7993f6"],
-Cell[387048, 6454, 598, 12, 38, "Output",ExpressionUUID->"73c8070a-d344-4fa6-832d-20506b06d580"]
-}, Open  ]],
-Cell[387661, 6469, 182, 3, 35, "Text",ExpressionUUID->"f74c8efa-7127-45e3-bd7c-79f82756139d"],
-Cell[387846, 6474, 948, 18, 30, "Input",ExpressionUUID->"5d066468-a720-4f84-adac-ef2fe5180a82"],
-Cell[388797, 6494, 570, 13, 30, "Input",ExpressionUUID->"f7d7e346-54c7-4725-9d92-c396c3e5af24"],
-Cell[389370, 6509, 918, 19, 30, "Input",ExpressionUUID->"de8a2374-2846-4af5-9700-ed4d14aaf5a5"],
-Cell[CellGroupData[{
-Cell[390313, 6532, 416, 8, 30, "Input",ExpressionUUID->"f0715c62-3936-43d6-9c8b-043fc5856858"],
-Cell[390732, 6542, 968, 28, 80, "Output",ExpressionUUID->"c0052b73-0f30-4373-ae36-1cf0c283a983"]
+Cell[385617, 6411, 629, 16, 40, "Input",ExpressionUUID->"c6a60db0-bb72-479f-9f07-ee1d395314a2"],
+Cell[386249, 6429, 650, 16, 44, "Output",ExpressionUUID->"aef43711-3b88-451c-ab02-d6f67f6162ff"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[391737, 6575, 4044, 108, 346, "Input",ExpressionUUID->"2f12a69d-6eb5-46c7-9fad-9b8c636a6274"],
-Cell[395784, 6685, 519, 11, 24, "Message",ExpressionUUID->"7e4b1ce2-3d40-475c-a1bb-5644835ee773"],
-Cell[396306, 6698, 188, 3, 34, "Output",ExpressionUUID->"038bf775-9472-4fed-a5de-14412dfeb942"],
-Cell[396497, 6703, 1438, 23, 60, "Message",ExpressionUUID->"b1ff0c16-b4c4-4c38-9cdd-d35e3cb1a92a"]
+Cell[386936, 6450, 248, 4, 30, "Input",ExpressionUUID->"7da5d049-d174-4021-bbb5-67e64d7993f6"],
+Cell[387187, 6456, 598, 12, 38, "Output",ExpressionUUID->"73c8070a-d344-4fa6-832d-20506b06d580"]
 }, Open  ]],
-Cell[397950, 6729, 454, 9, 52, "Input",ExpressionUUID->"695c0108-f3d2-41ad-9e8c-429872a70018"],
-Cell[398407, 6740, 289, 6, 30, "Input",ExpressionUUID->"bdd418d0-388f-4cd8-810c-8c09a193a868"],
+Cell[387800, 6471, 770, 13, 127, "Text",ExpressionUUID->"f74c8efa-7127-45e3-bd7c-79f82756139d"],
+Cell[388573, 6486, 948, 18, 30, "Input",ExpressionUUID->"5d066468-a720-4f84-adac-ef2fe5180a82"],
+Cell[389524, 6506, 570, 13, 30, "Input",ExpressionUUID->"f7d7e346-54c7-4725-9d92-c396c3e5af24"],
+Cell[390097, 6521, 918, 19, 30, "Input",ExpressionUUID->"de8a2374-2846-4af5-9700-ed4d14aaf5a5"],
 Cell[CellGroupData[{
-Cell[398721, 6750, 347, 7, 30, "Input",ExpressionUUID->"20fcfa0a-b531-4756-82c5-24823ddd8d17"],
-Cell[399071, 6759, 10937, 189, 105, "Output",ExpressionUUID->"3cda6135-2dd8-46a7-91ef-d3de76070267"]
+Cell[391040, 6544, 416, 8, 30, "Input",ExpressionUUID->"f0715c62-3936-43d6-9c8b-043fc5856858"],
+Cell[391459, 6554, 968, 28, 80, "Output",ExpressionUUID->"c0052b73-0f30-4373-ae36-1cf0c283a983"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[392464, 6587, 4044, 108, 346, "Input",ExpressionUUID->"2f12a69d-6eb5-46c7-9fad-9b8c636a6274"],
+Cell[396511, 6697, 519, 11, 24, "Message",ExpressionUUID->"7e4b1ce2-3d40-475c-a1bb-5644835ee773"],
+Cell[397033, 6710, 188, 3, 34, "Output",ExpressionUUID->"038bf775-9472-4fed-a5de-14412dfeb942"],
+Cell[397224, 6715, 1438, 23, 60, "Message",ExpressionUUID->"b1ff0c16-b4c4-4c38-9cdd-d35e3cb1a92a"]
+}, Open  ]],
+Cell[398677, 6741, 454, 9, 52, "Input",ExpressionUUID->"695c0108-f3d2-41ad-9e8c-429872a70018"],
+Cell[399134, 6752, 289, 6, 30, "Input",ExpressionUUID->"bdd418d0-388f-4cd8-810c-8c09a193a868"],
+Cell[CellGroupData[{
+Cell[399448, 6762, 347, 7, 30, "Input",ExpressionUUID->"20fcfa0a-b531-4756-82c5-24823ddd8d17"],
+Cell[399798, 6771, 10937, 189, 105, "Output",ExpressionUUID->"3cda6135-2dd8-46a7-91ef-d3de76070267"]
 }, Closed]],
-Cell[410023, 6951, 71, 0, 31, "Text",ExpressionUUID->"a6e85341-0207-4ee3-a5c9-1bd3212f84a8"],
-Cell[410097, 6953, 469, 8, 52, "Input",ExpressionUUID->"06e7422c-7e24-4b8d-9e44-28e5e9554bf0"],
+Cell[410750, 6963, 71, 0, 31, "Text",ExpressionUUID->"a6e85341-0207-4ee3-a5c9-1bd3212f84a8"],
+Cell[410824, 6965, 469, 8, 52, "Input",ExpressionUUID->"06e7422c-7e24-4b8d-9e44-28e5e9554bf0"],
+Cell[411296, 6975, 492, 9, 81, "Text",ExpressionUUID->"372073ce-4592-4aaa-bc9b-d123ebf3ca18"],
 Cell[CellGroupData[{
-Cell[410591, 6965, 699, 12, 30, "Input",ExpressionUUID->"8a3781a5-0287-4116-ad8c-e74f64b047ff"],
-Cell[411293, 6979, 208490, 3520, 233, "Output",ExpressionUUID->"0220aa7c-a8f9-43dc-bf1e-07299090b3f5"]
+Cell[411813, 6988, 699, 12, 30, "Input",ExpressionUUID->"8a3781a5-0287-4116-ad8c-e74f64b047ff"],
+Cell[412515, 7002, 208508, 3520, 233, "Output",ExpressionUUID->"0220aa7c-a8f9-43dc-bf1e-07299090b3f5"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[619820, 10504, 303, 5, 52, "Input",ExpressionUUID->"73db2953-23bd-4727-bdab-06fdbae38c4b"],
-Cell[620126, 10511, 517, 12, 59, "Message",ExpressionUUID->"f0dc6d94-9f78-47bd-b1f5-feb25792835b"]
+Cell[621060, 10527, 303, 5, 52, "Input",ExpressionUUID->"73db2953-23bd-4727-bdab-06fdbae38c4b"],
+Cell[621366, 10534, 517, 12, 59, "Message",ExpressionUUID->"f0dc6d94-9f78-47bd-b1f5-feb25792835b"]
 }, Open  ]],
-Cell[620658, 10526, 305, 5, 73, InheritFromParent,ExpressionUUID->"77b48b6b-bec7-4f28-bb19-42c96bf867be"]
+Cell[621898, 10549, 305, 5, 73, InheritFromParent,ExpressionUUID->"77b48b6b-bec7-4f28-bb19-42c96bf867be"]
 }, Open  ]]
 }
 ]
