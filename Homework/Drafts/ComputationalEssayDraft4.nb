@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     79639,       1770]
-NotebookOptionsPosition[     75122,       1684]
-NotebookOutlinePosition[     76084,       1717]
-CellTagsIndexPosition[     76015,       1712]
+NotebookDataLength[     47469,       1000]
+NotebookOptionsPosition[     43832,        928]
+NotebookOutlinePosition[     44793,        961]
+CellTagsIndexPosition[     44725,        956]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -55,7 +55,8 @@ fine tune the sound produced. Yet, some factors are outside the control of \
 the flute maker such as air temperature and humidity where the flute player \
 plays. Most of today\[CloseCurlyQuote]s Native American Flute (NAF) are tuned \
 to play in both the mode 1 and mode 4 pentatonic scales. Use the \
-computational input below, decided \
+computational input below, decided which keyed flute you\[CloseCurlyQuote]d \
+like to make and\
 \>", "Text",
  CellChangeTimes->{{3.770668212813489*^9, 3.770668289468783*^9}, {
   3.770668322790382*^9, 3.7706683938921432`*^9}, {3.770668544181076*^9, 
@@ -63,7 +64,8 @@ computational input below, decided \
   3.770668803483239*^9, 3.770668809425192*^9}, {3.7706704197730007`*^9, 
   3.770670477861327*^9}, {3.770670612680435*^9, 3.77067064596704*^9}, {
   3.770672734515748*^9, 3.770672765070822*^9}, {3.770673131658058*^9, 
-  3.77067314360819*^9}},ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-\
+  3.77067314360819*^9}, {3.770675960650165*^9, 
+  3.770675977846994*^9}},ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-\
 1e90c2e78c08"],
 
 Cell[BoxData[{
@@ -71,7 +73,8 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"T", " ", "=", " ", "20"}], " ", ";", 
    RowBox[{"(*", 
-    RowBox[{"Air", " ", "Temperature"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Air", " ", "Temperature", " ", "in", " ", "Celius"}], "*)"}], 
+   "\[IndentingNewLine]", 
    RowBox[{"v", "=", 
     RowBox[{"(", 
      RowBox[{
@@ -139,26 +142,14 @@ Cell[BoxData[{
    RowBox[{"Speed", " ", "of", " ", "Sound", " ", "in", " ", "Air"}], 
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Frequency", " ", "=", " ", 
-   RowBox[{"v", "/", "\[Lambda]"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.7704946223752337`*^9, 3.770494656489277*^9}, {
-   3.7706666325268803`*^9, 3.770666859200418*^9}, 3.7706669399123487`*^9, {
-   3.770666986845386*^9, 3.770666998447919*^9}, {3.770667182392913*^9, 
-   3.770667193558681*^9}, {3.7706673140143137`*^9, 3.770667336479651*^9}, {
-   3.770667378389174*^9, 3.7706674389004107`*^9}, {3.770667858679854*^9, 
-   3.770667860105467*^9}, {3.770667955906752*^9, 3.770667975607419*^9}, {
-   3.7706680816167088`*^9, 3.770668124358253*^9}, {3.7706723982997932`*^9, 
-   3.770672398811194*^9}, {3.7706729942199497`*^9, 3.770672995738957*^9}, {
-   3.770673416066504*^9, 
-   3.7706734217639713`*^9}},ExpressionUUID->"1305f99c-58d2-4efb-b65a-\
-587c1c123fb9"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
+  RowBox[{"bore", "=", 
+   RowBox[{"Round", "[", 
+    RowBox[{
+     RowBox[{"L", "/", "20"}], ",", ".125"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"f", "[", "n_", "]"}], "=", 
+   RowBox[{"f", "[", "n_", "]"}], ":=", 
    RowBox[{
     FormBox[
      SuperscriptBox[
@@ -198,28 +189,27 @@ Cell[BoxData[
      BaseStyle->{"Deploy"},
      DeleteWithContents->True,
      Editable->False,
-     SelectWithContents->True]}]}], ";"}]], "Input",
- CellChangeTimes->{{3.770673061050229*^9, 3.7706730668055*^9}, {
-  3.7706731825140543`*^9, 3.770673280873829*^9}, {3.770673324495901*^9, 
-  3.770673405087494*^9}, {3.770673453036138*^9, 3.770673488103138*^9}, {
-  3.770674042428027*^9, 3.770674052426793*^9}, {3.7706740997922707`*^9, 
-  3.7706741004319363`*^9}},ExpressionUUID->"401599fc-7101-42f1-927d-\
-232a92bdc0cb"],
-
-Cell[BoxData[
- RowBox[{
-  SuperscriptBox["2", 
+     SelectWithContents->True]}]}], ";", " ", 
+  RowBox[{"(*", 
    RowBox[{
-    FractionBox["1", "12"], " ", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"-", "49"}], "+", "n"}], ")"}]}]], " ", 
-  RowBox[{"(", 
-   TemplateBox[{"440","\"Hz\"","hertz","\"Hertz\""},
-    "Quantity"], ")"}]}]], "Output",
- CellChangeTimes->{3.770673484899317*^9},
- CellLabel->"Out[68]=",ExpressionUUID->"3273386c-3eea-4dfe-b6f5-07aaec58f4de"]
-}, Open  ]],
+   "Find", " ", "the", " ", "frequency", " ", "of", " ", "a", " ", "given", 
+    " ", "a", " ", "piano", " ", "key", " ", "number"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.7704946223752337`*^9, 3.770494656489277*^9}, {
+   3.7706666325268803`*^9, 3.770666859200418*^9}, 3.7706669399123487`*^9, {
+   3.770666986845386*^9, 3.770666998447919*^9}, {3.770667182392913*^9, 
+   3.770667193558681*^9}, {3.7706673140143137`*^9, 3.770667336479651*^9}, {
+   3.770667378389174*^9, 3.7706674389004107`*^9}, {3.770667858679854*^9, 
+   3.770667860105467*^9}, {3.770667955906752*^9, 3.770667975607419*^9}, {
+   3.7706680816167088`*^9, 3.770668124358253*^9}, {3.7706723982997932`*^9, 
+   3.770672398811194*^9}, {3.7706729942199497`*^9, 3.770672995738957*^9}, {
+   3.770673416066504*^9, 3.7706734217639713`*^9}, {3.7706761641602163`*^9, 
+   3.770676213453409*^9}, {3.770676262745682*^9, 3.7706763273061247`*^9}, {
+   3.770676370615274*^9, 3.7706763733533916`*^9}, {3.770677674174375*^9, 
+   3.770677703004682*^9}, {3.770677876748393*^9, 3.770677877930873*^9}, {
+   3.770678099515964*^9, 3.770678104442648*^9}, 3.770678143014583*^9, {
+   3.7706782257313423`*^9, 3.770678227951601*^9}},
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
 
 Cell[CellGroupData[{
 
@@ -230,136 +220,124 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"pianokey", ",", 
      RowBox[{
-      RowBox[{"Import", "[", "\"\</Users/Koop/Desktop/table-1.csv\>\"", "]"}],
-       "[", 
-      RowBox[{"[", 
+      RowBox[{
+       RowBox[{"Rule", "[", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+      RowBox[{
        RowBox[{
-        RowBox[{"3", ";;", "All"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "]"}]}], "}"}], ",", 
+       "Import", "[", "\"\</Users/Koop/Desktop/table-1.csv\>\"", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"3", ";;", "All"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "]"}]}]}], "}"}], ",", 
    RowBox[{"ControlType", "->", "PopupMenu"}]}], " ", "]"}]], "Input",
  CellChangeTimes->{{3.770673731065277*^9, 3.770673732513736*^9}, {
   3.770673815944316*^9, 3.770673874800086*^9}, {3.770673907177206*^9, 
   3.7706739395570297`*^9}, {3.7706739902511873`*^9, 3.770674008200625*^9}, {
   3.770674662690008*^9, 3.770674694095798*^9}, {3.770674743982903*^9, 
   3.770674780037243*^9}, {3.770674831617188*^9, 3.770674849884596*^9}, {
-  3.770674943021831*^9, 3.770674991934684*^9}},
+  3.770674943021831*^9, 3.770674991934684*^9}, {3.770675754723382*^9, 
+  3.7706757960389223`*^9}},
  CellLabel->
-  "In[125]:=",ExpressionUUID->"e6bd07f7-95dd-4cb8-908c-73d90327c2dc"],
+  "In[148]:=",ExpressionUUID->"e6bd07f7-95dd-4cb8-908c-73d90327c2dc"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`pianokey$$ = {108, "B8"}, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`pianokey$$ = 49, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`pianokey$$], {{108, "B8"}, {
-       107, "A\[Sharp]8/B\[Flat]8"}, {106, "A8"}, {
-       105, "G\[Sharp]8/A\[Flat]8"}, {104, "G8"}, {
-       103, "F\[Sharp]8/G\[Flat]8"}, {102, "F8"}, {101, "E8"}, {
-       100, "D\[Sharp]8/E\[Flat]8"}, {99, "D8"}, {
-       98, "C\[Sharp]8/D\[Flat]8"}, {88, "C8 Eighth octave"}, {87, "B7"}, {
-       86, "A\[Sharp]7/B\[Flat]7"}, {85, "A7"}, {
-       84, "G\[Sharp]7/A\[Flat]7"}, {83, "G7"}, {
-       82, "F\[Sharp]7/G\[Flat]7"}, {81, "F7"}, {80, "E7"}, {
-       79, "D\[Sharp]7/E\[Flat]7"}, {78, "D7"}, {
-       77, "C\[Sharp]7/D\[Flat]7"}, {76, "C7 Double high C"}, {75, "B6"}, {
-       74, "A\[Sharp]6/B\[Flat]6"}, {73, "A6"}, {
-       72, "G\[Sharp]6/A\[Flat]6"}, {71, "G6"}, {
-       70, "F\[Sharp]6/G\[Flat]6"}, {69, "F6"}, {68, "E6"}, {
-       67, "D\[Sharp]6/E\[Flat]6"}, {66, "D6"}, {
-       65, "C\[Sharp]6/D\[Flat]6"}, {64, "C6 Soprano C (High C)"}, {
-       63, "B5"}, {62, "A\[Sharp]5/B\[Flat]5"}, {61, "A5"}, {
-       60, "G\[Sharp]5/A\[Flat]5"}, {59, "G5"}, {
-       58, "F\[Sharp]5/G\[Flat]5"}, {57, "F5"}, {56, "E5"}, {
-       55, "D\[Sharp]5/E\[Flat]5"}, {54, "D5"}, {
-       53, "C\[Sharp]5/D\[Flat]5"}, {52, "C5 Tenor C"}, {51, "B4"}, {
-       50, "A\[Sharp]4/B\[Flat]4"}, {49, "A4 A440"}, {
-       48, "G\[Sharp]4/A\[Flat]4"}, {47, "G4"}, {
-       46, "F\[Sharp]4/G\[Flat]4"}, {45, "F4"}, {44, "E4"}, {
-       43, "D\[Sharp]4/E\[Flat]4"}, {42, "D4"}, {
-       41, "C\[Sharp]4/D\[Flat]4"}, {40, "C4 Middle C"}, {39, "B3"}, {
-       38, "A\[Sharp]3/B\[Flat]3"}, {37, "A3"}, {
-       36, "G\[Sharp]3/A\[Flat]3"}, {35, "G3"}, {
-       34, "F\[Sharp]3/G\[Flat]3"}, {33, "F3"}, {32, "E3"}, {
-       31, "D\[Sharp]3/E\[Flat]3"}, {30, "D3"}, {
-       29, "C\[Sharp]3/D\[Flat]3"}, {28, "C3"}, {27, "B2"}, {
-       26, "A\[Sharp]2/B\[Flat]2"}, {25, "A2"}, {
-       24, "G\[Sharp]2/A\[Flat]2"}, {23, "G2"}, {
-       22, "F\[Sharp]2/G\[Flat]2"}, {21, "F2"}, {20, "E2"}, {
-       19, "D\[Sharp]2/E\[Flat]2"}, {18, "D2"}, {
-       17, "C\[Sharp]2/D\[Flat]2"}, {16, "C2 Deep C"}, {15, "B1"}, {
-       14, "A\[Sharp]1/B\[Flat]1"}, {13, "A1"}, {
-       12, "G\[Sharp]1/A\[Flat]1"}, {11, "G1"}, {
-       10, "F\[Sharp]1/G\[Flat]1"}, {9, "F1"}, {8, "E1"}, {
-       7, "D\[Sharp]1/E\[Flat]1"}, {6, "D1"}, {5, "C\[Sharp]1/D\[Flat]1"}, {
-       4, "C1 Pedal C"}, {3, "B0"}, {2, "A\[Sharp]0/B\[Flat]0"}, {1, "A0"}, {
-       97, "G\[Sharp]0/A\[Flat]0"}, {96, "G0"}, {
-       95, "F\[Sharp]0/G\[Flat]0"}, {94, "F0"}, {93, "E0"}, {
-       92, "D\[Sharp]0/E\[Flat]0"}, {91, "D0"}, {
-       90, "C\[Sharp]0/D\[Flat]0"}, {89, "C0 Double Pedal C"}}}}, 
-    Typeset`size$$ = {264., {8.150390625, 19.}}, Typeset`update$$ = 0, 
-    Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`pianokey$240514$$ = 0}, 
+      Hold[$CellContext`pianokey$$], {
+      108 -> "B8", 107 -> "A\[Sharp]8/B\[Flat]8", 106 -> "A8", 105 -> 
+       "G\[Sharp]8/A\[Flat]8", 104 -> "G8", 103 -> "F\[Sharp]8/G\[Flat]8", 
+       102 -> "F8", 101 -> "E8", 100 -> "D\[Sharp]8/E\[Flat]8", 99 -> "D8", 
+       98 -> "C\[Sharp]8/D\[Flat]8", 88 -> "C8 Eighth octave", 87 -> "B7", 86 -> 
+       "A\[Sharp]7/B\[Flat]7", 85 -> "A7", 84 -> "G\[Sharp]7/A\[Flat]7", 83 -> 
+       "G7", 82 -> "F\[Sharp]7/G\[Flat]7", 81 -> "F7", 80 -> "E7", 79 -> 
+       "D\[Sharp]7/E\[Flat]7", 78 -> "D7", 77 -> "C\[Sharp]7/D\[Flat]7", 76 -> 
+       "C7 Double high C", 75 -> "B6", 74 -> "A\[Sharp]6/B\[Flat]6", 73 -> 
+       "A6", 72 -> "G\[Sharp]6/A\[Flat]6", 71 -> "G6", 70 -> 
+       "F\[Sharp]6/G\[Flat]6", 69 -> "F6", 68 -> "E6", 67 -> 
+       "D\[Sharp]6/E\[Flat]6", 66 -> "D6", 65 -> "C\[Sharp]6/D\[Flat]6", 64 -> 
+       "C6 Soprano C (High C)", 63 -> "B5", 62 -> "A\[Sharp]5/B\[Flat]5", 61 -> 
+       "A5", 60 -> "G\[Sharp]5/A\[Flat]5", 59 -> "G5", 58 -> 
+       "F\[Sharp]5/G\[Flat]5", 57 -> "F5", 56 -> "E5", 55 -> 
+       "D\[Sharp]5/E\[Flat]5", 54 -> "D5", 53 -> "C\[Sharp]5/D\[Flat]5", 52 -> 
+       "C5 Tenor C", 51 -> "B4", 50 -> "A\[Sharp]4/B\[Flat]4", 49 -> 
+       "A4 A440", 48 -> "G\[Sharp]4/A\[Flat]4", 47 -> "G4", 46 -> 
+       "F\[Sharp]4/G\[Flat]4", 45 -> "F4", 44 -> "E4", 43 -> 
+       "D\[Sharp]4/E\[Flat]4", 42 -> "D4", 41 -> "C\[Sharp]4/D\[Flat]4", 40 -> 
+       "C4 Middle C", 39 -> "B3", 38 -> "A\[Sharp]3/B\[Flat]3", 37 -> "A3", 
+       36 -> "G\[Sharp]3/A\[Flat]3", 35 -> "G3", 34 -> "F\[Sharp]3/G\[Flat]3",
+        33 -> "F3", 32 -> "E3", 31 -> "D\[Sharp]3/E\[Flat]3", 30 -> "D3", 29 -> 
+       "C\[Sharp]3/D\[Flat]3", 28 -> "C3", 27 -> "B2", 26 -> 
+       "A\[Sharp]2/B\[Flat]2", 25 -> "A2", 24 -> "G\[Sharp]2/A\[Flat]2", 23 -> 
+       "G2", 22 -> "F\[Sharp]2/G\[Flat]2", 21 -> "F2", 20 -> "E2", 19 -> 
+       "D\[Sharp]2/E\[Flat]2", 18 -> "D2", 17 -> "C\[Sharp]2/D\[Flat]2", 16 -> 
+       "C2 Deep C", 15 -> "B1", 14 -> "A\[Sharp]1/B\[Flat]1", 13 -> "A1", 12 -> 
+       "G\[Sharp]1/A\[Flat]1", 11 -> "G1", 10 -> "F\[Sharp]1/G\[Flat]1", 9 -> 
+       "F1", 8 -> "E1", 7 -> "D\[Sharp]1/E\[Flat]1", 6 -> "D1", 5 -> 
+       "C\[Sharp]1/D\[Flat]1", 4 -> "C1 Pedal C", 3 -> "B0", 2 -> 
+       "A\[Sharp]0/B\[Flat]0", 1 -> "A0", 97 -> "G\[Sharp]0/A\[Flat]0", 96 -> 
+       "G0", 95 -> "F\[Sharp]0/G\[Flat]0", 94 -> "F0", 93 -> "E0", 92 -> 
+       "D\[Sharp]0/E\[Flat]0", 91 -> "D0", 90 -> "C\[Sharp]0/D\[Flat]0", 89 -> 
+       "C0 Double Pedal C"}}}, Typeset`size$$ = {44., {4., 12.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`pianokey$247800$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`pianokey$$ = {108, "B8"}}, 
+     1, StandardForm, "Variables" :> {$CellContext`pianokey$$ = 108 -> "B8"}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`pianokey$$, $CellContext`pianokey$240514$$, 0]}, 
-      "OtherVariables" :> {
+        Hold[$CellContext`pianokey$$, $CellContext`pianokey$247800$$, False]},
+       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
       "Body" :> $CellContext`f[$CellContext`pianokey$$], 
-      "Specifications" :> {{$CellContext`pianokey$$, {{108, "B8"}, {
-          107, "A\[Sharp]8/B\[Flat]8"}, {106, "A8"}, {
-          105, "G\[Sharp]8/A\[Flat]8"}, {104, "G8"}, {
-          103, "F\[Sharp]8/G\[Flat]8"}, {102, "F8"}, {101, "E8"}, {
-          100, "D\[Sharp]8/E\[Flat]8"}, {99, "D8"}, {
-          98, "C\[Sharp]8/D\[Flat]8"}, {88, "C8 Eighth octave"}, {87, "B7"}, {
-          86, "A\[Sharp]7/B\[Flat]7"}, {85, "A7"}, {
-          84, "G\[Sharp]7/A\[Flat]7"}, {83, "G7"}, {
-          82, "F\[Sharp]7/G\[Flat]7"}, {81, "F7"}, {80, "E7"}, {
-          79, "D\[Sharp]7/E\[Flat]7"}, {78, "D7"}, {
-          77, "C\[Sharp]7/D\[Flat]7"}, {76, "C7 Double high C"}, {75, "B6"}, {
-          74, "A\[Sharp]6/B\[Flat]6"}, {73, "A6"}, {
-          72, "G\[Sharp]6/A\[Flat]6"}, {71, "G6"}, {
-          70, "F\[Sharp]6/G\[Flat]6"}, {69, "F6"}, {68, "E6"}, {
-          67, "D\[Sharp]6/E\[Flat]6"}, {66, "D6"}, {
-          65, "C\[Sharp]6/D\[Flat]6"}, {64, "C6 Soprano C (High C)"}, {
-          63, "B5"}, {62, "A\[Sharp]5/B\[Flat]5"}, {61, "A5"}, {
-          60, "G\[Sharp]5/A\[Flat]5"}, {59, "G5"}, {
-          58, "F\[Sharp]5/G\[Flat]5"}, {57, "F5"}, {56, "E5"}, {
-          55, "D\[Sharp]5/E\[Flat]5"}, {54, "D5"}, {
-          53, "C\[Sharp]5/D\[Flat]5"}, {52, "C5 Tenor C"}, {51, "B4"}, {
-          50, "A\[Sharp]4/B\[Flat]4"}, {49, "A4 A440"}, {
-          48, "G\[Sharp]4/A\[Flat]4"}, {47, "G4"}, {
-          46, "F\[Sharp]4/G\[Flat]4"}, {45, "F4"}, {44, "E4"}, {
-          43, "D\[Sharp]4/E\[Flat]4"}, {42, "D4"}, {
-          41, "C\[Sharp]4/D\[Flat]4"}, {40, "C4 Middle C"}, {39, "B3"}, {
-          38, "A\[Sharp]3/B\[Flat]3"}, {37, "A3"}, {
-          36, "G\[Sharp]3/A\[Flat]3"}, {35, "G3"}, {
-          34, "F\[Sharp]3/G\[Flat]3"}, {33, "F3"}, {32, "E3"}, {
-          31, "D\[Sharp]3/E\[Flat]3"}, {30, "D3"}, {
-          29, "C\[Sharp]3/D\[Flat]3"}, {28, "C3"}, {27, "B2"}, {
-          26, "A\[Sharp]2/B\[Flat]2"}, {25, "A2"}, {
-          24, "G\[Sharp]2/A\[Flat]2"}, {23, "G2"}, {
-          22, "F\[Sharp]2/G\[Flat]2"}, {21, "F2"}, {20, "E2"}, {
-          19, "D\[Sharp]2/E\[Flat]2"}, {18, "D2"}, {
-          17, "C\[Sharp]2/D\[Flat]2"}, {16, "C2 Deep C"}, {15, "B1"}, {
-          14, "A\[Sharp]1/B\[Flat]1"}, {13, "A1"}, {
-          12, "G\[Sharp]1/A\[Flat]1"}, {11, "G1"}, {
-          10, "F\[Sharp]1/G\[Flat]1"}, {9, "F1"}, {8, "E1"}, {
-          7, "D\[Sharp]1/E\[Flat]1"}, {6, "D1"}, {
-          5, "C\[Sharp]1/D\[Flat]1"}, {4, "C1 Pedal C"}, {3, "B0"}, {
-          2, "A\[Sharp]0/B\[Flat]0"}, {1, "A0"}, {
-          97, "G\[Sharp]0/A\[Flat]0"}, {96, "G0"}, {
-          95, "F\[Sharp]0/G\[Flat]0"}, {94, "F0"}, {93, "E0"}, {
-          92, "D\[Sharp]0/E\[Flat]0"}, {91, "D0"}, {
-          90, "C\[Sharp]0/D\[Flat]0"}, {89, "C0 Double Pedal C"}}}}, 
+      "Specifications" :> {{$CellContext`pianokey$$, {
+         108 -> "B8", 107 -> "A\[Sharp]8/B\[Flat]8", 106 -> "A8", 105 -> 
+          "G\[Sharp]8/A\[Flat]8", 104 -> "G8", 103 -> "F\[Sharp]8/G\[Flat]8", 
+          102 -> "F8", 101 -> "E8", 100 -> "D\[Sharp]8/E\[Flat]8", 99 -> "D8",
+           98 -> "C\[Sharp]8/D\[Flat]8", 88 -> "C8 Eighth octave", 87 -> "B7",
+           86 -> "A\[Sharp]7/B\[Flat]7", 85 -> "A7", 84 -> 
+          "G\[Sharp]7/A\[Flat]7", 83 -> "G7", 82 -> "F\[Sharp]7/G\[Flat]7", 
+          81 -> "F7", 80 -> "E7", 79 -> "D\[Sharp]7/E\[Flat]7", 78 -> "D7", 
+          77 -> "C\[Sharp]7/D\[Flat]7", 76 -> "C7 Double high C", 75 -> "B6", 
+          74 -> "A\[Sharp]6/B\[Flat]6", 73 -> "A6", 72 -> 
+          "G\[Sharp]6/A\[Flat]6", 71 -> "G6", 70 -> "F\[Sharp]6/G\[Flat]6", 
+          69 -> "F6", 68 -> "E6", 67 -> "D\[Sharp]6/E\[Flat]6", 66 -> "D6", 
+          65 -> "C\[Sharp]6/D\[Flat]6", 64 -> "C6 Soprano C (High C)", 63 -> 
+          "B5", 62 -> "A\[Sharp]5/B\[Flat]5", 61 -> "A5", 60 -> 
+          "G\[Sharp]5/A\[Flat]5", 59 -> "G5", 58 -> "F\[Sharp]5/G\[Flat]5", 
+          57 -> "F5", 56 -> "E5", 55 -> "D\[Sharp]5/E\[Flat]5", 54 -> "D5", 
+          53 -> "C\[Sharp]5/D\[Flat]5", 52 -> "C5 Tenor C", 51 -> "B4", 50 -> 
+          "A\[Sharp]4/B\[Flat]4", 49 -> "A4 A440", 48 -> 
+          "G\[Sharp]4/A\[Flat]4", 47 -> "G4", 46 -> "F\[Sharp]4/G\[Flat]4", 
+          45 -> "F4", 44 -> "E4", 43 -> "D\[Sharp]4/E\[Flat]4", 42 -> "D4", 
+          41 -> "C\[Sharp]4/D\[Flat]4", 40 -> "C4 Middle C", 39 -> "B3", 38 -> 
+          "A\[Sharp]3/B\[Flat]3", 37 -> "A3", 36 -> "G\[Sharp]3/A\[Flat]3", 
+          35 -> "G3", 34 -> "F\[Sharp]3/G\[Flat]3", 33 -> "F3", 32 -> "E3", 
+          31 -> "D\[Sharp]3/E\[Flat]3", 30 -> "D3", 29 -> 
+          "C\[Sharp]3/D\[Flat]3", 28 -> "C3", 27 -> "B2", 26 -> 
+          "A\[Sharp]2/B\[Flat]2", 25 -> "A2", 24 -> "G\[Sharp]2/A\[Flat]2", 
+          23 -> "G2", 22 -> "F\[Sharp]2/G\[Flat]2", 21 -> "F2", 20 -> "E2", 
+          19 -> "D\[Sharp]2/E\[Flat]2", 18 -> "D2", 17 -> 
+          "C\[Sharp]2/D\[Flat]2", 16 -> "C2 Deep C", 15 -> "B1", 14 -> 
+          "A\[Sharp]1/B\[Flat]1", 13 -> "A1", 12 -> "G\[Sharp]1/A\[Flat]1", 
+          11 -> "G1", 10 -> "F\[Sharp]1/G\[Flat]1", 9 -> "F1", 8 -> "E1", 7 -> 
+          "D\[Sharp]1/E\[Flat]1", 6 -> "D1", 5 -> "C\[Sharp]1/D\[Flat]1", 4 -> 
+          "C1 Pedal C", 3 -> "B0", 2 -> "A\[Sharp]0/B\[Flat]0", 1 -> "A0", 97 -> 
+          "G\[Sharp]0/A\[Flat]0", 96 -> "G0", 95 -> "F\[Sharp]0/G\[Flat]0", 
+          94 -> "F0", 93 -> "E0", 92 -> "D\[Sharp]0/E\[Flat]0", 91 -> "D0", 
+          90 -> "C\[Sharp]0/D\[Flat]0", 89 -> "C0 Double Pedal C"}}}, 
       "Options" :> {ControlType -> PopupMenu}, "DefaultOptions" :> {}],
-     ImageSizeCache->{309., {57., 63.}},
+     ImageSizeCache->{243., {51., 57.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -372,829 +350,95 @@ Cell[BoxData[
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{{3.7706746853978233`*^9, 3.770674694949296*^9}, {
    3.770674759265665*^9, 3.7706747812725554`*^9}, 3.770674851114315*^9, {
-   3.770674957227146*^9, 3.77067499303986*^9}},
+   3.770674957227146*^9, 3.77067499303986*^9}, {3.770675788046139*^9, 
+   3.770675797090522*^9}, 3.770676332625711*^9, {3.770678119694345*^9, 
+   3.770678173241242*^9}, 3.7706782332629347`*^9},
  CellLabel->
-  "Out[125]=",ExpressionUUID->"7e519a6f-7fb5-4ecf-a0b0-8a680fff7ae5"]
+  "Out[148]=",ExpressionUUID->"3a7fafd1-3a58-45de-8987-45bbc0b84c07"]
 }, Open  ]],
 
-Cell[BoxData["Ass"], "Input",
- CellChangeTimes->{{3.7706748581337357`*^9, 
-  3.7706748587881517`*^9}},ExpressionUUID->"0c2fe44c-d658-4eac-aaa6-\
-1ea5ffd0a5e7"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"pianokey", ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"105", ",", "\"\<C#\>\""}], "}"}], ",", 
-     RowBox[{"{", "}"}], ","}]}]}]}]], "Input",
- CellChangeTimes->{{3.7706742788732643`*^9, 
-  3.770674308621314*^9}},ExpressionUUID->"d21cc1ac-512a-4d48-8610-\
-2ae5828782d7"],
+Cell["\<\
+The first step in crafting a NAF is to determine which piano key one wants to \
+create. This decision calculates the frequency emitted when all finger holes \
+are covered. This leaves both the bore diameter and bore length to be \
+determined. and After having chosen a piano key to match the flute to, next \
+one needs to determine the bore of the flute. Generally most flute makers.... \
+20:1 to 24:1. \
+\>", "Text",
+ CellChangeTimes->{{3.770676430822741*^9, 3.770676496164699*^9}, {
+  3.770676557998217*^9, 3.770676732576376*^9}, {3.770676899329463*^9, 
+  3.7706769313524303`*^9}, {3.770676967321451*^9, 3.770676977689211*^9}, {
+  3.770677350118155*^9, 3.770677368595327*^9}, {3.7706776241725407`*^9, 
+  3.7706776569659758`*^9}},ExpressionUUID->"5585bfd0-ffe5-49eb-8259-\
+6b06145718f0"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"?", "InputField"}], "\[IndentingNewLine]"}]], "Input",
- CellChangeTimes->{{3.7706742475920353`*^9, 3.7706742516510353`*^9}},
- CellLabel->"In[95]:=",ExpressionUUID->"c0591cb8-0c20-4979-b136-68d36ebbd656"],
-
-Cell[BoxData[
- InterpretationBox[
-  StyleBox[
-   FrameBox[
-    DynamicModuleBox[{System`InformationDump`open$$ = False, 
-     System`InformationDump`mouseOver$$ = False}, 
-     PaneSelectorBox[{True->
-      TagBox[GridBox[{
-         {
-          ItemBox[
-           PaneBox[
-            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
-             StripOnInput->False,
-             BaseStyle -> None],
-            FrameMargins->{{4, 0}, {-1, 1}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], 
-          ItemBox[
-           PaneBox[
-            TooltipBox[
-             ButtonBox[
-              PaneSelectorBox[{False->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIcon"]], True->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
-                CurrentValue["MouseOver"]]],
-              Appearance->None,
-              BaseStyle->"Link",
-              ButtonData->"paclet:ref/InputField",
-              ButtonNote->"paclet:ref/InputField"],
-             "\"paclet:ref/InputField\""],
-            FrameMargins->{{0, 4}, {0, 2}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           PaneBox[
-            
-            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", \
-\\\"]\\\"}]\\) represents a blank editable input field. \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", StyleBox[\\\"x\\\", \\\"TI\
-\\\"], \\\"]\\\"}]\\) represents an editable input field that currently \
-contains the expression \\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\). \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", RowBox[{\\\"Dynamic\\\", \
-\\\"[\\\", StyleBox[\\\"x\\\", \\\"TI\\\"], \\\"]\\\"}], \\\"]\\\"}]\\) takes \
-the contents of the input field to be the dynamically updated current value \
-of \\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\), with the value of \
-\\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\) being reset if new contents are \
-entered. \\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", RowBox[{StyleBox[\
-\\\"x\\\", \\\"TI\\\"], \\\",\\\", \\\"String\\\"}], \\\"]\\\"}]\\) \
-represents an input field whose contents are taken to be a string. \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", \
-RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", \\\"Number\\\"}], \\\"]\\\
-\"}]\\) represents an input field whose contents are taken to be a number. \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", \
-RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"type\\\", \\\
-\"TI\\\"]}], \\\"]\\\"}]\\) represents an input field whose contents are \
-taken to be of the specified type. \"\>", "InformationUsageText",
-             StripOnInput->False,
-             LineSpacing->{1.5, 1.5, 3.}],
-            FrameMargins->{{10, 10}, {8, 10}}],
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False]},
-         {
-          PaneBox[GridBox[{
-             {
-              
-              DynamicModuleBox[{System`InformationDump`open$$ = {
-               False, False, False, False, False, False, False, False, False, 
-                False, False, False}}, 
-               StyleBox[GridBox[{
-                  {
-                   TagBox[
-                    TooltipBox[
-                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
-                    StripOnInput->False],
-                    "\"Documentation\"",
-                    TooltipStyle->"TextStyling"],
-                    Annotation[#, "Documentation", "Tooltip"]& ], 
-                   
-                   TemplateBox[{
-                    TemplateBox[{
-                    "\"Local \[RightGuillemet]\"", "paclet:ref/InputField", 
-                    "paclet:ref/InputField", "Link", {
-                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
-                    BaseStyle -> {
-                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
-                    "HyperlinkTemplate"],"\"  \"",StyleBox[
-                    "\"|\"", "InformationRowLabel", StripOnInput -> False],
-                    "\"  \"",TemplateBox[{"\"Web \[RightGuillemet]\"", {
-                    URL[
-                    "http://reference.wolfram.com/language/ref/InputField.\
-html"], None}, "http://reference.wolfram.com/language/ref/InputField.html", 
-                    "Hyperlink", {
-                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
-                    BaseStyle -> {
-                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
-                    "HyperlinkTemplate"]},
-                    "RowDefault"]},
-                  {
-                   PaneSelectorBox[{True->
-                    ButtonBox[
-                    PaneSelectorBox[{False->
-                    
-                    TemplateBox[{
-                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
-                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
-                    False],DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "DownPointerOpener"]]},
-                    "RowWithSeparators"], True->
-                    
-                    TemplateBox[{
-                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
-                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
-                    False],DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "DownPointerOpenerHot"]]},
-                    "RowWithSeparators"]}, Dynamic[
-                    CurrentValue["MouseOver"]],
-                    FrameMargins->0,
-                    ImageSize->Automatic],
-                    Appearance->None,
-                    BaseStyle->None,
-                    
-                    ButtonFunction:>(Part[System`InformationDump`open$$, 9] = 
-                    False),
-                    Evaluator->Automatic,
-                    FrameMargins->0,
-                    ImageMargins->0,
-                    Method->"Preemptive"], False->
-                    ButtonBox[
-                    PaneSelectorBox[{False->
-                    
-                    TemplateBox[{
-                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
-                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
-                    False],DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "RightPointerOpener"]]},
-                    "RowWithSeparators"], True->
-                    
-                    TemplateBox[{
-                    "\[ThickSpace]","\"\[ThickSpace]\"",StyleBox[
-                    "\"Options\"", "InformationRowLabel", StripOnInput -> 
-                    False],DynamicBox[
-                    FEPrivate`FrontEndResource[
-                    "FEBitmaps", "RightPointerOpenerHot"]]},
-                    "RowWithSeparators"]}, Dynamic[
-                    CurrentValue["MouseOver"]],
-                    FrameMargins->0,
-                    ImageSize->Automatic],
-                    Appearance->None,
-                    BaseStyle->None,
-                    
-                    ButtonFunction:>(Part[System`InformationDump`open$$, 9] = 
-                    True),
-                    Evaluator->Automatic,
-                    FrameMargins->0,
-                    ImageMargins->0,
-                    Method->"Preemptive"]}, Dynamic[
-                    FEPrivate`Part[System`InformationDump`open$$, 9]]], 
-                   PaneSelectorBox[{True->GridBox[{
-                    {
-                    RowBox[{"Alignment", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"Automatic", ",", "Automatic"}], "}"}]}]},
-                    {
-                    RowBox[{"Appearance", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"Background", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"BaselinePosition", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"BaseStyle", "\[Rule]", 
-                    RowBox[{"{", "}"}]}]},
-                    {
-                    RowBox[{"ContentPadding", "\[Rule]", "True"}]},
-                    {
-                    RowBox[{"ContinuousAction", "\[Rule]", "False"}]},
-                    {
-                    RowBox[{
-                    "DefaultBaseStyle", "\[Rule]", "\<\"InputField\"\>"}]},
-                    {
-                    RowBox[{
-                    "DefaultFieldHintStyle", 
-                    "\[Rule]", "\<\"FieldHintStyle\"\>"}]},
-                    {
-                    RowBox[{"Enabled", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{
-                    "FieldCompletionFunction", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"FieldHint", "\[Rule]", "Null"}]},
-                    {
-                    RowBox[{"FieldHintStyle", "\[Rule]", 
-                    RowBox[{"{", "}"}]}]},
-                    {
-                    RowBox[{"FieldMasked", "\[Rule]", "False"}]},
-                    {
-                    RowBox[{"FieldSize", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"FrameMargins", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"ImageMargins", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"ImageSize", "\[Rule]", "Automatic"}]},
-                    {
-                    RowBox[{"MenuList", "\[Rule]", 
-                    RowBox[{"{", "}"}]}]},
-                    {
-                    RowBox[{"Method", "\[Rule]", 
-                    RowBox[{"{", "}"}]}]},
-                    {
-                    StyleBox[
-                    
-                    TemplateBox[{
-                    "\"(\"","\"\[InvisibleSpace]\"","20","\" total)\""},
-                    "RowDefault"], "InformationRowOpener",
-                    StripOnInput->False]}
-                    },
-                    BaselinePosition->{Baseline, {1, 1}},
-                    DefaultBaseStyle->"Column",
-                    GridBoxAlignment->{"Columns" -> {{Left}}},
-                    
-                    GridBoxItemSize->{
-                    "Columns" -> {{Automatic}}, "Rows" -> {{1.}}}], False->
-                    RowBox[{
-                    RowBox[{"Alignment", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"Automatic", ",", "Automatic"}], "}"}]}], 
-                    "\[ThinSpace]", 
-                    StyleBox["\<\"\[Ellipsis]\"\>", "InformationRowOpener",
-                    StripOnInput->False], "\[ThinSpace]", 
-                    StyleBox[
-                    
-                    TemplateBox[{
-                    "\"(\"","\"\[InvisibleSpace]\"","20","\" total)\""},
-                    "RowDefault"], "InformationRowOpener",
-                    StripOnInput->False]}]}, Dynamic[
-                    FEPrivate`Part[System`InformationDump`open$$, 9]],
-                    BaselinePosition->Baseline,
-                    ImageSize->Automatic]},
-                  {
-                   TagBox[
-                    TooltipBox[
-                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
-                    StripOnInput->False],
-                    "\"Attributes\"",
-                    TooltipStyle->"TextStyling"],
-                    Annotation[#, "Attributes", "Tooltip"]& ], 
-                   RowBox[{"{", 
-                    RowBox[{"Protected", ",", "ReadProtected"}], "}"}]},
-                  {
-                   TagBox[
-                    TooltipBox[
-                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
-                    StripOnInput->False],
-                    "\"FullName\"",
-                    TooltipStyle->"TextStyling"],
-                    
-                    Annotation[#, "FullName", 
-                    "Tooltip"]& ], "\<\"System`InputField\"\>"}
-                 },
-                 AutoDelete->False,
-                 GridBoxAlignment->{"Columns" -> {Right, Left}},
-                 GridBoxDividers->None,
-                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
-                 GridBoxSpacings->{"Columns" -> {
-                    Offset[0.27999999999999997`], {
-                    Offset[0.5599999999999999]}, 
-                    Offset[0.27999999999999997`]}, "Rows" -> {
-                    Offset[0.2], {
-                    Offset[0.8]}, 
-                    Offset[0.2]}}], "DialogStyle",
-                StripOnInput->False],
-               DynamicModuleValues:>{}]}
-            },
-            DefaultBaseStyle->"Column",
-            GridBoxAlignment->{"Columns" -> {{Left}}},
-            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
-            
-            GridBoxItemSize->{
-             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-            GridBoxSpacings->{"Columns" -> {
-                Offset[0.27999999999999997`], {
-                 Offset[0.5599999999999999]}, 
-                Offset[0.27999999999999997`]}, "Rows" -> {
-                Offset[0.2], {
-                 Offset[3.6]}, 
-                Offset[0.2]}}],
-           FrameMargins->6], ""},
-         {
-          ItemBox[
-           TagBox[
-            ButtonBox[
-             PaneSelectorBox[{False->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpener"]], True->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
-              System`InformationDump`mouseOver$$]],
-             Alignment->Left,
-             Appearance->{"Default" -> None},
-             
-             ButtonFunction:>FEPrivate`Set[
-              System`InformationDump`open$$, False],
-             Evaluator->Automatic,
-             FrameMargins->{{9, 0}, {0, 0}},
-             ImageMargins->0,
-             ImageSize->Full,
-             Method->"Preemptive"],
-            
-            EventHandlerTag[{
-             "MouseEntered" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
-              "MouseExited" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
-              Method -> "Preemptive", PassEventsDown -> Automatic, 
-              PassEventsUp -> True}]],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], "\[SpanFromLeft]"}
-        },
-        AutoDelete->False,
-        FrameStyle->Directive[
-          GrayLevel[0.8], 
-          Thickness[Tiny]],
-        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
-        GridBoxDividers->{
-         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"], False->
-      TagBox[GridBox[{
-         {
-          ItemBox[
-           PaneBox[
-            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
-             StripOnInput->False],
-            FrameMargins->{{4, 0}, {-1, 1}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], 
-          ItemBox[
-           PaneBox[
-            TooltipBox[
-             ButtonBox[
-              PaneSelectorBox[{False->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIcon"],
-                ImageSizeCache->{13., {4., 9.}}], True->
-               
-               DynamicBox[FEPrivate`FrontEndResource[
-                "FEBitmaps", "InformationHelpIconHot"],
-                ImageSizeCache->{13., {4., 9.}}]}, Dynamic[
-                CurrentValue["MouseOver"]]],
-              Appearance->None,
-              BaseStyle->"Link",
-              ButtonData->"paclet:ref/InputField",
-              ButtonNote->"paclet:ref/InputField"],
-             "\"paclet:ref/InputField\""],
-            FrameMargins->{{0, 4}, {0, 2}}],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           PaneBox[
-            
-            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", \
-\\\"]\\\"}]\\) represents a blank editable input field. \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", StyleBox[\\\"x\\\", \\\"TI\
-\\\"], \\\"]\\\"}]\\) represents an editable input field that currently \
-contains the expression \\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\). \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", RowBox[{\\\"Dynamic\\\", \
-\\\"[\\\", StyleBox[\\\"x\\\", \\\"TI\\\"], \\\"]\\\"}], \\\"]\\\"}]\\) takes \
-the contents of the input field to be the dynamically updated current value \
-of \\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\), with the value of \
-\\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\) being reset if new contents are \
-entered. \\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", RowBox[{StyleBox[\
-\\\"x\\\", \\\"TI\\\"], \\\",\\\", \\\"String\\\"}], \\\"]\\\"}]\\) \
-represents an input field whose contents are taken to be a string. \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", \
-RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", \\\"Number\\\"}], \\\"]\\\
-\"}]\\) represents an input field whose contents are taken to be a number. \
-\\n\\!\\(\\*RowBox[{\\\"InputField\\\", \\\"[\\\", \
-RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"type\\\", \\\
-\"TI\\\"]}], \\\"]\\\"}]\\) represents an input field whose contents are \
-taken to be of the specified type. \"\>", "InformationUsageText",
-             StripOnInput->False,
-             LineSpacing->{1.5, 1.5, 3.}],
-            FrameMargins->{{10, 10}, {8, 10}}],
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False], 
-          ItemBox["\<\"\"\>",
-           BaseStyle->"InformationUsageSubtitleBackground",
-           StripOnInput->False]},
-         {
-          ItemBox[
-           TagBox[
-            ButtonBox[
-             PaneSelectorBox[{False->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpener"],
-               ImageSizeCache->{10., {2., 8.}}], True->
-              
-              DynamicBox[FEPrivate`FrontEndResource[
-               "FEBitmaps", "DownPointerOpenerHot"],
-               ImageSizeCache->{10., {2., 8.}}]}, Dynamic[
-              System`InformationDump`mouseOver$$]],
-             Alignment->Left,
-             Appearance->{"Default" -> None},
-             
-             ButtonFunction:>FEPrivate`Set[
-              System`InformationDump`open$$, True],
-             Evaluator->Automatic,
-             FrameMargins->{{9, 0}, {0, 0}},
-             ImageMargins->0,
-             ImageSize->Full,
-             Method->"Preemptive"],
-            
-            EventHandlerTag[{
-             "MouseEntered" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
-              "MouseExited" :> 
-              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
-              Method -> "Preemptive", PassEventsDown -> Automatic, 
-              PassEventsUp -> True}]],
-           BaseStyle->"InformationTitleBackground",
-           StripOnInput->False], "\[SpanFromLeft]"}
-        },
-        AutoDelete->False,
-        FrameStyle->Directive[
-          GrayLevel[0.8], 
-          Thickness[Tiny]],
-        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
-        GridBoxDividers->{
-         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
-        GridBoxItemSize->{
-         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-       "Grid"]}, Dynamic[System`InformationDump`open$$],
-      BaselinePosition->Baseline,
-      FrameMargins->0,
-      ImageSize->Automatic],
-     DynamicModuleValues:>{}],
-    BaseStyle->"InformationGridFrame",
-    StripOnInput->False], "InformationGridPlain",
-   StripOnInput->False],
-  InformationData[
-   Association[
-   "ObjectType" -> "Symbol", "Usage" -> 
-    "\!\(\*RowBox[{\"InputField\", \"[\", \"]\"}]\) represents a blank \
-editable input field. \n\!\(\*RowBox[{\"InputField\", \"[\", StyleBox[\"x\", \
-\"TI\"], \"]\"}]\) represents an editable input field that currently contains \
-the expression \!\(\*StyleBox[\"x\", \"TI\"]\). \n\
-\!\(\*RowBox[{\"InputField\", \"[\", RowBox[{\"Dynamic\", \"[\", StyleBox[\"x\
-\", \"TI\"], \"]\"}], \"]\"}]\) takes the contents of the input field to be \
-the dynamically updated current value of \!\(\*StyleBox[\"x\", \"TI\"]\), \
-with the value of \!\(\*StyleBox[\"x\", \"TI\"]\) being reset if new contents \
-are entered. \n\!\(\*RowBox[{\"InputField\", \"[\", RowBox[{StyleBox[\"x\", \
-\"TI\"], \",\", \"String\"}], \"]\"}]\) represents an input field whose \
-contents are taken to be a string. \n\!\(\*RowBox[{\"InputField\", \"[\", \
-RowBox[{StyleBox[\"x\", \"TI\"], \",\", \"Number\"}], \"]\"}]\) represents an \
-input field whose contents are taken to be a number. \n\
-\!\(\*RowBox[{\"InputField\", \"[\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", \
-StyleBox[\"type\", \"TI\"]}], \"]\"}]\) represents an input field whose \
-contents are taken to be of the specified type. ", "Documentation" -> 
-    Association[
-     "Local" -> "paclet:ref/InputField", "Web" -> 
-      "http://reference.wolfram.com/language/ref/InputField.html"], 
-    "OwnValues" -> None, "UpValues" -> None, "DownValues" -> None, 
-    "SubValues" -> None, "DefaultValues" -> None, "NValues" -> None, 
-    "FormatValues" -> None, 
-    "Options" -> {
-     Alignment -> {Automatic, Automatic}, Appearance -> Automatic, Background -> 
-      Automatic, BaselinePosition -> Automatic, BaseStyle -> {}, 
-      ContentPadding -> True, ContinuousAction -> False, DefaultBaseStyle -> 
-      "InputField", DefaultFieldHintStyle -> "FieldHintStyle", Enabled -> 
-      Automatic, FieldCompletionFunction -> Automatic, FieldHint -> Null, 
-      FieldHintStyle -> {}, FieldMasked -> False, FieldSize -> Automatic, 
-      FrameMargins -> Automatic, ImageMargins -> Automatic, ImageSize -> 
-      Automatic, MenuList -> {}, Method -> {}}, 
-    "Attributes" -> {Protected, ReadProtected}, "FullName" -> 
-    "System`InputField"], False]]], "Output",
- CellChangeTimes->{3.770674256079194*^9},
- CellLabel->"Out[95]=",ExpressionUUID->"b0a2aa1a-8eea-4793-a78c-bf18e71ff788"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.770673425009158*^9, 3.7706734603969927`*^9}, {
-  3.770673491542169*^9, 
-  3.770673492169202*^9}},ExpressionUUID->"f0989087-317f-4f88-bace-\
-fbac00eb0609"],
-
-Cell[BoxData[
- TemplateBox[{"3951.066410048992`","\"Hz\"","hertz","\"Hertz\""},
-  "Quantity"]], "Output",
- CellChangeTimes->{{3.77067338077847*^9, 3.770673461130831*^9}},
- CellLabel->"Out[65]=",ExpressionUUID->"d7ed7ba2-439a-44ed-a65a-65985bb25f7c"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{"\[Lambda]", "=", 
-    RowBox[{"4", "L"}]}], ";"}], 
   RowBox[{"(*", 
    RowBox[{
-   "Wavelenght", " ", "of", " ", "a", " ", "fundamental", " ", "standing", 
-    " ", "wave"}], "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"bore", "=", 
-   RowBox[{"Round", "[", 
     RowBox[{
-     RowBox[{"L", "/", "20"}], ",", ".125"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Import", "[", "\"\</Users/Koop/Desktop/table-1.csv\>\"", "]"}], 
-  "[", 
-  RowBox[{"[", 
-   RowBox[{
-    RowBox[{"3", ";;", "All"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"1", ",", "3"}], "}"}]}], "]"}], "]"}]}], "Input",
- CellChangeTimes->{{3.770668145612624*^9, 3.7706681469689903`*^9}, {
-   3.7706685333233633`*^9, 3.7706685359086733`*^9}, {3.770671415352236*^9, 
-   3.7706714420122232`*^9}, {3.770671483027101*^9, 3.7706715193584127`*^9}, {
-   3.770671813712286*^9, 3.7706718313085823`*^9}, 3.77067187811937*^9, {
-   3.770672901431501*^9, 3.770672905673712*^9}, 3.770673021872693*^9, {
-   3.770673539296451*^9, 3.7706736406083393`*^9}, {3.770673670735669*^9, 
-   3.770673695832142*^9}, {3.7706743319694443`*^9, 3.770674346477151*^9}, 
-   3.7706743891862307`*^9, {3.7706744236327047`*^9, 3.770674449604187*^9}, {
-   3.770674481028153*^9, 3.770674628926469*^9}},
+     RowBox[{"\[Lambda]", "=", 
+      RowBox[{"4", "L"}]}], ";", 
+     RowBox[{
+     "Wavelenght", " ", "of", " ", "a", " ", "fundamental", " ", "standing", 
+      " ", "wave"}]}], ",", " ", 
+    RowBox[{"\[Lambda]", " ", "is", " ", "the", " ", "wavelength"}]}], "*)"}],
+   "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"L", "[", "n_", "]"}], "=", " ", 
+   RowBox[{"v", "/", 
+    RowBox[{"(", 
+     RowBox[{"4", "*", 
+      RowBox[{"f", "[", "n", "]"}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7706777071972*^9, 3.770677737700036*^9}, {
+   3.770677787045657*^9, 3.770677829970141*^9}, {3.7706779255211*^9, 
+   3.770677960836681*^9}, {3.7706779969265633`*^9, 3.770677999874463*^9}, 
+   3.770678051913177*^9, 3.770678260956689*^9, {3.770678324098377*^9, 
+   3.770678333156584*^9}, {3.7706783947527647`*^9, 3.770678427258898*^9}},
  CellLabel->
-  "In[114]:=",ExpressionUUID->"82f08d58-681a-4143-ab82-0f1c5ee3042c"],
+  "In[150]:=",ExpressionUUID->"ba98a83d-8069-4c7a-aeee-ccc6ee2b1bfb"],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"108", ",", "\<\"B8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"107", ",", "\<\"A\[Sharp]8/B\[Flat]8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"106", ",", "\<\"A8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"105", ",", "\<\"G\[Sharp]8/A\[Flat]8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"104", ",", "\<\"G8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"103", ",", "\<\"F\[Sharp]8/G\[Flat]8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"102", ",", "\<\"F8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"101", ",", "\<\"E8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"100", ",", "\<\"D\[Sharp]8/E\[Flat]8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"99", ",", "\<\"D8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"98", ",", "\<\"C\[Sharp]8/D\[Flat]8\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"88", ",", "\<\"C8 Eighth octave\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"87", ",", "\<\"B7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"86", ",", "\<\"A\[Sharp]7/B\[Flat]7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"85", ",", "\<\"A7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"84", ",", "\<\"G\[Sharp]7/A\[Flat]7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"83", ",", "\<\"G7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"82", ",", "\<\"F\[Sharp]7/G\[Flat]7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"81", ",", "\<\"F7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"80", ",", "\<\"E7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"79", ",", "\<\"D\[Sharp]7/E\[Flat]7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"78", ",", "\<\"D7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"77", ",", "\<\"C\[Sharp]7/D\[Flat]7\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"76", ",", "\<\"C7 Double high C\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"75", ",", "\<\"B6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"74", ",", "\<\"A\[Sharp]6/B\[Flat]6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"73", ",", "\<\"A6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"72", ",", "\<\"G\[Sharp]6/A\[Flat]6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"71", ",", "\<\"G6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"70", ",", "\<\"F\[Sharp]6/G\[Flat]6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"69", ",", "\<\"F6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"68", ",", "\<\"E6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"67", ",", "\<\"D\[Sharp]6/E\[Flat]6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"66", ",", "\<\"D6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"65", ",", "\<\"C\[Sharp]6/D\[Flat]6\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"64", ",", "\<\"C6 Soprano C (High C)\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"63", ",", "\<\"B5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"62", ",", "\<\"A\[Sharp]5/B\[Flat]5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"61", ",", "\<\"A5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"60", ",", "\<\"G\[Sharp]5/A\[Flat]5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"59", ",", "\<\"G5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"58", ",", "\<\"F\[Sharp]5/G\[Flat]5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"57", ",", "\<\"F5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"56", ",", "\<\"E5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"55", ",", "\<\"D\[Sharp]5/E\[Flat]5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"54", ",", "\<\"D5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"53", ",", "\<\"C\[Sharp]5/D\[Flat]5\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"52", ",", "\<\"C5 Tenor C\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"51", ",", "\<\"B4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"50", ",", "\<\"A\[Sharp]4/B\[Flat]4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"49", ",", "\<\"A4 A440\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"48", ",", "\<\"G\[Sharp]4/A\[Flat]4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"47", ",", "\<\"G4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"46", ",", "\<\"F\[Sharp]4/G\[Flat]4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"45", ",", "\<\"F4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"44", ",", "\<\"E4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"43", ",", "\<\"D\[Sharp]4/E\[Flat]4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"42", ",", "\<\"D4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"41", ",", "\<\"C\[Sharp]4/D\[Flat]4\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"40", ",", "\<\"C4 Middle C\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"39", ",", "\<\"B3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"38", ",", "\<\"A\[Sharp]3/B\[Flat]3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"37", ",", "\<\"A3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"36", ",", "\<\"G\[Sharp]3/A\[Flat]3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"35", ",", "\<\"G3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"34", ",", "\<\"F\[Sharp]3/G\[Flat]3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"33", ",", "\<\"F3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"32", ",", "\<\"E3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"31", ",", "\<\"D\[Sharp]3/E\[Flat]3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"30", ",", "\<\"D3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"29", ",", "\<\"C\[Sharp]3/D\[Flat]3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"28", ",", "\<\"C3\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"27", ",", "\<\"B2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"26", ",", "\<\"A\[Sharp]2/B\[Flat]2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"25", ",", "\<\"A2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"24", ",", "\<\"G\[Sharp]2/A\[Flat]2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"23", ",", "\<\"G2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"22", ",", "\<\"F\[Sharp]2/G\[Flat]2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"21", ",", "\<\"F2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"20", ",", "\<\"E2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"19", ",", "\<\"D\[Sharp]2/E\[Flat]2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"18", ",", "\<\"D2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"17", ",", "\<\"C\[Sharp]2/D\[Flat]2\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"16", ",", "\<\"C2 Deep C\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"15", ",", "\<\"B1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"14", ",", "\<\"A\[Sharp]1/B\[Flat]1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"13", ",", "\<\"A1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"12", ",", "\<\"G\[Sharp]1/A\[Flat]1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"11", ",", "\<\"G1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"10", ",", "\<\"F\[Sharp]1/G\[Flat]1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"9", ",", "\<\"F1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"8", ",", "\<\"E1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"7", ",", "\<\"D\[Sharp]1/E\[Flat]1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"6", ",", "\<\"D1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"5", ",", "\<\"C\[Sharp]1/D\[Flat]1\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4", ",", "\<\"C1 Pedal C\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3", ",", "\<\"B0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2", ",", "\<\"A\[Sharp]0/B\[Flat]0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1", ",", "\<\"A0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"97", ",", "\<\"G\[Sharp]0/A\[Flat]0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"96", ",", "\<\"G0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"95", ",", "\<\"F\[Sharp]0/G\[Flat]0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"94", ",", "\<\"F0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"93", ",", "\<\"E0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"92", ",", "\<\"D\[Sharp]0/E\[Flat]0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"91", ",", "\<\"D0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"90", ",", "\<\"C\[Sharp]0/D\[Flat]0\"\>"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"89", ",", "\<\"C0 Double Pedal C\"\>"}], "}"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{
-  3.77067369657909*^9, 3.7706743472389927`*^9, {3.7706745494672832`*^9, 
-   3.770674575917342*^9}, {3.7706746237795486`*^9, 3.770674632806539*^9}},
+ RowBox[{
+  SuperscriptBox["2", 
+   RowBox[{
+    RowBox[{"-", "2"}], "+", 
+    FractionBox[
+     RowBox[{"49", "-", "n"}], "12"]}]], " ", 
+  RowBox[{"(", 
+   TemplateBox[{
+    "0.7795454545454545`",
+     RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", 
+       "\"Hz\"", "\[ThinSpace]", "\"s\"", "\[InvisibleSpace]", "\")\""}],
+     "meters per hertz second",FractionBox["\"Meters\"", 
+      RowBox[{"\"Hertz\"", " ", "\"Seconds\""}]]},
+    "Quantity"], ")"}]}]], "Output",
+ CellChangeTimes->{{3.770678412230308*^9, 3.7706784278550034`*^9}},
  CellLabel->
-  "Out[116]=",ExpressionUUID->"3480d2ec-9fd5-43ab-bb56-1ec5998710f4"]
+  "Out[150]=",ExpressionUUID->"564e9c91-1b6f-4c19-9225-1f3d024a1b63"]
 }, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.770671834283408*^9, 3.770671844259798*^9}, {
-  3.770673028095497*^9, 
-  3.7706730298277473`*^9}},ExpressionUUID->"e4d03ae1-5817-49f5-940b-\
-3634a314105f"],
 
 Cell[CellGroupData[{
 
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.7706743785281277`*^9, 
-  3.770674379726029*^9}},ExpressionUUID->"1ea7ad7f-1829-4f1a-ae33-\
-95f624aa86a2"],
+Cell[BoxData[
+ RowBox[{"L", "[", "1", "]"}]], "Input",
+ CellChangeTimes->{{3.770678438372476*^9, 3.770678440067093*^9}},
+ CellLabel->
+  "In[151]:=",ExpressionUUID->"7da5d049-d174-4021-bbb5-67e64d7993f6"],
 
-Cell[BoxData["\<\"/Users/Koop\"\>"], "Output",
- CellChangeTimes->{{3.77066816502462*^9, 3.770668190286274*^9}, {
-  3.77067149876628*^9, 3.7706715201551847`*^9}, {3.7706718392236643`*^9, 
-  3.770671844738978*^9}},
- CellLabel->"Out[47]=",ExpressionUUID->"d8dd90ee-8498-411d-a9ad-4d1ad2a2272a"]
+Cell[BoxData[
+ TemplateBox[{
+  "3.118181818181818`",
+   RowBox[{"\"m\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", 
+     "\"Hz\"", "\[ThinSpace]", "\"s\"", "\[InvisibleSpace]", "\")\""}],
+   "meters per hertz second",FractionBox["\"Meters\"", 
+    RowBox[{"\"Hertz\"", " ", "\"Seconds\""}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{3.770678440902792*^9},
+ CellLabel->
+  "Out[151]=",ExpressionUUID->"4ab9ad6a-e189-450e-904c-6a2ecb368013"]
 }, Open  ]],
 
 Cell["blah blah blah stuff about wood materials ", "Text",
@@ -1683,7 +927,7 @@ Cell["", "Text",ExpressionUUID->"a6e85341-0207-4ee3-a5c9-1bd3212f84a8"]
 }, Open  ]]
 },
 WindowSize->{1088, 746},
-WindowMargins->{{Automatic, 83}, {Automatic, 0}},
+WindowMargins->{{Automatic, 94}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -1711,7 +955,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Title", 75876, 1706}
+ {"Title", 44586, 950}
  }
 *)
 (*NotebookFileOutline
@@ -1721,56 +965,42 @@ Cell[580, 22, 576, 8, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3
  CellTags->"Title"],
 Cell[1159, 32, 380, 6, 53, "Subtitle",ExpressionUUID->"8d15dbd2-3b05-4a27-b208-8b865837d52f"],
 Cell[1542, 40, 451, 7, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1996, 49, 1107, 17, 104, "Text",ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-1e90c2e78c08"],
-Cell[3106, 68, 4067, 85, 83, "Input",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
+Cell[1996, 49, 1215, 19, 104, "Text",ExpressionUUID->"df1e0bae-d8e8-4014-ba0d-1e90c2e78c08"],
+Cell[3214, 70, 6557, 141, 135, "Input",ExpressionUUID->"1305f99c-58d2-4efb-b65a-587c1c123fb9"],
 Cell[CellGroupData[{
-Cell[7198, 157, 2212, 49, 40, "Input",ExpressionUUID->"401599fc-7101-42f1-927d-232a92bdc0cb"],
-Cell[9413, 208, 406, 12, 44, "Output",ExpressionUUID->"3273386c-3eea-4dfe-b6f5-07aaec58f4de"]
+Cell[9796, 215, 1295, 31, 52, "Input",ExpressionUUID->"e6bd07f7-95dd-4cb8-908c-73d90327c2dc"],
+Cell[11094, 248, 7096, 108, 185, "Output",ExpressionUUID->"3a7fafd1-3a58-45de-8987-45bbc0b84c07"]
+}, Open  ]],
+Cell[18205, 359, 798, 13, 81, "Text",ExpressionUUID->"5585bfd0-ffe5-49eb-8259-6b06145718f0"],
+Cell[CellGroupData[{
+Cell[19028, 376, 983, 24, 52, "Input",ExpressionUUID->"ba98a83d-8069-4c7a-aeee-ccc6ee2b1bfb"],
+Cell[20014, 402, 658, 17, 44, "Output",ExpressionUUID->"564e9c91-1b6f-4c19-9225-1f3d024a1b63"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9856, 225, 990, 22, 52, "Input",ExpressionUUID->"e6bd07f7-95dd-4cb8-908c-73d90327c2dc"],
-Cell[10849, 249, 7158, 127, 197, "Output",ExpressionUUID->"7e519a6f-7fb5-4ecf-a0b0-8a680fff7ae5"]
+Cell[20709, 424, 203, 4, 30, "Input",ExpressionUUID->"7da5d049-d174-4021-bbb5-67e64d7993f6"],
+Cell[20915, 430, 453, 10, 38, "Output",ExpressionUUID->"4ab9ad6a-e189-450e-904c-6a2ecb368013"]
 }, Open  ]],
-Cell[18022, 379, 159, 3, 30, "Input",ExpressionUUID->"0c2fe44c-d658-4eac-aaa6-1ea5ffd0a5e7"],
-Cell[18184, 384, 336, 10, 30, "Input",ExpressionUUID->"d21cc1ac-512a-4d48-8610-2ae5828782d7"],
+Cell[21383, 443, 182, 3, 35, "Text",ExpressionUUID->"f74c8efa-7127-45e3-bd7c-79f82756139d"],
+Cell[21568, 448, 948, 18, 30, "Input",ExpressionUUID->"5d066468-a720-4f84-adac-ef2fe5180a82"],
+Cell[22519, 468, 570, 13, 30, "Input",ExpressionUUID->"f7d7e346-54c7-4725-9d92-c396c3e5af24"],
+Cell[23092, 483, 918, 19, 30, "Input",ExpressionUUID->"de8a2374-2846-4af5-9700-ed4d14aaf5a5"],
 Cell[CellGroupData[{
-Cell[18545, 398, 238, 4, 52, "Input",ExpressionUUID->"c0591cb8-0c20-4979-b136-68d36ebbd656"],
-Cell[18786, 404, 22594, 493, 238, "Output",ExpressionUUID->"b0a2aa1a-8eea-4793-a78c-bf18e71ff788"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[41417, 902, 203, 4, 30, "Input",ExpressionUUID->"f0989087-317f-4f88-bace-fbac00eb0609"],
-Cell[41623, 908, 249, 4, 36, "Output",ExpressionUUID->"d7ed7ba2-439a-44ed-a65a-65985bb25f7c"]
+Cell[24035, 506, 416, 8, 30, "Input",ExpressionUUID->"f0715c62-3936-43d6-9c8b-043fc5856858"],
+Cell[24454, 516, 968, 28, 51, "Output",ExpressionUUID->"c0052b73-0f30-4373-ae36-1cf0c283a983"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[41909, 917, 1387, 33, 73, "Input",ExpressionUUID->"82f08d58-681a-4143-ab82-0f1c5ee3042c"],
-Cell[43299, 952, 8668, 224, 266, "Output",ExpressionUUID->"3480d2ec-9fd5-43ab-bb56-1ec5998710f4"]
+Cell[25459, 549, 4044, 108, 346, "Input",ExpressionUUID->"2f12a69d-6eb5-46c7-9fad-9b8c636a6274"],
+Cell[29506, 659, 519, 11, 24, "Message",ExpressionUUID->"7e4b1ce2-3d40-475c-a1bb-5644835ee773"],
+Cell[30028, 672, 188, 3, 34, "Output",ExpressionUUID->"038bf775-9472-4fed-a5de-14412dfeb942"],
+Cell[30219, 677, 1438, 23, 60, "Message",ExpressionUUID->"b1ff0c16-b4c4-4c38-9cdd-d35e3cb1a92a"]
 }, Open  ]],
-Cell[51982, 1179, 203, 4, 30, "Input",ExpressionUUID->"e4d03ae1-5817-49f5-940b-3634a314105f"],
+Cell[31672, 703, 454, 9, 52, "Input",ExpressionUUID->"695c0108-f3d2-41ad-9e8c-429872a70018"],
+Cell[32129, 714, 289, 6, 30, "Input",ExpressionUUID->"bdd418d0-388f-4cd8-810c-8c09a193a868"],
 Cell[CellGroupData[{
-Cell[52210, 1187, 154, 3, 30, "Input",ExpressionUUID->"1ea7ad7f-1829-4f1a-ae33-95f624aa86a2"],
-Cell[52367, 1192, 291, 4, 34, "Output",ExpressionUUID->"d8dd90ee-8498-411d-a9ad-4d1ad2a2272a"]
-}, Open  ]],
-Cell[52673, 1199, 182, 3, 35, "Text",ExpressionUUID->"f74c8efa-7127-45e3-bd7c-79f82756139d"],
-Cell[52858, 1204, 948, 18, 30, "Input",ExpressionUUID->"5d066468-a720-4f84-adac-ef2fe5180a82"],
-Cell[53809, 1224, 570, 13, 30, "Input",ExpressionUUID->"f7d7e346-54c7-4725-9d92-c396c3e5af24"],
-Cell[54382, 1239, 918, 19, 30, "Input",ExpressionUUID->"de8a2374-2846-4af5-9700-ed4d14aaf5a5"],
-Cell[CellGroupData[{
-Cell[55325, 1262, 416, 8, 30, "Input",ExpressionUUID->"f0715c62-3936-43d6-9c8b-043fc5856858"],
-Cell[55744, 1272, 968, 28, 51, "Output",ExpressionUUID->"c0052b73-0f30-4373-ae36-1cf0c283a983"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[56749, 1305, 4044, 108, 346, "Input",ExpressionUUID->"2f12a69d-6eb5-46c7-9fad-9b8c636a6274"],
-Cell[60796, 1415, 519, 11, 24, "Message",ExpressionUUID->"7e4b1ce2-3d40-475c-a1bb-5644835ee773"],
-Cell[61318, 1428, 188, 3, 34, "Output",ExpressionUUID->"038bf775-9472-4fed-a5de-14412dfeb942"],
-Cell[61509, 1433, 1438, 23, 60, "Message",ExpressionUUID->"b1ff0c16-b4c4-4c38-9cdd-d35e3cb1a92a"]
-}, Open  ]],
-Cell[62962, 1459, 454, 9, 52, "Input",ExpressionUUID->"695c0108-f3d2-41ad-9e8c-429872a70018"],
-Cell[63419, 1470, 289, 6, 30, "Input",ExpressionUUID->"bdd418d0-388f-4cd8-810c-8c09a193a868"],
-Cell[CellGroupData[{
-Cell[63733, 1480, 347, 7, 30, "Input",ExpressionUUID->"20fcfa0a-b531-4756-82c5-24823ddd8d17"],
-Cell[64083, 1489, 10937, 189, 105, "Output",ExpressionUUID->"3cda6135-2dd8-46a7-91ef-d3de76070267"]
+Cell[32443, 724, 347, 7, 30, "Input",ExpressionUUID->"20fcfa0a-b531-4756-82c5-24823ddd8d17"],
+Cell[32793, 733, 10937, 189, 105, "Output",ExpressionUUID->"3cda6135-2dd8-46a7-91ef-d3de76070267"]
 }, Closed]],
-Cell[75035, 1681, 71, 0, 31, "Text",ExpressionUUID->"a6e85341-0207-4ee3-a5c9-1bd3212f84a8"]
+Cell[43745, 925, 71, 0, 31, "Text",ExpressionUUID->"a6e85341-0207-4ee3-a5c9-1bd3212f84a8"]
 }, Open  ]]
 }
 ]
