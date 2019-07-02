@@ -10,51 +10,327 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3091,         85]
-NotebookOptionsPosition[      2028,         55]
-NotebookOutlinePosition[      2836,         82]
-CellTagsIndexPosition[      2793,         79]
+NotebookDataLength[     14587,        368]
+NotebookOptionsPosition[     13014,        331]
+NotebookOutlinePosition[     13822,        358]
+CellTagsIndexPosition[     13779,        355]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Forecast Accuracy Tracking", "Title",
+Cell["IoT Data Storage on a Blockchain", "Title",
  CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
   3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770629187164171*^9, 
-  3.770629190665093*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
+  3.770629190665093*^9}, {3.771082338636999*^9, 
+  3.7710823642564497`*^9}},ExpressionUUID->"49ab34ee-bfd5-49f5-beef-\
 400d3cc456dd"],
 
-Cell["By Tony Koop", "Text",
+Cell["\<\
+by Tony Koop
+Mentored by Matthew Szudzik\
+\>", "Text",
  CellChangeTimes->{{3.549624168509506*^9, 3.549624171985794*^9}, {
   3.549624508772977*^9, 3.549624510775043*^9}, {3.5498187159613867`*^9, 
   3.5498187170087957`*^9}, {3.549819049020514*^9, 3.5498190533440437`*^9}, {
   3.77005561844785*^9, 3.7700556489651537`*^9}, {3.770629192801318*^9, 
-  3.770629197888893*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
+  3.770629197888893*^9}, {3.771083279771476*^9, 
+  3.771083292442835*^9}},ExpressionUUID->"94536f76-3fd2-4bf6-b228-\
 fa93ec9acae9"],
 
-Cell["Mentor - Matthew Szudzik", "Text",
- CellChangeTimes->{{3.549624515773694*^9, 3.5496245246892014`*^9}, {
-  3.5498187208956137`*^9, 3.5498187221413403`*^9}, {3.5498190558319674`*^9, 
-  3.54981906151682*^9}, {3.770055624686027*^9, 3.770055659820487*^9}, {
-  3.7706292041091957`*^9, 
-  3.7706292219246883`*^9}},ExpressionUUID->"b70c649b-a958-4202-9f22-\
-238ea1f9c7d4"],
-
 Cell["\<\
-One Sentence Project Description:
-Use WL to track weather forecast accuracy by taking a screenshot of the \
-forecast and compare it against measured results to provide an accuracy score.\
+The code below is used to fetch data streaming from a weather station using \
+HTTP requests. \
 \>", "Text",
  CellChangeTimes->{{3.770629225417316*^9, 3.770629243156436*^9}, {
-  3.770629343594851*^9, 
-  3.770629518239246*^9}},ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-\
-cca681f25e5e"]
+  3.770629343594851*^9, 3.770629518239246*^9}, {3.771083300634212*^9, 
+  3.771083301578216*^9}, {3.771083429823304*^9, 3.771083518778612*^9}, {
+  3.771084368954064*^9, 
+  3.7710843707424173`*^9}},ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-\
+cca681f25e5e"],
+
+Cell["\<\
+Questions:
+Would it be possible to figure out the decay rate of new weather station \
+installations? 
+Why aren\[CloseCurlyQuote]t governments building new official weather \
+stations?\
+\>", "Text",
+ CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
+  3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
+  3.771084313003523*^9}},ExpressionUUID->"76323e88-8e60-4739-8cb9-\
+0af2ae696da9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(*", 
+                    RowBox[{
+                    "Send", " ", "a", " ", "login", " ", "request", " ", 
+                    "with", " ", "username", " ", "and", " ", "password", " ",
+                     "to", " ", "get", " ", "a", " ", "session", " ", 
+                    RowBox[{"token", "."}]}], "*)"}], "\n", 
+                    RowBox[{"URLExecute", "[", 
+                    RowBox[{"HTTPRequest", "[", 
+                    RowBox[{"\[LeftAssociation]", "\n", 
+                    RowBox[{"Method", "\[Rule]"}]}]}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], "POST"}], 
+                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "Scheme", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], "http"}], 
+                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "Domain", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], 
+                    RowBox[{"marapi", ".", "myacurite", ".", "com"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "Path", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], "/", "users"}], "/", 
+                    "login"}], "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "ContentType", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], 
+                    RowBox[{"application", "/", "json"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "Body", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]", 
+                    RowBox[{"ExportString", "[", 
+                    RowBox[{"<|", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "email", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}]}]}]}], 
+                   "\[CloseCurlyDoubleQuote]"}], 
+                  RowBox[{
+                   RowBox[{"wrfcoin", "@", "gmx"}], ".", "com"}]}], 
+                 "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                RowBox[{
+                 RowBox[{
+                 "\[OpenCurlyDoubleQuote]", "password", 
+                  "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+               "\[CloseCurlyDoubleQuote]"}], 
+              RowBox[{"h5h3f", "**", "kD"}]}], "\[CloseCurlyDoubleQuote]"}], 
+            ",", "\n", 
+            RowBox[{
+             RowBox[{
+             "\[OpenCurlyDoubleQuote]", "remember", 
+              "\[CloseCurlyDoubleQuote]"}], "\[Rule]", "True"}]}], "\n"}], 
+          "|>"}], ","}], "\[CloseCurlyDoubleQuote]"}], "RawJSON"}], 
+      "\[CloseCurlyDoubleQuote]"}], "]"}], "\[RightAssociation]"}], "]"}], 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.771082391812119*^9, 3.7710823955685368`*^9}, {
+   3.771083316147428*^9, 3.7710833248755836`*^9}, {3.771083555734696*^9, 
+   3.771083560126384*^9}, 3.7710837595752974`*^9, 3.77108382104727*^9, {
+   3.771084392411193*^9, 3.771084461903273*^9}},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Syntax","bktmcp",
+   "\"Expression \\\"\\!\\(\\*RowBox[{\\\"HTTPRequest\\\", \\\"[\\\", \
+RowBox[{\\\"\[LeftAssociation]\\\", RowBox[{\\\"Method\\\", \
+\\\"\[Rule]\\\"}]}]}]\\)\\\" has no closing \
+\\\"\\!\\(\\*RowBox[{\\\"\\\\\\\"]\\\\\\\"\\\"}]\\)\\\"\\!\\(\\*RowBox[{\\\"\\\
+\\\\\"\\\\\\\"\\\"}]\\).\"",2,95,12,31025095271756117170,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.771084432363839*^9},
+ CellLabel->
+  "During evaluation of \
+In[95]:=",ExpressionUUID->"ff8feab8-a826-4fba-8314-bd9029668adc"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Sending", " ", "a", " ", "request", " ", "for", " ", "the", " ", 
+     RowBox[{"account", "'"}], "s", " ", "hubs"}], ",", " ", 
+    RowBox[{"with", " ", "the", " ", "session", " ", "token", " ", 
+     RowBox[{"header", "."}]}]}], "*)"}], "\n", 
+  RowBox[{"URLExecute", "[", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{"<|", "\n", "   ", 
+     RowBox[{
+      RowBox[{"Method", " ", "->", " ", "\"\<GET\>\""}], ",", "\n", "   ", 
+      RowBox[{"\"\<Scheme\>\"", " ", "->", " ", "\"\<http\>\""}], ",", "\n", 
+      "   ", 
+      RowBox[{
+      "\"\<Domain\>\"", " ", "->", " ", "\"\<marapi.myacurite.com\>\""}], ",",
+       "\n", "   ", 
+      RowBox[{
+      "\"\<Path\>\"", " ", "->", " ", 
+       "\"\</account/220508/dashboard/hubs\>\""}], ",", "\n", "   ", 
+      RowBox[{"\"\<Headers\>\"", " ", "->", " ", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<x-one-vue-token\>\"", " ", "->", " ", 
+         "\"\<7bcfed00-ba36-4de4-a6cd-994f721712a1\>\""}], "}"}]}]}], "|>"}], 
+    "]"}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.771082448636874*^9, 3.771082449838254*^9}, {
+  3.771083338467074*^9, 3.7710833448235617`*^9}, {3.77108379291358*^9, 
+  3.7710838137518787`*^9}, {3.7710840608636713`*^9, 3.771084070035021*^9}, {
+  3.771084134332685*^9, 
+  3.771084135081994*^9}},ExpressionUUID->"2614d193-01b2-416b-ac9a-\
+e7b8c11e22a0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(*", 
+                    RowBox[{
+                    RowBox[{
+                    "Send", " ", "a", " ", "request", " ", "for", " ", "a", 
+                    " ", "given", " ", 
+                    RowBox[{"hub", "'"}], "s", " ", "information"}], ",", " ", 
+                    RowBox[{"including", " ", "weather", " ", "data"}], ",", 
+                    " ", 
+                    RowBox[{
+                    "with", " ", "the", " ", "session", " ", "token", " ", 
+                    RowBox[{"header", "."}]}]}], "*)"}], "\n", 
+                    RowBox[{"URLExecute", "[", 
+                    RowBox[{"HTTPRequest", "[", 
+                    RowBox[{"\[LeftAssociation]", "\n", 
+                    RowBox[{"Method", "\[Rule]"}]}]}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], "GET"}], 
+                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "Scheme", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], "http"}], 
+                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    "\[OpenCurlyDoubleQuote]", "Domain", 
+                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                    "\[CloseCurlyDoubleQuote]"}], 
+                   RowBox[{"marapi", ".", "myacurite", ".", "com"}]}], 
+                  "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+                 RowBox[{
+                  RowBox[{
+                  "\[OpenCurlyDoubleQuote]", "Path", 
+                   "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
+                "\[CloseCurlyDoubleQuote]"}], "/", "account"}], "/", 
+              "220508"}], "/", "dashboard"}], "/", "hubs"}], "/", "239430"}], 
+          "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
+         RowBox[{
+          RowBox[{
+          "\[OpenCurlyDoubleQuote]", "Headers", "\[CloseCurlyDoubleQuote]"}], 
+          "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\[OpenCurlyDoubleQuote]", 
+             RowBox[{"x", "-", "one", "-", "vue", "-", "token"}], 
+             "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}]}]}], 
+        "\[CloseCurlyDoubleQuote]"}], "mytoken"}], 
+      "\[CloseCurlyDoubleQuote]"}], "}"}], "\[RightAssociation]"}], "]"}], 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.771082544882339*^9, 3.771082546356468*^9}, {
+  3.771083358210535*^9, 3.771083361512175*^9}, {3.771084073003517*^9, 
+  3.771084075555132*^9}, {3.771084183491238*^9, 3.77108421424384*^9}},
+ EmphasizeSyntaxErrors->True,
+ CellLabel->"In[95]:=",ExpressionUUID->"164c7c84-e3da-411a-8622-49e80f317948"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Import", " ", "a", " ", "JSON", " ", "response", " ", 
+    RowBox[{"(", 
+     RowBox[{
+     "like", " ", "that", " ", "returned", " ", "by", " ", "these", " ", 
+      "URLExecute", " ", "calls"}], ")"}], " ", "as", " ", "an", " ", 
+    RowBox[{"association", "."}]}], "*)"}], "\n", 
+  RowBox[{"ImportString", "[", 
+   RowBox[{
+   "\"\<{\\n\\t\\\"email\\\":\\\"myemail\\\",\\n\\t\\\"password\\\":\\\"\
+mysecretpassword\\\"\\n}\>\"", ",", "\"\<RawJSON\>\""}], "]"}]}]], "Code",
+ CellChangeTimes->{
+  3.771082569267932*^9, {3.771083376560582*^9, 
+   3.771083382657256*^9}},ExpressionUUID->"dc458ab8-4823-4359-9ac9-\
+73f6b8db5112"]
 }, Open  ]]
 },
-WindowSize->{634, 350},
-WindowMargins->{{6, Automatic}, {188, Automatic}},
+WindowSize->{775, 748},
+WindowMargins->{{Automatic, -235}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -67,7 +343,7 @@ DockedCells->{
       RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
       40]}], CellFrameMargins -> 10, Background -> 
    RGBColor[0.12, 0.14, 0.15]]},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 11, 2019)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -82,10 +358,17 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 268, 4, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
-Cell[851, 28, 400, 6, 35, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1254, 36, 370, 6, 35, "Text",ExpressionUUID->"b70c649b-a958-4202-9f22-238ea1f9c7d4"],
-Cell[1627, 44, 385, 8, 81, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"]
+Cell[580, 22, 325, 5, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
+Cell[908, 29, 485, 10, 58, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[1396, 41, 438, 9, 35, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
+Cell[1837, 52, 432, 10, 81, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
+Cell[CellGroupData[{
+Cell[2294, 66, 4664, 111, 262, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+Cell[6961, 179, 564, 12, 24, "Message",ExpressionUUID->"ff8feab8-a826-4fba-8314-bd9029668adc"]
+}, Open  ]],
+Cell[7540, 194, 1402, 33, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+Cell[8945, 229, 3370, 81, 167, "Code",ExpressionUUID->"164c7c84-e3da-411a-8622-49e80f317948"],
+Cell[12318, 312, 680, 16, 72, "Code",ExpressionUUID->"dc458ab8-4823-4359-9ac9-73f6b8db5112"]
 }, Open  ]]
 }
 ]
