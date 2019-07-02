@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14587,        368]
-NotebookOptionsPosition[     13014,        331]
-NotebookOutlinePosition[     13822,        358]
-CellTagsIndexPosition[     13779,        355]
+NotebookDataLength[     51117,       1164]
+NotebookOptionsPosition[     48832,       1114]
+NotebookOutlinePosition[     49669,       1142]
+CellTagsIndexPosition[     49626,       1139]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -54,143 +54,76 @@ Cell["\<\
 Questions:
 Would it be possible to figure out the decay rate of new weather station \
 installations? 
-Why aren\[CloseCurlyQuote]t governments building new official weather \
-stations?\
+Why aren\[CloseCurlyQuote]t governments building new official weather stations?
+Could a Neural Net be used for anomaly detection? To say weather the station \
+is indoors, effected by HVAC, radiant heat from buildings, etc?
+\
 \>", "Text",
  CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
   3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
-  3.771084313003523*^9}},ExpressionUUID->"76323e88-8e60-4739-8cb9-\
+  3.771084313003523*^9}, {3.77108524061522*^9, 
+  3.7710853136265383`*^9}},ExpressionUUID->"76323e88-8e60-4739-8cb9-\
 0af2ae696da9"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Send", " ", "a", " ", "login", " ", "request", " ", "with", " ", 
+    "username", " ", "and", " ", "password", " ", "to", " ", "get", " ", "a", 
+    " ", "session", " ", 
+    RowBox[{"token", "."}]}], "*)"}], "\n", 
+  RowBox[{"out", " ", "=", " ", 
    RowBox[{
     RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{
+     RowBox[{"URLExecute", "[", 
+      RowBox[{"HTTPRequest", "[", 
+       RowBox[{"\[LeftAssociation]", "\n", 
         RowBox[{
+         RowBox[{"Method", "\[Rule]", "\"\<POST\>\""}], ",", "\n", 
+         RowBox[{"\"\<Scheme\>\"", "\[Rule]", "\"\<https\>\""}], ",", "\n", 
          RowBox[{
-          RowBox[{
+         "\"\<Domain\>\"", "\[Rule]", "\"\<marapi.myacurite.com\>\""}], ",", 
+         "\n", 
+         RowBox[{"\"\<Path\>\"", "\[Rule]", "\"\</users/login\>\""}], ",", 
+         "\n", 
+         RowBox[{
+         "\"\<ContentType\>\"", "\[Rule]", "\"\<application/json\>\""}], ",", 
+         "\n", 
+         RowBox[{"\"\<Body\>\"", "\[Rule]", 
+          RowBox[{"ExportString", "[", 
            RowBox[{
-            RowBox[{
+            RowBox[{"<|", "\n", 
              RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"(*", 
-                    RowBox[{
-                    "Send", " ", "a", " ", "login", " ", "request", " ", 
-                    "with", " ", "username", " ", "and", " ", "password", " ",
-                     "to", " ", "get", " ", "a", " ", "session", " ", 
-                    RowBox[{"token", "."}]}], "*)"}], "\n", 
-                    RowBox[{"URLExecute", "[", 
-                    RowBox[{"HTTPRequest", "[", 
-                    RowBox[{"\[LeftAssociation]", "\n", 
-                    RowBox[{"Method", "\[Rule]"}]}]}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], "POST"}], 
-                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "Scheme", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], "http"}], 
-                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "Domain", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], 
-                    RowBox[{"marapi", ".", "myacurite", ".", "com"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "Path", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], "/", "users"}], "/", 
-                    "login"}], "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "ContentType", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], 
-                    RowBox[{"application", "/", "json"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "Body", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]", 
-                    RowBox[{"ExportString", "[", 
-                    RowBox[{"<|", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "email", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}]}]}]}], 
-                   "\[CloseCurlyDoubleQuote]"}], 
-                  RowBox[{
-                   RowBox[{"wrfcoin", "@", "gmx"}], ".", "com"}]}], 
-                 "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                RowBox[{
-                 RowBox[{
-                 "\[OpenCurlyDoubleQuote]", "password", 
-                  "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-               "\[CloseCurlyDoubleQuote]"}], 
-              RowBox[{"h5h3f", "**", "kD"}]}], "\[CloseCurlyDoubleQuote]"}], 
-            ",", "\n", 
-            RowBox[{
-             RowBox[{
-             "\[OpenCurlyDoubleQuote]", "remember", 
-              "\[CloseCurlyDoubleQuote]"}], "\[Rule]", "True"}]}], "\n"}], 
-          "|>"}], ","}], "\[CloseCurlyDoubleQuote]"}], "RawJSON"}], 
-      "\[CloseCurlyDoubleQuote]"}], "]"}], "\[RightAssociation]"}], "]"}], 
-  "]"}]], "Code",
+              RowBox[{"\"\<email\>\"", "\[Rule]", "\"\<wrfcoin@gmx.com\>\""}],
+               ",", "\n", 
+              RowBox[{"\"\<password\>\"", "\[Rule]", "\"\<h5h3f**kD\>\""}], 
+              ",", "\n", 
+              RowBox[{"\"\<remember\>\"", "\[Rule]", "\"\<True\>\""}]}], "\n",
+              "|>"}], ",", "\"\<RawJSON\>\""}], "]"}]}]}], 
+        "\[RightAssociation]"}], "]"}], "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "//", "Values"}]}]}]], "Code",
  CellChangeTimes->{{3.771082391812119*^9, 3.7710823955685368`*^9}, {
    3.771083316147428*^9, 3.7710833248755836`*^9}, {3.771083555734696*^9, 
    3.771083560126384*^9}, 3.7710837595752974`*^9, 3.77108382104727*^9, {
-   3.771084392411193*^9, 3.771084461903273*^9}},
- EmphasizeSyntaxErrors->
-  True,ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+   3.771084392411193*^9, 3.771084461903273*^9}, {3.771085846168277*^9, 
+   3.771085855553465*^9}, {3.771085939340316*^9, 3.77108594333871*^9}, {
+   3.7710873409820423`*^9, 3.771087378918182*^9}, 3.771087427253346*^9, {
+   3.771087910619619*^9, 3.771087912391076*^9}, {3.77108794563041*^9, 
+   3.771087946140184*^9}, {3.771088044068439*^9, 3.771088055248048*^9}, {
+   3.7710881002918673`*^9, 3.771088104291875*^9}, {3.771088139689871*^9, 
+   3.771088233007464*^9}, {3.771088510625771*^9, 3.771088512326501*^9}, {
+   3.771088553596797*^9, 3.771088583212084*^9}, 3.7710891179729443`*^9},
+ CellLabel->"In[42]:=",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
 
-Cell[BoxData[
- TemplateBox[{
-  "Syntax","bktmcp",
-   "\"Expression \\\"\\!\\(\\*RowBox[{\\\"HTTPRequest\\\", \\\"[\\\", \
-RowBox[{\\\"\[LeftAssociation]\\\", RowBox[{\\\"Method\\\", \
-\\\"\[Rule]\\\"}]}]}]\\)\\\" has no closing \
-\\\"\\!\\(\\*RowBox[{\\\"\\\\\\\"]\\\\\\\"\\\"}]\\)\\\"\\!\\(\\*RowBox[{\\\"\\\
-\\\\\"\\\\\\\"\\\"}]\\).\"",2,95,12,31025095271756117170,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.771084432363839*^9},
- CellLabel->
-  "During evaluation of \
-In[95]:=",ExpressionUUID->"ff8feab8-a826-4fba-8314-bd9029668adc"]
+Cell[BoxData["\<\"1f5ee239-f2d6-410a-9fb3-5fccc6e28d3a\"\>"], "Output",
+ CellChangeTimes->{3.771089118721138*^9, 3.7710894246947117`*^9},
+ CellLabel->"Out[42]=",ExpressionUUID->"21d93c21-1e2f-4ddb-80f9-3f5b0fe8bc19"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -205,110 +138,231 @@ Cell[BoxData[
    RowBox[{"HTTPRequest", "[", 
     RowBox[{"<|", "\n", "   ", 
      RowBox[{
-      RowBox[{"Method", " ", "->", " ", "\"\<GET\>\""}], ",", "\n", "   ", 
-      RowBox[{"\"\<Scheme\>\"", " ", "->", " ", "\"\<http\>\""}], ",", "\n", 
+      RowBox[{"Method", " ", "\[Rule]", " ", "\"\<GET\>\""}], ",", "\n", 
       "   ", 
+      RowBox[{"\"\<Scheme\>\"", " ", "\[Rule]", " ", "\"\<https\>\""}], ",", 
+      "\n", "   ", 
       RowBox[{
-      "\"\<Domain\>\"", " ", "->", " ", "\"\<marapi.myacurite.com\>\""}], ",",
-       "\n", "   ", 
-      RowBox[{
-      "\"\<Path\>\"", " ", "->", " ", 
-       "\"\</account/220508/dashboard/hubs\>\""}], ",", "\n", "   ", 
-      RowBox[{"\"\<Headers\>\"", " ", "->", " ", 
+      "\"\<Domain\>\"", " ", "\[Rule]", " ", 
+       "\"\<marapi.myacurite.com/accounts/220508/dashboard/hubs/910057\>\""}],
+       ",", "\n", "   ", 
+      RowBox[{"\"\<ContentType\>\"", "\[Rule]", "\"\<application/json\>\""}], 
+      ",", "\n", "   ", 
+      RowBox[{"\"\<Headers\>\"", " ", "\[Rule]", " ", 
        RowBox[{"{", 
         RowBox[{
-        "\"\<x-one-vue-token\>\"", " ", "->", " ", 
-         "\"\<7bcfed00-ba36-4de4-a6cd-994f721712a1\>\""}], "}"}]}]}], "|>"}], 
+        "\"\<x-one-vue-token\>\"", " ", "\[Rule]", " ", 
+         "\"\<e0505d62-24d7-4ee8-8a09-937648bbfa78\>\""}], "}"}]}]}], "|>"}], 
     "]"}], "]"}]}]], "Code",
  CellChangeTimes->{{3.771082448636874*^9, 3.771082449838254*^9}, {
-  3.771083338467074*^9, 3.7710833448235617`*^9}, {3.77108379291358*^9, 
-  3.7710838137518787`*^9}, {3.7710840608636713`*^9, 3.771084070035021*^9}, {
-  3.771084134332685*^9, 
-  3.771084135081994*^9}},ExpressionUUID->"2614d193-01b2-416b-ac9a-\
-e7b8c11e22a0"],
+   3.771083338467074*^9, 3.7710833448235617`*^9}, {3.77108379291358*^9, 
+   3.7710838137518787`*^9}, {3.7710840608636713`*^9, 3.771084070035021*^9}, {
+   3.771084134332685*^9, 3.771084135081994*^9}, {3.771085922018978*^9, 
+   3.7710859539142*^9}, {3.7710879556917143`*^9, 3.771087967027676*^9}, {
+   3.7710885916439466`*^9, 3.771088608800115*^9}, {3.771088756564013*^9, 
+   3.77108876179359*^9}, {3.771088842226864*^9, 3.771088846537229*^9}, {
+   3.771089103315099*^9, 3.77108913465497*^9}, {3.7710891793458443`*^9, 
+   3.771089179477522*^9}, 3.771089291940974*^9, {3.771089327800702*^9, 
+   3.771089329664217*^9}, {3.7710893740587683`*^9, 3.771089375149967*^9}, {
+   3.771089407454576*^9, 3.771089417456294*^9}, {3.771089458408695*^9, 
+   3.771089483509128*^9}, {3.771089570159154*^9, 3.771089630728292*^9}, {
+   3.771089664303707*^9, 3.771089704623885*^9}, 3.771089906126796*^9},
+ CellLabel->"In[51]:=",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
 
 Cell[BoxData[
- RowBox[{
+ RowBox[{"{", 
   RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{
+   RowBox[{"\<\"name\"\>", "\[Rule]", "\<\"Tony's AcuRite\"\>"}], ",", 
+   RowBox[{"\<\"account_id\"\>", "\[Rule]", "220508"}], ",", 
+   RowBox[{"\<\"latitude\"\>", "\[Rule]", "\<\"42.387012\"\>"}], ",", 
+   RowBox[{"\<\"longitude\"\>", "\[Rule]", "\<\"-71.220635\"\>"}], ",", 
+   RowBox[{"\<\"elevation\"\>", "\[Rule]", "43.3`"}], ",", 
+   RowBox[{"\<\"elevation_unit\"\>", "\[Rule]", "\<\"ft\"\>"}], ",", 
+   RowBox[{"\<\"timezone\"\>", "\[Rule]", "\<\"America/New_York\"\>"}], ",", 
+   RowBox[{"\<\"country\"\>", "\[Rule]", "\<\"US\"\>"}], ",", 
+   RowBox[{"\<\"one_minute_page_refresh\"\>", "\[Rule]", "False"}], ",", 
+   RowBox[{"\<\"devices\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{
+       RowBox[{"\<\"id\"\>", "\[Rule]", "910058"}], ",", 
+       RowBox[{"\<\"name\"\>", 
+        "\[Rule]", "\<\"Tony's 5-in-1 Weather Station\"\>"}], ",", 
+       RowBox[{"\<\"model_code\"\>", "\[Rule]", "\<\"5in1WS\"\>"}], ",", 
+       RowBox[{"\<\"placement_code\"\>", "\[Rule]", "\<\"OUT\"\>"}], ",", 
+       RowBox[{"\<\"status_code\"\>", "\[Rule]", "\<\"green\"\>"}], ",", 
+       RowBox[{"\<\"battery_level\"\>", "\[Rule]", "\<\"Normal\"\>"}], ",", 
+       RowBox[{"\<\"signal_strength\"\>", "\[Rule]", "4"}], ",", 
+       RowBox[{"\<\"last_check_in_at\"\>", 
+        "\[Rule]", "\<\"2019-07-02T20:56:07.000+00:00\"\>"}], ",", 
+       RowBox[{"\<\"timezone\"\>", "\[Rule]", "\<\"America/New_York\"\>"}], 
+       ",", 
+       RowBox[{"\<\"meta_file\"\>", 
+        "\[Rule]", \
+"\<\"https://dataapi.myacurite.com/mar-sensor-readings/24C86E0C2838-00000895-\
+5in1WS/meta.json\"\>"}], ",", 
+       RowBox[{"\<\"summary_files\"\>", "\[Rule]", 
         RowBox[{
+        "{", "\<\"https://dataapi.myacurite.com/mar-sensor-readings/\
+24C86E0C2838-00000895-5in1WS/1h-summaries/2019-07-02.json\"\>", "}"}]}], ",", 
+       
+       RowBox[{"\<\"temp_high_value\"\>", "\[Rule]", "\<\"85.3\"\>"}], ",", 
+       RowBox[{"\<\"temp_high_at\"\>", "\[Rule]", "\<\"3:21 PM\"\>"}], ",", 
+       RowBox[{"\<\"temp_low_value\"\>", "\[Rule]", "\<\"67.6\"\>"}], ",", 
+       RowBox[{"\<\"temp_low_at\"\>", "\[Rule]", "\<\"5:11 AM\"\>"}], ",", 
+       RowBox[{"\<\"daily_cumulative_strikes\"\>", "\[Rule]", "Null"}], ",", 
+       RowBox[{"\<\"daily_cumulative_measured_light\"\>", "\[Rule]", "Null"}],
+        ",", 
+       RowBox[{"\<\"current_comfort_index\"\>", "\[Rule]", "Null"}], ",", 
+       RowBox[{"\<\"created_at\"\>", 
+        "\[Rule]", "\<\"2019-07-01T18:38:47.905Z\"\>"}], ",", 
+       RowBox[{"\<\"sensors\"\>", "\[Rule]", 
+        RowBox[{"{", 
          RowBox[{
-          RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{
-                RowBox[{
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"(*", 
-                    RowBox[{
-                    RowBox[{
-                    "Send", " ", "a", " ", "request", " ", "for", " ", "a", 
-                    " ", "given", " ", 
-                    RowBox[{"hub", "'"}], "s", " ", "information"}], ",", " ", 
-                    RowBox[{"including", " ", "weather", " ", "data"}], ",", 
-                    " ", 
-                    RowBox[{
-                    "with", " ", "the", " ", "session", " ", "token", " ", 
-                    RowBox[{"header", "."}]}]}], "*)"}], "\n", 
-                    RowBox[{"URLExecute", "[", 
-                    RowBox[{"HTTPRequest", "[", 
-                    RowBox[{"\[LeftAssociation]", "\n", 
-                    RowBox[{"Method", "\[Rule]"}]}]}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], "GET"}], 
-                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "Scheme", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], "http"}], 
-                    "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                    RowBox[{
-                    RowBox[{
-                    "\[OpenCurlyDoubleQuote]", "Domain", 
-                    "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                    "\[CloseCurlyDoubleQuote]"}], 
-                   RowBox[{"marapi", ".", "myacurite", ".", "com"}]}], 
-                  "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-                 RowBox[{
-                  RowBox[{
-                  "\[OpenCurlyDoubleQuote]", "Path", 
-                   "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}], 
-                "\[CloseCurlyDoubleQuote]"}], "/", "account"}], "/", 
-              "220508"}], "/", "dashboard"}], "/", "hubs"}], "/", "239430"}], 
-          "\[CloseCurlyDoubleQuote]"}], ",", "\n", 
-         RowBox[{
-          RowBox[{
-          "\[OpenCurlyDoubleQuote]", "Headers", "\[CloseCurlyDoubleQuote]"}], 
-          "\[Rule]", 
           RowBox[{"{", 
            RowBox[{
-            RowBox[{"\[OpenCurlyDoubleQuote]", 
-             RowBox[{"x", "-", "one", "-", "vue", "-", "token"}], 
-             "\[CloseCurlyDoubleQuote]"}], "\[Rule]"}]}]}]}], 
-        "\[CloseCurlyDoubleQuote]"}], "mytoken"}], 
-      "\[CloseCurlyDoubleQuote]"}], "}"}], "\[RightAssociation]"}], "]"}], 
-  "]"}]], "Code",
- CellChangeTimes->{{3.771082544882339*^9, 3.771082546356468*^9}, {
-  3.771083358210535*^9, 3.771083361512175*^9}, {3.771084073003517*^9, 
-  3.771084075555132*^9}, {3.771084183491238*^9, 3.77108421424384*^9}},
- EmphasizeSyntaxErrors->True,
- CellLabel->"In[95]:=",ExpressionUUID->"164c7c84-e3da-411a-8622-49e80f317948"],
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190024"}], ",", 
+            RowBox[{"\<\"sensor_code\"\>", "\[Rule]", "\<\"Temperature\"\>"}],
+             ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Temperature\"\>"}],
+             ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"83.8\"\>"}],
+             ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "1"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"F\"\>"}], ",", 
+            RowBox[{"\<\"show_tenths\"\>", "\[Rule]", "True"}]}], "}"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190025"}], ",", 
+            RowBox[{"\<\"sensor_code\"\>", "\[Rule]", "\<\"Humidity\"\>"}], 
+            ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Humidity\"\>"}], 
+            ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"49\"\>"}], 
+            ",", 
+            RowBox[{"\<\"display_unit\"\>", "\[Rule]", "\<\"%\"\>"}], ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "2"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"%RH\"\>"}]}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190026"}], ",", 
+            RowBox[{"\<\"sensor_code\"\>", "\[Rule]", "\<\"Wind Speed\"\>"}], 
+            ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Wind Speed\"\>"}], 
+            ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"3\"\>"}], 
+            ",", 
+            RowBox[{"\<\"display_unit\"\>", "\[Rule]", "\<\"mph\"\>"}], ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "3"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"mph\"\>"}]}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190027"}], ",", 
+            
+            RowBox[{"\<\"sensor_code\"\>", 
+             "\[Rule]", "\<\"Wind Direction\"\>"}], ",", 
+            
+            RowBox[{"\<\"sensor_name\"\>", 
+             "\[Rule]", "\<\"Wind Direction\"\>"}], ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"270\"\>"}], 
+            ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "4"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "Null"}], ",", 
+            RowBox[{"\<\"wind_direction\"\>", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\<\"abbreviation\"\>", "\[Rule]", "\<\"W\"\>"}], ",", 
+               
+               RowBox[{"\<\"direction\"\>", "\[Rule]", "\<\"270.0\"\>"}], ",", 
+               RowBox[{"\<\"point\"\>", "\[Rule]", "\<\"West\"\>"}]}], 
+              "}"}]}], ",", 
+            RowBox[{"\<\"previous_wind_direction\"\>", "\[Rule]", "Null"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190029"}], ",", 
+            RowBox[{"\<\"sensor_code\"\>", "\[Rule]", "\<\"Dew Point\"\>"}], 
+            ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Dew Point\"\>"}], 
+            ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"63\"\>"}], 
+            ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "6"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"F\"\>"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190030"}], ",", 
+            RowBox[{"\<\"sensor_code\"\>", "\[Rule]", "\<\"Heat Index\"\>"}], 
+            ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Heat Index\"\>"}], 
+            ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"85\"\>"}], 
+            ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "7"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"F\"\>"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190023"}], ",", 
+            
+            RowBox[{"\<\"sensor_code\"\>", 
+             "\[Rule]", "\<\"Barometric Pressure\"\>"}], ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Pressure\"\>"}], 
+            ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"29.5\"\>"}],
+             ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "9"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"inHg\"\>"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190032"}], ",", 
+            RowBox[{"\<\"sensor_code\"\>", "\[Rule]", "\<\"Rainfall\"\>"}], 
+            ",", 
+            RowBox[{"\<\"sensor_name\"\>", "\[Rule]", "\<\"Rainfall\"\>"}], 
+            ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"0.0\"\>"}], 
+            ",", 
+            RowBox[{"\<\"display_unit\"\>", "\[Rule]", "\<\"in\"\>"}], ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "11"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"in\"\>"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\<\"id\"\>", "\[Rule]", "4190022"}], ",", 
+            
+            RowBox[{"\<\"sensor_code\"\>", 
+             "\[Rule]", "\<\"WindSpeedAvg\"\>"}], ",", 
+            
+            RowBox[{"\<\"sensor_name\"\>", 
+             "\[Rule]", "\<\"Wind Speed Average\"\>"}], ",", 
+            RowBox[{"\<\"last_reading_value\"\>", "\[Rule]", "\<\"3\"\>"}], 
+            ",", 
+            RowBox[{"\<\"channel\"\>", "\[Rule]", "12"}], ",", 
+            RowBox[{"\<\"chart_unit\"\>", "\[Rule]", "\<\"mph\"\>"}], ",", 
+            RowBox[{"\<\"wind_speed_peak_value\"\>", "\[Rule]", "Null"}]}], 
+           "}"}]}], "}"}]}], ",", 
+       RowBox[{"\<\"wired_sensors\"\>", "\[Rule]", 
+        RowBox[{"{", "}"}]}], ",", 
+       RowBox[{"\<\"model\"\>", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\<\"id\"\>", "\[Rule]", "4020"}], ",", 
+          RowBox[{"\<\"code\"\>", "\[Rule]", "\<\"5in1WS\"\>"}], ",", 
+          
+          RowBox[{"\<\"description\"\>", 
+           "\[Rule]", "\<\"5-in-1 Weather Station\"\>"}], ",", 
+          RowBox[{"\<\"has_wifi\"\>", "\[Rule]", "False"}]}], "}"}]}]}], 
+      "}"}], "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.77108943996894*^9, 3.771089485280579*^9, {3.771089651905162*^9, 
+   3.77108971199339*^9}, 3.771089907922791*^9},
+ CellLabel->"Out[51]=",ExpressionUUID->"cfc82000-ccd2-486f-aeaf-93dcc11d7b2c"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -326,11 +380,740 @@ mysecretpassword\\\"\\n}\>\"", ",", "\"\<RawJSON\>\""}], "]"}]}]], "Code",
  CellChangeTimes->{
   3.771082569267932*^9, {3.771083376560582*^9, 
    3.771083382657256*^9}},ExpressionUUID->"dc458ab8-4823-4359-9ac9-\
-73f6b8db5112"]
+73f6b8db5112"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Send", " ", "a", " ", "request", " ", "for", " ", "a", " ", "given", " ", 
+     RowBox[{"hub", "'"}], "s", " ", "information"}], ",", " ", 
+    RowBox[{"including", " ", "weather", " ", "data"}], ",", " ", 
+    RowBox[{"with", " ", "the", " ", "session", " ", "token", " ", 
+     RowBox[{"header", "."}]}]}], "*)"}], "\n", 
+  RowBox[{"URLExecute", "[", 
+   RowBox[{"HTTPRequest", "[", 
+    RowBox[{"\[LeftAssociation]", "\n", 
+     RowBox[{
+      RowBox[{"Method", "\[Rule]", "\"\<GET\>\""}], ",", "\n", 
+      RowBox[{"\"\<Scheme\>\"", "\[Rule]", "\"\<http\>\""}], ",", "\n", 
+      RowBox[{"\"\<Domain\>\"", "\[Rule]", "\"\<marapi.myacurite.com\>\""}], 
+      ",", "\n", 
+      RowBox[{
+      "\"\<Path\>\"", "\[Rule]", 
+       "\"\</account/220508/dashboard/hubs/239430\>\""}], ",", "\n", 
+      RowBox[{"\"\<Headers\>\"", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<x-one-vue-token\>\"", "\[Rule]", "\"\<mytoken\>\""}], 
+        "}"}]}]}], "\[RightAssociation]"}], "]"}], "]"}]}]], "Code",
+ CellChangeTimes->{{3.771082544882339*^9, 3.771082546356468*^9}, {
+  3.771083358210535*^9, 3.771083361512175*^9}, {3.771084073003517*^9, 
+  3.771084075555132*^9}, {3.771084183491238*^9, 3.77108421424384*^9}, {
+  3.771087360863961*^9, 
+  3.7710873775884447`*^9}},ExpressionUUID->"164c7c84-e3da-411a-8622-\
+49e80f317948"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Syntax","bktmcp",
+   "\"Expression \\\"\\!\\(\\*RowBox[{\\\"HTTPRequest\\\", \\\"[\\\", \
+RowBox[{\\\"\[LeftAssociation]\\\", RowBox[{\\\"Method\\\", \
+\\\"\[Rule]\\\"}]}]}]\\)\\\" has no closing \
+\\\"\\!\\(\\*RowBox[{\\\"\\\\\\\"]\\\\\\\"\\\"}]\\)\\\"\\!\\(\\*RowBox[{\\\"\\\
+\\\\\"\\\\\\\"\\\"}]\\).\"",2,99,17,31025095271756117170,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7710860291879053`*^9},
+ CellLabel->
+  "During evaluation of \
+In[99]:=",ExpressionUUID->"81d1235b-42ec-4c61-bdd5-3804d483b038"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Give", " ", "the", " ", "string", " ", "of", " ", "weather", " ", "data",
+      " ", "above"}], ",", " ", 
+    RowBox[{
+    "find", " ", "its", " ", "hash", " ", "and", " ", "insert", " ", "into", 
+     " ", "the", " ", "Wolfram", " ", "Blockchain"}]}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"?", "Encrypt"}], "\n", 
+   RowBox[{"?", "Hash"}], "\n", 
+   RowBox[{"BlockchainPut", "[", "]"}]}]}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+  3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+  3.7710854065993137`*^9}, {3.771085515566758*^9, 
+  3.771085535084083*^9}},ExpressionUUID->"3328e4ce-4400-4a1f-9502-\
+1359fb90981f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/Encrypt",
+              ButtonNote->"paclet:ref/Encrypt"],
+             "\"paclet:ref/Encrypt\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Encrypt\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"password\\\\\\\",\
+\\\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+StyleBox[\\\"expr\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) encrypts \
+\\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\) using the specified password, \
+to give an encrypted object.\\n\\!\\(\\*RowBox[{\\\"Encrypt\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"keyspec\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"expr\\\
+\", \\\"TI\\\"]}], \\\"]\\\"}]\\) encrypts \\!\\(\\*StyleBox[\\\"expr\\\", \\\
+\"TI\\\"]\\) using the cryptographic key specification \
+\\!\\(\\*StyleBox[\\\"keyspec\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"Encrypt\\\", \\\"[\\\", \
+StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) interactively requests a \
+password with which to encrypt \\!\\(\\*StyleBox[\\\"expr\\\", \
+\\\"TI\\\"]\\).\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   
+                   TemplateBox[{
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", "paclet:ref/Encrypt", 
+                    "paclet:ref/Encrypt", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"],"\"  \"",StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False],
+                    "\"  \"",TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/Encrypt.html"],
+                     None}, 
+                    "http://reference.wolfram.com/language/ref/Encrypt.html", 
+                    "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", 
+                    RowBox[{"Protected", ",", "ReadProtected"}], "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`Encrypt\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{16., {5., 11.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{16., {5., 11.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/Encrypt",
+              ButtonNote->"paclet:ref/Encrypt"],
+             "\"paclet:ref/Encrypt\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Encrypt\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"password\\\\\\\",\
+\\\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+StyleBox[\\\"expr\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) encrypts \
+\\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\) using the specified password, \
+to give an encrypted object.\\n\\!\\(\\*RowBox[{\\\"Encrypt\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"keyspec\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"expr\\\
+\", \\\"TI\\\"]}], \\\"]\\\"}]\\) encrypts \\!\\(\\*StyleBox[\\\"expr\\\", \\\
+\"TI\\\"]\\) using the cryptographic key specification \
+\\!\\(\\*StyleBox[\\\"keyspec\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"Encrypt\\\", \\\"[\\\", \
+StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) interactively requests a \
+password with which to encrypt \\!\\(\\*StyleBox[\\\"expr\\\", \
+\\\"TI\\\"]\\).\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{13., {3., 10.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{13., {3., 10.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"Encrypt\", \"[\", \
+RowBox[{StyleBox[\"\\\"\\!\\(\\*StyleBox[\\\"password\\\",\\\"TI\\\"]\\)\\\"\"\
+, ShowStringCharacters->True], \",\", StyleBox[\"expr\", \"TI\"]}], \"]\"}]\) \
+encrypts \!\(\*StyleBox[\"expr\", \"TI\"]\) using the specified password, to \
+give an encrypted object.\n\!\(\*RowBox[{\"Encrypt\", \"[\", \
+RowBox[{StyleBox[\"keyspec\", \"TI\"], \",\", StyleBox[\"expr\", \"TI\"]}], \
+\"]\"}]\) encrypts \!\(\*StyleBox[\"expr\", \"TI\"]\) using the cryptographic \
+key specification \!\(\*StyleBox[\"keyspec\", \"TI\"]\).\n\
+\!\(\*RowBox[{\"Encrypt\", \"[\", StyleBox[\"expr\", \"TI\"], \"]\"}]\) \
+interactively requests a password with which to encrypt \!\(\*StyleBox[\"expr\
+\", \"TI\"]\).", "Documentation" -> 
+    Association[
+     "Local" -> "paclet:ref/Encrypt", "Web" -> 
+      "http://reference.wolfram.com/language/ref/Encrypt.html"], "OwnValues" -> 
+    None, "UpValues" -> None, "DownValues" -> None, "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {Protected, ReadProtected}, "FullName" -> 
+    "System`Encrypt"], False]]], "Output",
+ CellChangeTimes->{3.771085216794265*^9, 3.771085407253459*^9},
+ CellLabel->"Out[97]=",ExpressionUUID->"739ee594-a012-41c9-9286-89319bf51b5f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = False, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/Hash",
+              ButtonNote->"paclet:ref/Hash"],
+             "\"paclet:ref/Hash\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Hash\\\", \\\"[\\\", StyleBox[\
+\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives an integer hash code for the \
+expression \\!\\(\\*StyleBox[\\\"expr\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"Hash\\\", \\\"[\\\", RowBox[{StyleBox[\
+\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"type\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True]}], \\\"]\\\"}]\\) gives \
+an integer hash code of the specified type for \
+\\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"Hash\\\
+\", \\\"[\\\", RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"type\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", StyleBox[\\\
+\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"format\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\
+\\)\\\\\\\"\\\", ShowStringCharacters->True]}], \\\"]\\\"}]\\) gives a hash \
+code in the specified format.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False, False, False, False, 
+                False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   
+                   TemplateBox[{
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", "paclet:ref/Hash", 
+                    "paclet:ref/Hash", "Link", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"],"\"  \"",StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False],
+                    "\"  \"",TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL[
+                    "http://reference.wolfram.com/language/ref/Hash.html"], 
+                    None}, 
+                    "http://reference.wolfram.com/language/ref/Hash.html", 
+                    "Hyperlink", {
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]}, 
+                    BaseStyle -> {
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", "Protected", "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`Hash\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->6], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox["\<\" Symbol\"\>", "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{16., {5., 11.}}], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{16., {5., 11.}}]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/Hash",
+              ButtonNote->"paclet:ref/Hash"],
+             "\"paclet:ref/Hash\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Hash\\\", \\\"[\\\", StyleBox[\
+\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives an integer hash code for the \
+expression \\!\\(\\*StyleBox[\\\"expr\\\", \
+\\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"Hash\\\", \\\"[\\\", RowBox[{StyleBox[\
+\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"type\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True]}], \\\"]\\\"}]\\) gives \
+an integer hash code of the specified type for \
+\\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"Hash\\\
+\", \\\"[\\\", RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"type\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", StyleBox[\\\
+\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"format\\\\\\\",\\\\\\\"TI\\\\\\\"]\\\
+\\)\\\\\\\"\\\", ShowStringCharacters->True]}], \\\"]\\\"}]\\) gives a hash \
+code in the specified format.\"\>", "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{13., {3., 10.}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"],
+               ImageSizeCache->{13., {3., 10.}}]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          GrayLevel[0.8], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[
+   Association[
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"Hash\", \"[\", StyleBox[\"expr\", \"TI\"], \"]\"}]\) \
+gives an integer hash code for the expression \!\(\*StyleBox[\"expr\", \
+\"TI\"]\).\n\!\(\*RowBox[{\"Hash\", \"[\", RowBox[{StyleBox[\"expr\", \
+\"TI\"], \",\", \
+StyleBox[\"\\\"\\!\\(\\*StyleBox[\\\"type\\\",\\\"TI\\\"]\\)\\\"\", \
+ShowStringCharacters->True]}], \"]\"}]\) gives an integer hash code of the \
+specified type for \!\(\*StyleBox[\"expr\", \"TI\"]\).\n\
+\!\(\*RowBox[{\"Hash\", \"[\", RowBox[{StyleBox[\"expr\", \"TI\"], \",\", \
+StyleBox[\"\\\"\\!\\(\\*StyleBox[\\\"type\\\",\\\"TI\\\"]\\)\\\"\", \
+ShowStringCharacters->True], \",\", \
+StyleBox[\"\\\"\\!\\(\\*StyleBox[\\\"format\\\",\\\"TI\\\"]\\)\\\"\", \
+ShowStringCharacters->True]}], \"]\"}]\) gives a hash code in the specified \
+format.", "Documentation" -> 
+    Association[
+     "Local" -> "paclet:ref/Hash", "Web" -> 
+      "http://reference.wolfram.com/language/ref/Hash.html"], "OwnValues" -> 
+    None, "UpValues" -> None, "DownValues" -> None, "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> None, "Attributes" -> {Protected}, "FullName" -> 
+    "System`Hash"], False]]], "Output",
+ CellChangeTimes->{3.771085216794265*^9, 3.7710854074164753`*^9},
+ CellLabel->"Out[98]=",ExpressionUUID->"dc109317-9c31-433b-86d2-bda7572491fd"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", "W", "*)"}]], "Code",
+ CellChangeTimes->{{3.771085006065072*^9, 
+  3.771085010137249*^9}},ExpressionUUID->"b8ab719d-4f8b-4292-8f80-\
+4a976755fe30"]
 }, Open  ]]
 },
-WindowSize->{775, 748},
-WindowMargins->{{Automatic, -235}, {Automatic, 0}},
+WindowSize->{1009, 748},
+WindowMargins->{{Automatic, 4}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -343,6 +1126,7 @@ DockedCells->{
       RGBColor[0.97, 0.83, 0.35], FontFamily -> "Source Sans Pro", FontSize -> 
       40]}], CellFrameMargins -> 10, Background -> 
    RGBColor[0.12, 0.14, 0.15]]},
+Magnification:>1.25 Inherited,
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -358,17 +1142,29 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 325, 5, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
-Cell[908, 29, 485, 10, 58, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1396, 41, 438, 9, 35, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
-Cell[1837, 52, 432, 10, 81, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
+Cell[580, 22, 325, 5, 123, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
+Cell[908, 29, 485, 10, 73, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
+Cell[1396, 41, 438, 9, 44, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
+Cell[1837, 52, 624, 13, 188, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
 Cell[CellGroupData[{
-Cell[2294, 66, 4664, 111, 262, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
-Cell[6961, 179, 564, 12, 24, "Message",ExpressionUUID->"ff8feab8-a826-4fba-8314-bd9029668adc"]
+Cell[2486, 69, 2430, 49, 330, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+Cell[4919, 120, 216, 2, 42, "Output",ExpressionUUID->"21d93c21-1e2f-4ddb-80f9-3f5b0fe8bc19"]
 }, Open  ]],
-Cell[7540, 194, 1402, 33, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
-Cell[8945, 229, 3370, 81, 167, "Code",ExpressionUUID->"164c7c84-e3da-411a-8622-49e80f317948"],
-Cell[12318, 312, 680, 16, 72, "Code",ExpressionUUID->"dc458ab8-4823-4359-9ac9-73f6b8db5112"]
+Cell[CellGroupData[{
+Cell[5172, 127, 2165, 42, 210, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+Cell[7340, 171, 9320, 192, 927, "Output",ExpressionUUID->"cfc82000-ccd2-486f-aeaf-93dcc11d7b2c"]
+}, Open  ]],
+Cell[16675, 366, 680, 16, 90, "Code",ExpressionUUID->"dc458ab8-4823-4359-9ac9-73f6b8db5112"],
+Cell[CellGroupData[{
+Cell[17380, 386, 1394, 30, 210, "Code",ExpressionUUID->"164c7c84-e3da-411a-8622-49e80f317948"],
+Cell[18777, 418, 566, 12, 30, "Message",ExpressionUUID->"81d1235b-42ec-4c61-bdd5-3804d483b038"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19380, 435, 750, 18, 138, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
+Cell[20133, 455, 14171, 322, 177, "Output",ExpressionUUID->"739ee594-a012-41c9-9286-89319bf51b5f"],
+Cell[34307, 779, 14318, 325, 177, "Output",ExpressionUUID->"dc109317-9c31-433b-86d2-bda7572491fd"]
+}, Open  ]],
+Cell[48640, 1107, 176, 4, 65, "Code",ExpressionUUID->"b8ab719d-4f8b-4292-8f80-4a976755fe30"]
 }, Open  ]]
 }
 ]
