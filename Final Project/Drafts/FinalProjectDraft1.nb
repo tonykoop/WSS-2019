@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1117009,      22257]
-NotebookOptionsPosition[   1112511,      22181]
-NotebookOutlinePosition[   1113317,      22208]
-CellTagsIndexPosition[   1113274,      22205]
+NotebookDataLength[   1131290,      22541]
+NotebookOptionsPosition[   1126692,      22464]
+NotebookOutlinePosition[   1127498,      22491]
+CellTagsIndexPosition[   1127455,      22488]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -246,7 +246,7 @@ Cell[BoxData[
    3.771105595400465*^9, 3.771105613308576*^9}, {3.771167054633564*^9, 
    3.771167059175173*^9}},
  CellLabel->
-  "In[532]:=",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+  "In[546]:=",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
 
 Cell[BoxData[
  RowBox[{
@@ -368,7 +368,7 @@ Cell[BoxData[
    3.771109937350623*^9}, {3.7711497084321404`*^9, 3.7711497211059504`*^9}, {
    3.771167064259235*^9, 3.7711670682262373`*^9}},
  CellLabel->
-  "In[533]:=",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
+  "In[547]:=",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
 
 Cell[CellGroupData[{
 
@@ -483,7 +483,7 @@ Cell[BoxData[
   3.771167082626642*^9, 3.7711670870806704`*^9}, {3.771169541333366*^9, 
   3.771169541457921*^9}, {3.7711752552882137`*^9, 3.771175259497059*^9}},
  CellLabel->
-  "In[537]:=",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
+  "In[551]:=",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -496,7 +496,7 @@ Cell[BoxData[
         RowBox[{"\<\"Sensor\"\>", "\[Rule]", "\<\"Temperature\"\>"}], ",", 
         RowBox[{"\<\"Value\"\>", "\[Rule]", 
          TemplateBox[{
-          "\"89.4\"","\"\[Degree]F\"","degrees Fahrenheit",
+          "\"88.5\"","\"\[Degree]F\"","degrees Fahrenheit",
            "\"DegreesFahrenheit\""},
           "Quantity"]}]}], "\[RightAssociation]"}], ",", 
       RowBox[{"\[LeftAssociation]", 
@@ -510,7 +510,7 @@ Cell[BoxData[
         RowBox[{"\<\"Sensor\"\>", "\[Rule]", "\<\"Wind Speed\"\>"}], ",", 
         RowBox[{"\<\"Value\"\>", "\[Rule]", 
          TemplateBox[{
-          "\"2\"",RowBox[{
+          "\"3\"",RowBox[{
             "\"mi\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
              "\"h\""}],"miles per hour",FractionBox["\"Miles\"", "\"Hours\""]},
           "Quantity"]}]}], "\[RightAssociation]"}], ",", 
@@ -528,7 +528,7 @@ Cell[BoxData[
         RowBox[{"\<\"Sensor\"\>", "\[Rule]", "\<\"Dew Point\"\>"}], ",", 
         RowBox[{"\<\"Value\"\>", "\[Rule]", 
          TemplateBox[{
-          "\"59\"","\"\[Degree]F\"","degrees Fahrenheit",
+          "\"58\"","\"\[Degree]F\"","degrees Fahrenheit",
            "\"DegreesFahrenheit\""},
           "Quantity"]}]}], "\[RightAssociation]"}], ",", 
       RowBox[{"\[LeftAssociation]", 
@@ -536,7 +536,7 @@ Cell[BoxData[
         RowBox[{"\<\"Sensor\"\>", "\[Rule]", "\<\"Heat Index\"\>"}], ",", 
         RowBox[{"\<\"Value\"\>", "\[Rule]", 
          RowBox[{"Quantity", "[", 
-          RowBox[{"\<\"89\"\>", ",", 
+          RowBox[{"\<\"88\"\>", ",", 
            RowBox[{"Missing", "[", 
             RowBox[{"\<\"KeyAbsent\"\>", ",", "\<\"Heat Index\"\>"}], "]"}]}],
            "]"}]}]}], "\[RightAssociation]"}], ",", 
@@ -564,7 +564,7 @@ Cell[BoxData[
              "\"h\""}],"miles per hour",FractionBox["\"Miles\"", "\"Hours\""]},
           "Quantity"]}]}], "\[RightAssociation]"}]}], "}"}]}], ",", 
    RowBox[{"\<\"Timestamp\"\>", "\[Rule]", 
-    TemplateBox[{RowBox[{"\"Wed 3 Jul 2019 16:46:08\"", 
+    TemplateBox[{RowBox[{"\"Wed 3 Jul 2019 16:51:07\"", 
         StyleBox[
          RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
            StyleBox[
@@ -574,8 +574,8 @@ Cell[BoxData[
         RowBox[{
           RowBox[{"{", 
             
-            RowBox[{"2019", ",", "7", ",", "3", ",", "16", ",", "46", ",", 
-              "8.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+            RowBox[{"2019", ",", "7", ",", "3", ",", "16", ",", "51", ",", 
+              "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
           RowBox[{"-", "4.`"}]}], "]"}]},
      "DateObject",
      Editable->False]}], ",", 
@@ -590,9 +590,10 @@ Cell[BoxData[
    3.7711099446333323`*^9, 3.771109972631291*^9}, 3.771110302524931*^9, 
    3.771167425281671*^9, {3.7711731376367817`*^9, 3.771173143271369*^9}, {
    3.771173397819455*^9, 3.7711734177924623`*^9}, 3.7711740745730343`*^9, 
-   3.771175268753694*^9, 3.771175349186439*^9, 3.7711756293206787`*^9},
+   3.771175268753694*^9, 3.771175349186439*^9, 3.7711756293206787`*^9, 
+   3.77117606324214*^9},
  CellLabel->
-  "Out[538]=",ExpressionUUID->"45b8312f-310b-42ec-a7f9-85f085f3759b"]
+  "Out[552]=",ExpressionUUID->"32d93342-9448-485b-92f1-bea2d3586392"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -652,14 +653,305 @@ Cell[BoxData[
    3.77117381849409*^9}, {3.771173857693507*^9, 3.771173890151108*^9}, {
    3.7711739469250307`*^9, 3.7711740384316263`*^9}, {3.771174859743806*^9, 
    3.771174864803845*^9}, {3.771175328427691*^9, 3.77117533845473*^9}, {
-   3.7711755321284437`*^9, 3.771175543825688*^9}},
+   3.7711755321284437`*^9, 3.771175543825688*^9}, {3.771175912227634*^9, 
+   3.7711759678223753`*^9}, {3.771176011414653*^9, 3.7711760405496607`*^9}, {
+   3.771176126327593*^9, 
+   3.771176127099765*^9}},ExpressionUUID->"3328e4ce-4400-4a1f-9502-\
+1359fb90981f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["Databin",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquarePlusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{
+              Thickness[0.05555555555555555], 
+              StyleBox[{
+                
+                FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                  0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                  0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+                  0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                  0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+                  0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                  1, 3, 3}}}, {{{15.646999999999998`, 5.933000000000001}, {
+                  13.585, 7.263}, {15.533, 8.458}, {17.332, 
+                  7.363999999999999}, {15.646999999999998`, 
+                  5.933000000000001}}, {{12.697, 3.425}, {10.245, 5.212}, {
+                  12.491, 6.591}, {14.725999999999999`, 
+                  5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+                  5.978000000000001, 2.285}, {8.666, 4.244}, {
+                  11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 
+                  3.425}, {2.606, 5.1499999999999995`}, {4.841, 6.591}, {
+                  7.087, 5.212}, {4.635, 3.425}}, {{0., 7.363999999999999}, {
+                  1.799, 8.458}, {3.7470000000000003`, 7.263}, {
+                  1.6840000000000002`, 5.933000000000001}, {0., 
+                  7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+                  "]}]}, 
+               FaceForm[
+                RGBColor[0.44721600000000006`, 0.519288, 0.528528, 1.]], 
+               StripOnInput -> False]}, {
+             Background -> GrayLevel[0.93], Axes -> False, AspectRatio -> 1, 
+              ImageSize -> {Automatic, 
+                Dynamic[
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                  Magnification])]}, Frame -> True, FrameTicks -> None, 
+              PlotRangePadding -> 2.5, FrameStyle -> Directive[
+                Thickness[Tiny], 
+                GrayLevel[0.55]], ImageSize -> {18., 19.}, 
+              PlotRange -> {{0., 18.}, {0., 19.}}, AspectRatio -> Automatic}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Short ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"EM6FHeXi\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Total entry count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DD09a8a28afbb-0f51-4d70-aef8-1908334abfc7"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 
+                    Missing[]], StandardForm]], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Range limited\"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Key: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"LatestDate\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquareMinusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{
+              Thickness[0.05555555555555555], 
+              StyleBox[{
+                
+                FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                  0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
+                  0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 
+                  0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
+                  0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+                  0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                  1, 3, 3}}}, {{{15.646999999999998`, 5.933000000000001}, {
+                  13.585, 7.263}, {15.533, 8.458}, {17.332, 
+                  7.363999999999999}, {15.646999999999998`, 
+                  5.933000000000001}}, {{12.697, 3.425}, {10.245, 5.212}, {
+                  12.491, 6.591}, {14.725999999999999`, 
+                  5.1499999999999995`}, {12.697, 3.425}}, {{8.666, 0.}, {
+                  5.978000000000001, 2.285}, {8.666, 4.244}, {
+                  11.354000000000001`, 2.285}, {8.666, 0.}}, {{4.635, 
+                  3.425}, {2.606, 5.1499999999999995`}, {4.841, 6.591}, {
+                  7.087, 5.212}, {4.635, 3.425}}, {{0., 7.363999999999999}, {
+                  1.799, 8.458}, {3.7470000000000003`, 7.263}, {
+                  1.6840000000000002`, 5.933000000000001}, {0., 
+                  7.363999999999999}}, CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrbtp7vvlbqIOP+uy9pQIqzr8Wfnxkm+SjIPIOveH
+VVNUHNgbpzp3v1Fw2Pb575WKk0YOpnG7PHmYFB1eB+6Qa+U2djDvdEx4OkHR
+AWTMMSA/PQ0Ilik61NgDVQLVF9hyXV9coOKwp2SyBMs0FYcFUvp3Vdg04PbJ
+twJNikPwV4Gsn6DhAFQdxrdWxWHWTCCI1HAAOSMnXcXB42GVyLrjig5nz4CA
+hEMWyOAWRQd+kEfUJaDmKzpoxvQf+qoh4RDQOz1P6LCCA5N2u9jNcxIOlltO
+lO2bLwI3TxJoja6RCNw+kO7GqSJw96CHDwDEr32g
+                  "]}]}, 
+               FaceForm[
+                RGBColor[0.44721600000000006`, 0.519288, 0.528528, 1.]], 
+               StripOnInput -> False]}, {
+             Background -> GrayLevel[0.93], Axes -> False, AspectRatio -> 1, 
+              ImageSize -> {Automatic, 
+                Dynamic[
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                  Magnification])]}, Frame -> True, FrameTicks -> None, 
+              PlotRangePadding -> 2.5, FrameStyle -> Directive[
+                Thickness[Tiny], 
+                GrayLevel[0.55]], ImageSize -> {18., 19.}, 
+              PlotRange -> {{0., 18.}, {0., 19.}}, AspectRatio -> Automatic}], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Short ID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"EM6FHeXi\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Total entry count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DD09a8a28afbb-0f51-4d70-aef8-1908334abfc7"}], Except[
+                    Blank[Association]] -> {}, {0}], "EntryCount", 
+                    Missing[]], StandardForm]], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Range limited\"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Key: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"LatestDate\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"ShortURL: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "\"https://wolfr.am/EM6FHeXi\"", 
+                    "https://wolfr.am/EM6FHeXi"}, "HyperlinkURL"], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                 "\"DD09a8a28afbb-0f51-4d70-aef8-1908334abfc7\"", 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"ShortURL: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "\"https://wolfr.am/EM6FHeXi\"", 
+                    "https://wolfr.am/EM6FHeXi"}, "HyperlinkURL"], 
+                  "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Creator: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"wrfcoin@gmx.com\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Owner: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"wrfcoin@gmx.com\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Creation date: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"Tue 2 Jul 2019 20:59:53\"", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Latest date: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Replace[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DD09a8a28afbb-0f51-4d70-aef8-1908334abfc7"}], Except[
+                    Blank[Association]] -> {}, {0}], "Timestamp", 
+                    Missing[]], Pattern[DataDropClient`Private`date, 
+                    Blank[DateObject]] :> 
+                    DateString[DataDropClient`Private`date], {0}], 
+                    StandardForm]], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Total size: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    (If[
+                    NumberQ[#], 
+                    Round[#, 0.1], #]& )[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinStats", 
+                    "DD09a8a28afbb-0f51-4d70-aef8-1908334abfc7"}], Except[
+                    Blank[Association]] -> {}, {0}], "Size", 
+                    Missing[]]], StandardForm]], "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Latest: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  DynamicBox[
+                   ToBoxes[
+                    Lookup[
+                    Replace[
+                    
+                    DataDropClient`Private`datadropclientcache[{
+                    "DatabinLatest", 
+                    "DD09a8a28afbb-0f51-4d70-aef8-1908334abfc7"}], Except[
+                    Blank[Association]] -> {}, {0}], "Data", 
+                    Missing[]], StandardForm]], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  Databin["EM6FHeXi", "EntryCount", "LatestDate"],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.771175644493207*^9, 3.771176073173728*^9},
  CellLabel->
-  "In[539]:=",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
+  "Out[558]=",ExpressionUUID->"63c2c632-3d02-42f9-9793-39595793b847"],
 
 Cell[BoxData["True"], "Output",
- CellChangeTimes->{3.771175644493207*^9},
+ CellChangeTimes->{3.771175644493207*^9, 3.77117607570778*^9},
  CellLabel->
-  "Out[544]=",ExpressionUUID->"7437c280-e4f5-48b1-b4d9-de683f73cfcf"],
+  "Out[559]=",ExpressionUUID->"15c740de-6cbb-4bd0-96cc-eaff8f4e6346"],
 
 Cell[BoxData[
  TemplateBox[{TagBox[
@@ -679,14 +971,14 @@ Cell[BoxData[
            TypeSystem`PackageScope`ElidedShape[1], {"Timestamp"} -> 
            TypeSystem`PackageScope`AtomShape[75], {"Position"} -> 
            TypeSystem`PackageScope`AtomShape[106]], 1], "InitialData" -> 
-        TypeSystem`PackageScope`CacheHandle[1350063708], "Type" -> 
+        TypeSystem`PackageScope`CacheHandle[1609534330], "Type" -> 
         TypeSystem`Struct[{"Sensors", "Timestamp", "Position"}, {
            TypeSystem`Vector[
             TypeSystem`Struct[{"Sensor", "Value"}, {
               TypeSystem`Atom[String], TypeSystem`AnyType}], 9], 
            TypeSystem`Atom[DateObject], 
            TypeSystem`Atom[GeoPosition]}], "HandleQ" -> True, "RowTarget" -> 
-        20, "Data" -> TypeSystem`PackageScope`CacheHandle[1350063708]], 
+        20, "Data" -> TypeSystem`PackageScope`CacheHandle[1609534330]], 
       TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
       TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
       TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
@@ -718,11 +1010,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 405879377][{
-                    
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1499464594][{
                     Key["Sensors"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
-                 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
                   GeneralUtilities`Slice[
                    Key["Sensors"]]], "Mouse"], Background -> GrayLevel[0.95], 
                 Alignment -> {Left, Baseline}], 
@@ -743,11 +1033,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 405879377][{
-                    
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1499464594][{
                     Key["Sensors"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
-                 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
                   GeneralUtilities`Slice[
                    Key["Sensors"]]], "Mouse"], BaseStyle -> {
                   GrayLevel[0.5]}]}, {
@@ -776,11 +1064,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 405879377][{
-                    
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1499464594][{
                     Key["Timestamp"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
-                 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
                   GeneralUtilities`Slice[
                    Key["Timestamp"]]], "Mouse"], Background -> 
                 GrayLevel[0.95], Alignment -> {Left, Baseline}], 
@@ -788,12 +1074,11 @@ Cell[BoxData[
                 Annotation[
                  RawBoxes[
                   StyleBox[
-                  "\"Wed 3 Jul 2019 16:46:08\"", FontColor -> RGBColor[{
+                  "\"Wed 3 Jul 2019 16:51:07\"", FontColor -> RGBColor[{
                     Rational[33, 74], 
                     Rational[27, 74], 
                     Rational[117, 370]}]]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
-                 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
                   GeneralUtilities`Slice[
                    Key["Timestamp"]]], "Mouse"], 
                 ImageSize -> {{75, Full}, Automatic}, 
@@ -822,11 +1107,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 405879377][{
-                    
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1499464594][{
                     Key["Position"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
-                 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
                   GeneralUtilities`Slice[
                    Key["Position"]]], "Mouse"], Background -> GrayLevel[0.95],
                  Alignment -> {Left, Baseline}], 
@@ -839,8 +1122,7 @@ Cell[BoxData[
                     Rational[33, 74], 
                     Rational[27, 74], 
                     Rational[117, 370]}]]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
-                 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
                   GeneralUtilities`Slice[
                    Key["Position"]]], "Mouse"], 
                 ImageSize -> {{106, Full}, Automatic}, 
@@ -873,7 +1155,7 @@ Cell[BoxData[
             LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
              ShowAutoStyles -> False]], 
          TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
-         TypeSystem`NestedGrid`PackagePrivate`self = BoxObject[620849]}, 
+         TypeSystem`NestedGrid`PackagePrivate`self = BoxObject[626897]}, 
         Dynamic[
          TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
          TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
@@ -891,7 +1173,7 @@ Cell[BoxData[
                 TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                  TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                  TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 405879377][
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1499464594][
                 TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
                Not[
                 FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
@@ -922,14 +1204,14 @@ Cell[BoxData[
            TypeSystem`NestedGrid`PackagePrivate`$state$$, 
             TypeSystem`NestedGrid`PackagePrivate`$path$$, 
             TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 405879377]]]], 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1499464594]]]], 
         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
       TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
         Dynamic[
          Replace[
           MouseAnnotation[Null], {
-          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][Null] -> 
-           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[405879377][
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1499464594][
              Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
               Blank[]]] :> (
             TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
@@ -976,9 +1258,9 @@ Cell[BoxData[
   "CopyTag",
   DisplayFunction->(#& ),
   InterpretationFunction->("Dataset[<>]"& )]], "Output",
- CellChangeTimes->{3.771175644537739*^9},
+ CellChangeTimes->{3.771175644493207*^9, 3.771176075758165*^9},
  CellLabel->
-  "Out[545]=",ExpressionUUID->"bdf194ba-b9bd-4f9e-8a73-adfec93c184a"]
+  "Out[560]=",ExpressionUUID->"ebcf5bcb-2922-4d5b-86e2-9182908c907e"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -986,11 +1268,9 @@ Cell[BoxData[
   RowBox[{"(*", 
    RowBox[{"Similarily", ",", " ", 
     RowBox[{
-    "insert", " ", "its", " ", "hash", " ", "into", " ", "the", " ", 
+    "insert", " ", "the", " ", "data", " ", "into", " ", "the", " ", 
      "Bitcoin", " ", 
-     RowBox[{"Testnet", ".", " ", "Insert"}], " ", "the", " ", "table", " ", 
-     "itself", " ", "into", " ", "a", " ", "Databin"}]}], "*)"}], "\n", "\n", 
-  
+     RowBox[{"Testnet", "."}]}]}], "*)"}], "\n", "\n", 
   RowBox[{"(*", 
    RowBox[{
    "Set", " ", "default", " ", "blockchain", " ", "to", " ", "Bitcoin", " ", 
@@ -1004,9 +1284,10 @@ Cell[BoxData[
     RowBox[{
     "Create", " ", "pair", " ", "of", " ", "keys", " ", "for", " ", "Bitcoin",
       " ", "network"}], "*)"}], "\n", 
-   RowBox[{"btcKeys", "=", 
-    RowBox[{"GenerateAsymmetricKeyPair", "[", "\"\<Bitcoin\>\"", "]"}]}], 
-   "\n", "\n", 
+   RowBox[{
+    RowBox[{"btcKeys", "=", 
+     RowBox[{"GenerateAsymmetricKeyPair", "[", "\"\<Bitcoin\>\"", "]"}]}], 
+    ";"}], "\n", "\n", 
    RowBox[{"(*", 
     RowBox[{
     "Create", " ", "a", " ", "Bitcoin", " ", "testnet", " ", "address"}], 
@@ -1030,12 +1311,13 @@ Cell[BoxData[
        RowBox[{"testnet", "/", " ", "and"}], " ", "save", " ", "your", " ", 
        "transaction", " ", "ID"}]}]}], "*)"}], "\n", 
    RowBox[{
-    RowBox[{"sourceTXID", "=", "\"\<\>\""}], ";"}], " ", 
-   RowBox[{"(*", 
-    RowBox[{"enter", " ", "trx", " ", "ID", " ", "between", " ", "quotes"}], 
-    "*)"}], "\n", 
-   RowBox[{"sourceTX", "=", 
-    RowBox[{"BlockchainTransactionData", "[", "sourceTXID", "]"}]}], "\n", 
+    RowBox[{"sourceTXID", "=", "\"\<\>\""}], ";", " ", 
+    RowBox[{"(*", 
+     RowBox[{"enter", " ", "trx", " ", "ID", " ", "between", " ", "quotes"}], 
+     "*)"}], "\n", 
+    RowBox[{"sourceTX", "=", 
+     RowBox[{"BlockchainTransactionData", "[", "sourceTXID", "]"}]}]}], "\n", 
+   
    RowBox[{
     RowBox[{"sourceTX", "[", "\"\<Outputs\>\"", "]"}], "\[LeftDoubleBracket]",
      "2", "\[RightDoubleBracket]"}], "\n", "\n", 
@@ -1118,7 +1400,8 @@ Cell[BoxData[
    3.771171982516374*^9, 3.7711721638786783`*^9}, {3.7711722270791597`*^9, 
    3.7711722492458353`*^9}, 3.7711722940208282`*^9, {3.771172325574664*^9, 
    3.7711723913004713`*^9}, {3.7711754385585423`*^9, 
-   3.7711754403342648`*^9}},ExpressionUUID->"0e3d3c41-1404-423f-a852-\
+   3.7711754403342648`*^9}, {3.7711762233417053`*^9, 3.7711762311795063`*^9}, 
+   3.7711762927464457`*^9},ExpressionUUID->"0e3d3c41-1404-423f-a852-\
 cafe8d978895"],
 
 Cell[BoxData[
@@ -22218,45 +22501,46 @@ Cell[8610, 197, 2655, 51, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e
 Cell[11268, 250, 5344, 120, 357, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
 Cell[CellGroupData[{
 Cell[16637, 374, 4709, 111, 281, "Code",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
-Cell[21349, 487, 4815, 107, 150, "Output",ExpressionUUID->"45b8312f-310b-42ec-a7f9-85f085f3759b"]
+Cell[21349, 487, 4840, 108, 150, "Output",ExpressionUUID->"32d93342-9448-485b-92f1-bea2d3586392"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26201, 599, 2799, 57, 224, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
-Cell[29003, 658, 156, 3, 34, "Output",ExpressionUUID->"7437c280-e4f5-48b1-b4d9-de683f73cfcf"],
-Cell[29162, 663, 16276, 317, 109, "Output",ExpressionUUID->"bdf194ba-b9bd-4f9e-8a73-adfec93c184a"]
+Cell[26226, 600, 2927, 59, 224, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
+Cell[29156, 661, 14155, 287, 92, "Output",ExpressionUUID->"63c2c632-3d02-42f9-9793-39595793b847"],
+Cell[43314, 950, 177, 3, 34, "Output",ExpressionUUID->"15c740de-6cbb-4bd0-96cc-eaff8f4e6346"],
+Cell[43494, 955, 16120, 307, 109, "Output",ExpressionUUID->"ebcf5bcb-2922-4d5b-86e2-9182908c907e"]
 }, Open  ]],
-Cell[45453, 983, 5991, 138, 534, "Code",ExpressionUUID->"0e3d3c41-1404-423f-a852-cafe8d978895"],
-Cell[51447, 1123, 2306, 49, 186, "Code",ExpressionUUID->"5880ebb0-d1cf-4e2a-91f4-ed0cbe38cfdf"],
+Cell[59629, 1265, 5996, 139, 534, "Code",ExpressionUUID->"0e3d3c41-1404-423f-a852-cafe8d978895"],
+Cell[65628, 1406, 2306, 49, 186, "Code",ExpressionUUID->"5880ebb0-d1cf-4e2a-91f4-ed0cbe38cfdf"],
 Cell[CellGroupData[{
-Cell[53778, 1176, 2199, 47, 205, "Code",ExpressionUUID->"0b8ea834-3441-4c0f-a08a-34d3f8a6b1cf"],
-Cell[55980, 1225, 353, 9, 24, "Message",ExpressionUUID->"2fc0b3c9-620d-4be2-b330-2d809fc9fffb"],
-Cell[56336, 1236, 17425, 350, 81, "Output",ExpressionUUID->"20d37a43-ad9d-4a5e-b307-c53a1a34ad54"],
-Cell[73764, 1588, 196, 3, 34, "Output",ExpressionUUID->"eabc8c73-ed22-4f7b-9d50-9361b38cd498"]
+Cell[67959, 1459, 2199, 47, 205, "Code",ExpressionUUID->"0b8ea834-3441-4c0f-a08a-34d3f8a6b1cf"],
+Cell[70161, 1508, 353, 9, 24, "Message",ExpressionUUID->"2fc0b3c9-620d-4be2-b330-2d809fc9fffb"],
+Cell[70517, 1519, 17425, 350, 81, "Output",ExpressionUUID->"20d37a43-ad9d-4a5e-b307-c53a1a34ad54"],
+Cell[87945, 1871, 196, 3, 34, "Output",ExpressionUUID->"eabc8c73-ed22-4f7b-9d50-9361b38cd498"]
 }, Open  ]],
-Cell[73975, 1594, 176, 4, 46, "Text",ExpressionUUID->"e269f266-1d94-4135-bf09-be097c4444df"],
+Cell[88156, 1877, 176, 4, 46, "Text",ExpressionUUID->"e269f266-1d94-4135-bf09-be097c4444df"],
 Cell[CellGroupData[{
-Cell[74176, 1602, 1479, 30, 91, "Code",ExpressionUUID->"f98d0015-52a2-47e7-bd97-af23a7bbc01f"],
-Cell[75658, 1634, 430490, 7081, 731, "Output",ExpressionUUID->"19ece7f5-096c-41cd-abd0-c0f40ba3bcd9"]
+Cell[88357, 1885, 1479, 30, 91, "Code",ExpressionUUID->"f98d0015-52a2-47e7-bd97-af23a7bbc01f"],
+Cell[89839, 1917, 430490, 7081, 731, "Output",ExpressionUUID->"19ece7f5-096c-41cd-abd0-c0f40ba3bcd9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[506185, 8720, 3500, 77, 368, "Code",ExpressionUUID->"7328d502-6f81-40a1-95dd-d8b697155f12"],
-Cell[509688, 8799, 17343, 349, 81, "Output",ExpressionUUID->"03f7d18e-4deb-4ced-b7cc-dcc2f5dc24b3"],
-Cell[527034, 9150, 130945, 2789, 585, "Output",ExpressionUUID->"0feb04ff-5589-4559-9250-26635873f0ce"],
-Cell[657982, 11941, 398799, 9195, 227, 356652, 8503, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"0a259990-3a38-40b9-8f3b-0b3d602cda2c"],
-Cell[1056784, 21138, 385, 10, 24, "Message",ExpressionUUID->"dd1d20e2-88fe-4682-85de-de74fc0af623"],
-Cell[1057172, 21150, 16551, 241, 72, "Message",ExpressionUUID->"c117007c-c28d-4187-98f4-30a9b094ff16"],
-Cell[1073726, 21393, 18949, 372, 115, "Output",ExpressionUUID->"62e073bf-069f-4a31-8631-be70607c06a9"]
+Cell[520366, 9003, 3500, 77, 368, "Code",ExpressionUUID->"7328d502-6f81-40a1-95dd-d8b697155f12"],
+Cell[523869, 9082, 17343, 349, 81, "Output",ExpressionUUID->"03f7d18e-4deb-4ced-b7cc-dcc2f5dc24b3"],
+Cell[541215, 9433, 130945, 2789, 585, "Output",ExpressionUUID->"0feb04ff-5589-4559-9250-26635873f0ce"],
+Cell[672163, 12224, 398799, 9195, 227, 356652, 8503, "CachedBoxData", "BoxData", "Output",ExpressionUUID->"0a259990-3a38-40b9-8f3b-0b3d602cda2c"],
+Cell[1070965, 21421, 385, 10, 24, "Message",ExpressionUUID->"dd1d20e2-88fe-4682-85de-de74fc0af623"],
+Cell[1071353, 21433, 16551, 241, 72, "Message",ExpressionUUID->"c117007c-c28d-4187-98f4-30a9b094ff16"],
+Cell[1087907, 21676, 18949, 372, 115, "Output",ExpressionUUID->"62e073bf-069f-4a31-8631-be70607c06a9"]
 }, Open  ]],
-Cell[1092690, 21768, 1338, 25, 72, "Code",ExpressionUUID->"83eb5259-ca50-4efe-afdd-2cca1e27d9a3"],
+Cell[1106871, 22051, 1338, 25, 72, "Code",ExpressionUUID->"83eb5259-ca50-4efe-afdd-2cca1e27d9a3"],
 Cell[CellGroupData[{
-Cell[1094053, 21797, 1244, 30, 129, "Code",ExpressionUUID->"ccdf1274-ea81-4fdc-b498-c6bd04fe02f6"],
-Cell[1095300, 21829, 219, 5, 34, "Output",ExpressionUUID->"971622f8-bef5-44b9-baeb-89ddfa9b38e2"]
+Cell[1108234, 22080, 1244, 30, 129, "Code",ExpressionUUID->"ccdf1274-ea81-4fdc-b498-c6bd04fe02f6"],
+Cell[1109481, 22112, 219, 5, 34, "Output",ExpressionUUID->"971622f8-bef5-44b9-baeb-89ddfa9b38e2"]
 }, Open  ]],
-Cell[1095534, 21837, 1323, 22, 72, "Code",ExpressionUUID->"480db39f-781a-4800-b3f9-a20a2016c1c6"],
-Cell[1096860, 21861, 1295, 21, 72, "Code",ExpressionUUID->"88a59515-29c3-447c-b107-ed4e370f8334"],
+Cell[1109715, 22120, 1323, 22, 72, "Code",ExpressionUUID->"480db39f-781a-4800-b3f9-a20a2016c1c6"],
+Cell[1111041, 22144, 1295, 21, 72, "Code",ExpressionUUID->"88a59515-29c3-447c-b107-ed4e370f8334"],
 Cell[CellGroupData[{
-Cell[1098180, 21886, 248, 5, 30, "Input",ExpressionUUID->"07ad9bd2-6311-4468-aa8c-1edcaf28f820"],
-Cell[1098431, 21893, 14052, 284, 215, "Output",ExpressionUUID->"4d2d3c7e-23d5-462f-9c05-f47052b4e5c5"]
+Cell[1112361, 22169, 248, 5, 30, "Input",ExpressionUUID->"07ad9bd2-6311-4468-aa8c-1edcaf28f820"],
+Cell[1112612, 22176, 14052, 284, 215, "Output",ExpressionUUID->"4d2d3c7e-23d5-462f-9c05-f47052b4e5c5"]
 }, Open  ]]
 }, Open  ]]
 }
