@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     51640,       1121]
-NotebookOptionsPosition[     48844,       1068]
-NotebookOutlinePosition[     49650,       1095]
-CellTagsIndexPosition[     49607,       1092]
+NotebookDataLength[     56479,       1224]
+NotebookOptionsPosition[     53490,       1169]
+NotebookOutlinePosition[     54295,       1196]
+CellTagsIndexPosition[     54252,       1193]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60,13 +60,15 @@ Could a Neural Net be used for anomaly detection? To say weather the station \
 is indoors, effected by HVAC, radiant heat from buildings, etc?\
 \[LineSeparator]How can one prove that they published the string of weather \
 data? Proof of Publishing
+How much computing power is being used for weather data? How much more should \
+it be?
 \
 \>", "Text",
  CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
   3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
   3.771084313003523*^9}, {3.77108524061522*^9, 3.7710853136265383`*^9}, {
-  3.771150412019314*^9, 
-  3.771150436640399*^9}},ExpressionUUID->"76323e88-8e60-4739-8cb9-\
+  3.771150412019314*^9, 3.771150436640399*^9}, {3.7711528496053457`*^9, 
+  3.7711528619639807`*^9}},ExpressionUUID->"76323e88-8e60-4739-8cb9-\
 0af2ae696da9"],
 
 Cell[BoxData[
@@ -665,7 +667,7 @@ Cell[BoxData[
             LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
              ShowAutoStyles -> False]], 
          TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
-         TypeSystem`NestedGrid`PackagePrivate`self = BoxObject[397041]}, 
+         TypeSystem`NestedGrid`PackagePrivate`self = BoxObject[417841]}, 
         Dynamic[
          TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
          TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
@@ -907,28 +909,33 @@ Cell[BoxData[
 cafe8d978895"],
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"Similarily", ",", " ", 
-    RowBox[{
-    "insert", " ", "its", " ", "hash", " ", "into", " ", "the", " ", "ARK", 
-     " ", "Mainnet", " ", 
-     RowBox[{"Blockchain", ".", " ", "Insert"}], " ", "the", " ", "table", 
-     " ", "itself", " ", "into", " ", "a", " ", "Databin"}]}], "*)"}], "\n", 
-  RowBox[{
-   RowBox[{"WeatherHash1", "=", 
-    RowBox[{"Hash", "[", 
-     RowBox[{"WeatherEntry", ",", " ", "\"\<SHA256\>\""}], "]"}]}], "\n", 
-   RowBox[{"trxID", "=", 
-    RowBox[{"BlockchainPut", "[", "WeatherHash1", "]"}]}], "\n", 
-   RowBox[{"(*", 
-    RowBox[{"BlockchainGet", "[", "trxID", "]"}], "*)"}], "\n", 
-   RowBox[{"(*", 
-    RowBox[{"Databin", "[", 
-     RowBox[{"\"\<id\>\"", ",", " ", "range", ",", " ", 
-      RowBox[{"{", 
-       RowBox[{"key1", ",", " ", "key2", ",", " ", 
-        RowBox[{"...", "..."}]}], "}"}]}], "]"}], "*)"}]}]}]], "Code",
+ RowBox[{"(*", 
+  RowBox[{"Similarily", ",", " ", 
+   RowBox[{
+   "insert", " ", "its", " ", "hash", " ", "into", " ", "the", " ", "ARK", 
+    " ", "Mainnet", " ", 
+    RowBox[{"\[AliasDelimiter]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Blockchain", ".", " ", "Insert"}], " ", "the", " ", "table",
+          " ", "itself", " ", "into", " ", "a", " ", "Databin"}], "*)"}], 
+       "\n", "WeatherHash1"}], "=", 
+      RowBox[{
+       RowBox[{"Hash", "[", 
+        RowBox[{"WeatherEntry", ",", " ", "\"\<SHA256\>\""}], "]"}], "\n", 
+       RowBox[{"trxID", "=", 
+        RowBox[{"BlockchainPut", "[", "WeatherHash1", "]"}]}], "\n", 
+       RowBox[{"(*", 
+        RowBox[{"BlockchainGet", "[", "trxID", "]"}], "*)"}], "\n", 
+       RowBox[{"(*", 
+        RowBox[{"Databin", "[", 
+         RowBox[{"\"\<id\>\"", ",", " ", "range", ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"key1", ",", " ", "key2", ",", " ", 
+            RowBox[{"...", "..."}]}], "}"}]}], "]"}], 
+        "*)"}]}]}]}]}]}]}]], "Code",
  CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
    3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
    3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
@@ -939,8 +946,8 @@ Cell[BoxData[
    3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
    3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
    3.771150086644277*^9}, {3.7711501479283457`*^9, 3.77115015107971*^9}, {
-   3.7711521186753902`*^9, 
-   3.771152119539214*^9}},ExpressionUUID->"5880ebb0-d1cf-4e2a-91f4-\
+   3.7711521186753902`*^9, 3.771152119539214*^9}, 
+   3.7711525091416683`*^9},ExpressionUUID->"5880ebb0-d1cf-4e2a-91f4-\
 ed0cbe38cfdf"],
 
 Cell[CellGroupData[{
@@ -1050,7 +1057,50 @@ Cell[BoxData[
     "find", " ", "the", " ", "areas", " ", "of", " ", "least", " ", "density",
       " ", "where", " ", "new", " ", "stations", " ", "should", " ", "be", 
      " ", 
-     RowBox[{"installed", "."}]}]}], "*)"}], "\n"}]], "Code",
+     RowBox[{"installed", ".", " ", "See"}], " ", 
+     RowBox[{"Katja", "'"}], "s", " ", "lecture", " ", 
+     RowBox[{"NB", "."}]}]}], "*)"}], "\n", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Import", " ", "the", " ", "dataset", " ", "on", " ", "snowfall", " ", 
+    "frequency", " ", "by", " ", "WMO", " ", 
+    RowBox[{"station", ":"}]}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"snow", "=", 
+    RowBox[{
+    "ResourceData", "[", "\"\<Snowfall Frequency by WMO Station\>\"", "]"}]}],
+    "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Plot", " ", "the", " ", "location", " ", "of", " ", "all", " ", "WMO", 
+     " ", 
+     RowBox[{"stations", ":"}]}], "*)"}], "\n", 
+   RowBox[{"GeoListPlot", "[", 
+    RowBox[{"snow", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "\"\<Coordinates\>\""}], "]"}], "]"}], "]"}], "\n", 
+   "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Plot", " ", "the", " ", "WMO", " ", "stations", " ", "for", " ", "a", 
+      " ", "particular", " ", "region"}], ",", " ", 
+     RowBox[{"here", " ", 
+      RowBox[{"Afghanistan", ":"}]}]}], "*)"}], "\n", 
+   RowBox[{"GeoListPlot", "[", 
+    RowBox[{
+     RowBox[{"snow", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "\"\<Coordinates\>\""}], "]"}], "]"}], ",", 
+     RowBox[{"GeoRange", "\[Rule]", 
+      TemplateBox[{"\"Afghanistan\"",RowBox[{"Entity", "[", 
+          RowBox[{"\"Country\"", ",", "\"Afghanistan\""}], "]"}],
+        "\"Entity[\\\"Country\\\", \\\"Afghanistan\\\"]\"","\"country\""},
+       "Entity"]}]}], "]"}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Visualize", " ", "the", " ", "areas", " ", "with", " ", "least", " ", 
+     "density"}], "*)"}]}]}]], "Code",
  CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
    3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
    3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
@@ -1061,13 +1111,64 @@ Cell[BoxData[
    3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
    3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
    3.771150086644277*^9}, {3.7711501479283457`*^9, 3.77115015107971*^9}, {
-   3.771151528791712*^9, 
-   3.77115158833444*^9}},ExpressionUUID->"7328d502-6f81-40a1-95dd-\
-d8b697155f12"]
+   3.771151528791712*^9, 3.77115158833444*^9}, {3.7711526293416843`*^9, 
+   3.771152788513624*^9}},ExpressionUUID->"7328d502-6f81-40a1-95dd-\
+d8b697155f12"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Given", " ", "the", " ", "location", " ", "of", " ", "WMO", " ", 
+     "weather", " ", "stations"}], ",", " ", 
+    RowBox[{
+    "calculate", " ", "a", " ", "proximity", " ", "value", " ", "for", " ", 
+     "the", " ", "weather", " ", 
+     RowBox[{"station", "'"}], "s", " ", "location"}]}], "*)"}], 
+  "\n"}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+   3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+   3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
+   3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
+   3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
+   3.771150086644277*^9}, {3.7711501479283457`*^9, 3.77115015107971*^9}, {
+   3.771151528791712*^9, 3.77115158833444*^9}, {3.7711526293416843`*^9, 
+   3.771152788513624*^9}, {3.771154860539383*^9, 
+   3.771154924408267*^9}},ExpressionUUID->"83eb5259-ca50-4efe-afdd-\
+2cca1e27d9a3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Can", " ", "we", " ", "find", " ", "the", " ", "location", " ", "and", 
+    " ", "data", " ", "of", " ", "civilian", " ", "weather", " ", "stations", 
+    " ", "contributing", " ", "to", " ", "AcuRite", " ", "or", " ", 
+    "WeatherBug", "??"}], "*)"}], "\n"}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+   3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+   3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
+   3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
+   3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
+   3.771150086644277*^9}, {3.7711501479283457`*^9, 3.77115015107971*^9}, {
+   3.771151528791712*^9, 3.77115158833444*^9}, {3.7711526293416843`*^9, 
+   3.771152788513624*^9}, {3.771154860539383*^9, 3.771154897332314*^9}, {
+   3.77115495745417*^9, 
+   3.771154995764248*^9}},ExpressionUUID->"480db39f-781a-4800-b3f9-\
+a20a2016c1c6"]
 }, Open  ]]
 },
-WindowSize->{995, 688},
-WindowMargins->{{Automatic, 18}, {Automatic, 0}},
+WindowSize->{551, 739},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -1098,30 +1199,32 @@ Cell[CellGroupData[{
 Cell[580, 22, 325, 5, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
 Cell[908, 29, 531, 11, 58, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
 Cell[1442, 42, 438, 9, 35, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
-Cell[1883, 53, 778, 16, 150, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
-Cell[2664, 71, 3117, 66, 319, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
-Cell[5784, 139, 1639, 41, 186, "Code",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
-Cell[7426, 182, 2546, 49, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
-Cell[9975, 233, 5207, 117, 357, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
+Cell[1883, 53, 915, 18, 173, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
+Cell[2801, 73, 3117, 66, 319, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+Cell[5921, 141, 1639, 41, 186, "Code",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
+Cell[7563, 184, 2546, 49, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+Cell[10112, 235, 5207, 117, 357, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
 Cell[CellGroupData[{
-Cell[15207, 354, 4568, 109, 281, "Code",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
-Cell[19778, 465, 16219, 309, 109, "Output",ExpressionUUID->"4720201c-7ca3-4601-a296-0e3275d8c62c"]
+Cell[15344, 356, 4568, 109, 281, "Code",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
+Cell[19915, 467, 16219, 309, 109, "Output",ExpressionUUID->"4720201c-7ca3-4601-a296-0e3275d8c62c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36034, 779, 1645, 35, 129, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
-Cell[37682, 816, 257, 5, 34, "Output",ExpressionUUID->"abbcb724-4794-468a-b81f-659a20e5ecd6"],
-Cell[37942, 823, 249, 5, 34, "Output",ExpressionUUID->"e29df97a-cad5-43af-bcfd-e22c34debf62"],
-Cell[38194, 830, 257, 5, 34, "Output",ExpressionUUID->"b442921b-0c87-4682-ac87-0f2c8d5a0767"]
+Cell[36171, 781, 1645, 35, 129, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
+Cell[37819, 818, 257, 5, 34, "Output",ExpressionUUID->"abbcb724-4794-468a-b81f-659a20e5ecd6"],
+Cell[38079, 825, 249, 5, 34, "Output",ExpressionUUID->"e29df97a-cad5-43af-bcfd-e22c34debf62"],
+Cell[38331, 832, 257, 5, 34, "Output",ExpressionUUID->"b442921b-0c87-4682-ac87-0f2c8d5a0767"]
 }, Open  ]],
-Cell[38466, 838, 1665, 33, 129, "Code",ExpressionUUID->"0b8ea834-3441-4c0f-a08a-34d3f8a6b1cf"],
-Cell[40134, 873, 1648, 33, 129, "Code",ExpressionUUID->"0e3d3c41-1404-423f-a852-cafe8d978895"],
-Cell[41785, 908, 1766, 35, 129, "Code",ExpressionUUID->"5880ebb0-d1cf-4e2a-91f4-ed0cbe38cfdf"],
+Cell[38603, 840, 1665, 33, 129, "Code",ExpressionUUID->"0b8ea834-3441-4c0f-a08a-34d3f8a6b1cf"],
+Cell[40271, 875, 1648, 33, 129, "Code",ExpressionUUID->"0e3d3c41-1404-423f-a852-cafe8d978895"],
+Cell[41922, 910, 1940, 40, 129, "Code",ExpressionUUID->"5880ebb0-d1cf-4e2a-91f4-ed0cbe38cfdf"],
 Cell[CellGroupData[{
-Cell[43576, 947, 2743, 61, 128, "Code",ExpressionUUID->"f98d0015-52a2-47e7-bd97-af23a7bbc01f"],
-Cell[46322, 1010, 770, 15, 30, "Message",ExpressionUUID->"de342c96-7185-4e02-8429-27abbabe609c"],
-Cell[47095, 1027, 423, 11, 38, "Output",ExpressionUUID->"be580511-859d-45f6-886d-44405981b2c7"]
+Cell[43887, 954, 2743, 61, 128, "Code",ExpressionUUID->"f98d0015-52a2-47e7-bd97-af23a7bbc01f"],
+Cell[46633, 1017, 770, 15, 48, "Message",ExpressionUUID->"de342c96-7185-4e02-8429-27abbabe609c"],
+Cell[47406, 1034, 423, 11, 38, "Output",ExpressionUUID->"be580511-859d-45f6-886d-44405981b2c7"]
 }, Open  ]],
-Cell[47533, 1041, 1295, 24, 72, "Code",ExpressionUUID->"7328d502-6f81-40a1-95dd-d8b697155f12"]
+Cell[47844, 1048, 2963, 67, 273, "Code",ExpressionUUID->"7328d502-6f81-40a1-95dd-d8b697155f12"],
+Cell[50810, 1117, 1338, 25, 72, "Code",ExpressionUUID->"83eb5259-ca50-4efe-afdd-2cca1e27d9a3"],
+Cell[52151, 1144, 1323, 22, 72, "Code",ExpressionUUID->"480db39f-781a-4800-b3f9-a20a2016c1c6"]
 }, Open  ]]
 }
 ]
