@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38710,        838]
-NotebookOptionsPosition[     36751,        797]
-NotebookOutlinePosition[     37557,        824]
-CellTagsIndexPosition[     37514,        821]
+NotebookDataLength[     40363,        879]
+NotebookOptionsPosition[     38275,        835]
+NotebookOutlinePosition[     39081,        862]
+CellTagsIndexPosition[     39038,        859]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -130,8 +130,9 @@ Cell[BoxData[
    3.771099076435253*^9, 3.771099077432643*^9}, {3.771099127377956*^9, 
    3.771099132705564*^9}, {3.771104896845284*^9, 3.771104902879814*^9}, {
    3.771105127795205*^9, 3.771105142577239*^9}, {3.771105438238021*^9, 
-   3.7711054413073397`*^9}},ExpressionUUID->"6f6d6f81-9861-478a-b041-\
-80bfc39edb92"],
+   3.7711054413073397`*^9}},
+ CellLabel->
+  "In[270]:=",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
 
 Cell[BoxData[
  RowBox[{
@@ -165,14 +166,16 @@ Cell[BoxData[
             "\"\<x-one-vue-token\>\"", " ", "\[Rule]", " ", "mytoken"}], 
             "}"}]}]}], "|>"}], "]"}], ",", "\"\<RawJSON\>\""}], "]"}]}], 
     ";"}], "\n", " ", 
-   RowBox[{"myhubid", "=", 
-    RowBox[{"hubsData", "[", 
-     RowBox[{"[", 
-      RowBox[{"\"\<account_hubs\>\"", ",", "1", ",", "\"\<id\>\""}], "]"}], 
-     "]"}]}]}]}]], "Code",
- CellChangeTimes->{{3.771105453028803*^9, 
-  3.771105547529624*^9}},ExpressionUUID->"4fd67fd1-04f7-4573-b972-\
-cf4d0bbcaeaa"],
+   RowBox[{
+    RowBox[{"myhubid", "=", 
+     RowBox[{"hubsData", "[", 
+      RowBox[{"[", 
+       RowBox[{"\"\<account_hubs\>\"", ",", "1", ",", "\"\<id\>\""}], "]"}], 
+      "]"}]}], ";"}]}]}]], "Code",
+ CellChangeTimes->{{3.771105453028803*^9, 3.771105547529624*^9}, 
+   3.771109680693119*^9},
+ CellLabel->
+  "In[273]:=",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
 
 Cell[BoxData[
  RowBox[{
@@ -223,7 +226,7 @@ Cell[BoxData[
    3.7711010518521547`*^9}, {3.7711011290688057`*^9, 3.771101133640033*^9}, {
    3.771105595400465*^9, 3.771105613308576*^9}},
  CellLabel->
-  "In[208]:=",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+  "In[275]:=",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
 
 Cell[BoxData[
  RowBox[{
@@ -262,6 +265,13 @@ Cell[BoxData[
           ",", "\"\<F\>\"", ",", "\"\<DegreesFahrenheit\>\"", ",", 
           "\"\<C\>\"", ",", "\"\<DegreesCelsius\>\""}], "]"}]}], ",", 
        "\[IndentingNewLine]", 
+       RowBox[{"\"\<Pressure\>\"", "\[Rule]", 
+        RowBox[{"Switch", "[", 
+         RowBox[{
+          RowBox[{"sensorRawData", "[", 
+           RowBox[{"\"\<Pressure\>\"", ",", "\"\<chart_unit\>\""}], "]"}], 
+          ",", "\"\<inHg\>\"", ",", "\"\<InchesOfMercury\>\"", ",", 
+          "\"\<hPa\>\"", ",", "\"\<Hectopascals\>\""}], "]"}]}], ",", "\n", 
        RowBox[{"\"\<Humidity\>\"", "\[Rule]", "\"\<Percent\>\""}], ",", 
        "\[IndentingNewLine]", 
        RowBox[{"\"\<Wind Speed\>\"", "\[Rule]", 
@@ -277,14 +287,13 @@ Cell[BoxData[
        "\[IndentingNewLine]", 
        RowBox[{"\"\<Wind Direction\>\"", "\[Rule]", "\"\<Degrees\>\""}], ",", 
        "\[IndentingNewLine]", 
-       RowBox[{"\"\<Feels Like\>\"", "\[Rule]", 
+       RowBox[{"\"\<Rainfall\>\"", "\[Rule]", 
         RowBox[{"Switch", "[", 
          RowBox[{
           RowBox[{"sensorRawData", "[", 
-           RowBox[{"\"\<Feels Like\>\"", ",", "\"\<chart_unit\>\""}], "]"}], 
-          ",", "\"\<F\>\"", ",", "\"\<DegreesFahrenheit\>\"", ",", 
-          "\"\<C\>\"", ",", "\"\<DegreesCelsius\>\""}], "]"}]}], ",", 
-       "\[IndentingNewLine]", 
+           RowBox[{"\"\<Rainfall\>\"", ",", "\"\<chart_unit\>\""}], "]"}], 
+          ",", "\"\<in\>\"", ",", "\"\<Inches\>\"", ",", "\"\<mm\>\"", ",", 
+          "\"\<Millimeters\>\""}], "]"}]}], ",", "\[IndentingNewLine]", 
        RowBox[{"\"\<Dew Point\>\"", "\[Rule]", 
         RowBox[{"Switch", "[", 
          RowBox[{
@@ -293,21 +302,14 @@ Cell[BoxData[
           ",", "\"\<F\>\"", ",", "\"\<DegreesFahrenheit\>\"", ",", 
           "\"\<C\>\"", ",", "\"\<DegreesCelsius\>\""}], "]"}]}], ",", 
        "\[IndentingNewLine]", 
-       RowBox[{"\"\<Pressure\>\"", "\[Rule]", 
+       RowBox[{"\"\<Feels Like\>\"", "\[Rule]", 
         RowBox[{"Switch", "[", 
          RowBox[{
           RowBox[{"sensorRawData", "[", 
-           RowBox[{"\"\<Pressure\>\"", ",", "\"\<chart_unit\>\""}], "]"}], 
-          ",", "\"\<inHg\>\"", ",", "\"\<InchesOfMercury\>\"", ",", 
-          "\"\<hPa\>\"", ",", "\"\<Hectopascals\>\""}], "]"}]}], ",", 
+           RowBox[{"\"\<Feels Like\>\"", ",", "\"\<chart_unit\>\""}], "]"}], 
+          ",", "\"\<F\>\"", ",", "\"\<DegreesFahrenheit\>\"", ",", 
+          "\"\<C\>\"", ",", "\"\<DegreesCelsius\>\""}], "]"}]}], ",", 
        "\[IndentingNewLine]", 
-       RowBox[{"\"\<Rainfall\>\"", "\[Rule]", 
-        RowBox[{"Switch", "[", 
-         RowBox[{
-          RowBox[{"sensorRawData", "[", 
-           RowBox[{"\"\<Rainfall\>\"", ",", "\"\<chart_unit\>\""}], "]"}], 
-          ",", "\"\<in\>\"", ",", "\"\<Inches\>\"", ",", "\"\<mm\>\"", ",", 
-          "\"\<Millimeters\>\""}], "]"}]}], ",", "\[IndentingNewLine]", 
        RowBox[{"\"\<Wind Speed Average\>\"", "\[Rule]", 
         RowBox[{"Switch", "[", 
          RowBox[{
@@ -317,8 +319,8 @@ Cell[BoxData[
           RowBox[{"\"\<Miles\>\"", "/", "\"\<Hours\>\""}], ",", 
           "\"\<km/h\>\"", ",", 
           RowBox[{"\"\<Kilometers\>\"", "/", "\"\<Hours\>\""}], ",", 
-          "\"\<kn\>\"", ",", "\"\<Knots\>\""}], "]"}]}]}], 
-      "\[IndentingNewLine]", "|>"}]}], ";"}], "\n", 
+          "\"\<kn\>\"", ",", "\"\<Knots\>\""}], "]"}]}]}], "|>"}]}], ";"}], 
+   "\n", 
    RowBox[{
     RowBox[{"Dataset", "[", 
      RowBox[{"sensorData", "=", 
@@ -338,120 +340,124 @@ Cell[BoxData[
        RowBox[{"Values", "@", "sensorRawData"}]}]}], "]"}], ";"}]}]}]], "Code",\
 
  CellChangeTimes->{{3.771105833777266*^9, 3.771105937482283*^9}, {
-  3.771105974785947*^9, 3.771105985849489*^9}, {3.771106231569067*^9, 
-  3.771106247050165*^9}},
+   3.771105974785947*^9, 3.771105985849489*^9}, {3.771106231569067*^9, 
+   3.771106247050165*^9}, 3.771109845251099*^9, {3.771109916328511*^9, 
+   3.771109937350623*^9}},
  CellLabel->
-  "In[226]:=",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"isoStringWithTZToDateObject", "[", "string_String", "]"}], ":=", 
-  "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{"by", " ", "Jesse"}], " ", "*)"}], 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"stringParts", "=", 
-       RowBox[{"StringSplit", "[", 
-        RowBox[{"string", ",", 
-         RowBox[{
-         "RegularExpression", "[", 
-          "\"\<(?=((\\\\+|-)\\\\d{2}:\\\\d{2})|Z$)\>\"", "]"}]}], "]"}]}], 
-      ",", "tzpart", ",", "tzoffset", ",", "signedtzoffset"}], "}"}], ",", 
-    RowBox[{
-     RowBox[{"Which", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Length", "[", "stringParts", "]"}], "===", "1"}], ",", 
-       RowBox[{"signedtzoffset", "=", "Automatic"}], ",", 
-       RowBox[{
-        RowBox[{"ToUpperCase", "[", 
-         RowBox[{"stringParts", "[", 
-          RowBox[{"[", "2", "]"}], "]"}], "]"}], "===", "\"\<Z\>\""}], ",", 
-       RowBox[{"signedtzoffset", "=", "0"}], ",", "True", ",", 
-       RowBox[{
-        RowBox[{"tzpart", "=", 
-         RowBox[{"StringSplit", "[", 
-          RowBox[{
-           RowBox[{"stringParts", "[", 
-            RowBox[{"[", "2", "]"}], "]"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"RegularExpression", "[", "\"\<(?<=\\\\+|-)\>\"", "]"}], 
-             ",", "\"\<:\>\""}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"tzoffset", "=", 
-         RowBox[{"NumberCompose", "[", 
-          RowBox[{
-           RowBox[{"FromDigits", "/@", 
-            RowBox[{"Rest", "[", "tzpart", "]"}]}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", 
-             RowBox[{"1", "/", "60"}]}], "}"}]}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"signedtzoffset", "=", 
-         RowBox[{"N", "@", 
-          RowBox[{"If", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"tzpart", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], "===", "\"\<-\>\""}], ",", 
-            RowBox[{"-", "tzoffset"}], ",", "tzoffset"}], "]"}]}]}], ";"}]}], 
-      "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"DateObject", "[", 
-      RowBox[{
-       RowBox[{"stringParts", "[", 
-        RowBox[{"[", "1", "]"}], "]"}], ",", 
-       RowBox[{"TimeZone", "\[Rule]", "signedtzoffset"}]}], "]"}]}]}], 
-   "]"}]}]], "Input",
- CellChangeTimes->{{3.771104015492691*^9, 3.771104040373913*^9}},
- CellLabel->
-  "In[181]:=",ExpressionUUID->"2ecb5f8b-57cb-4eb7-bf7d-2a8949d4f5f9"],
+  "In[276]:=",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Dataset", "[", 
-  RowBox[{"dataTable", "=", 
-   RowBox[{"<|", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Include", " ", "timestamp"}], ",", " ", "latitude", ",", " ", 
+    "longitude", ",", " ", 
     RowBox[{
-     RowBox[{"\"\<Sensors\>\"", "\[Rule]", "sensorData"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\"\<Timestamp\>\"", "\[Rule]", 
-      RowBox[{"TimeZoneConvert", "[", 
-       RowBox[{"isoStringWithTZToDateObject", "[", 
-        RowBox[{"deviceRawData", "[", "\"\<last_check_in_at\>\"", "]"}], 
-        "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
-     RowBox[{"\"\<Position\>\"", "\[Rule]", 
-      RowBox[{"GeoPosition", "[", 
-       RowBox[{"Append", "[", "\[IndentingNewLine]", 
+    "and", " ", "elevation", " ", "into", " ", "the", " ", "table"}]}], 
+   "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"isoStringWithTZToDateObject", "[", "string_String", "]"}], ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{"by", " ", "Jesse"}], " ", "*)"}], 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"stringParts", "=", 
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"string", ",", 
+           RowBox[{
+           "RegularExpression", "[", 
+            "\"\<(?=((\\\\+|-)\\\\d{2}:\\\\d{2})|Z$)\>\"", "]"}]}], "]"}]}], 
+        ",", "tzpart", ",", "tzoffset", ",", "signedtzoffset"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"Which", "[", 
         RowBox[{
          RowBox[{
-          RowBox[{"Interpreter", "[", "\"\<Real\>\"", "]"}], "[", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"weatherfeed", "[", "\"\<latitude\>\"", "]"}], ",", 
-            RowBox[{"weatherfeed", "[", "\"\<longitude\>\"", "]"}]}], "}"}], 
-          "]"}], ",", "\[IndentingNewLine]", 
-         RowBox[{"Quantity", "[", 
-          RowBox[{
-           RowBox[{"weatherfeed", "[", "\"\<elevation\>\"", "]"}], ",", 
-           RowBox[{"Switch", "[", 
+          RowBox[{"Length", "[", "stringParts", "]"}], "===", "1"}], ",", 
+         RowBox[{"signedtzoffset", "=", "Automatic"}], ",", 
+         RowBox[{
+          RowBox[{"ToUpperCase", "[", 
+           RowBox[{"stringParts", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}], "===", "\"\<Z\>\""}], ",", 
+         
+         RowBox[{"signedtzoffset", "=", "0"}], ",", "True", ",", 
+         RowBox[{
+          RowBox[{"tzpart", "=", 
+           RowBox[{"StringSplit", "[", 
             RowBox[{
-             RowBox[{"weatherfeed", "[", "\"\<elevation_unit\>\"", "]"}], 
-             ",", "\"\<ft\>\"", ",", "\"\<Feet\>\"", ",", "\"\<m\>\"", ",", 
-             "\"\<Meters\>\""}], "]"}]}], "]"}]}], "\[IndentingNewLine]", 
-        "]"}], "]"}]}]}], "\[IndentingNewLine]", "|>"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.771103019672653*^9, 3.771103040164447*^9}, {
-  3.771103106138558*^9, 3.771103122928973*^9}, {3.771103220914947*^9, 
-  3.771103284791545*^9}, {3.771103319773189*^9, 3.7711033206652527`*^9}, {
-  3.771103537644936*^9, 3.77110353791294*^9}, {3.771103605084442*^9, 
-  3.7711036363034687`*^9}, {3.771103677964427*^9, 3.7711036867881002`*^9}, {
-  3.7711037394916162`*^9, 3.771103757106861*^9}, {3.771104141324306*^9, 
-  3.771104158136682*^9}},
+             RowBox[{"stringParts", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+               "RegularExpression", "[", "\"\<(?<=\\\\+|-)\>\"", "]"}], ",", 
+               "\"\<:\>\""}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"tzoffset", "=", 
+           RowBox[{"NumberCompose", "[", 
+            RowBox[{
+             RowBox[{"FromDigits", "/@", 
+              RowBox[{"Rest", "[", "tzpart", "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"1", "/", "60"}]}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"signedtzoffset", "=", 
+           RowBox[{"N", "@", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"tzpart", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "===", "\"\<-\>\""}], ",", 
+              RowBox[{"-", "tzoffset"}], ",", "tzoffset"}], "]"}]}]}], 
+          ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"DateObject", "[", 
+        RowBox[{
+         RowBox[{"stringParts", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", "signedtzoffset"}]}], "]"}]}]}], 
+     "]"}]}], "\n", "\n", 
+   RowBox[{"WeatherEntry", "=", 
+    RowBox[{"Dataset", "[", 
+     RowBox[{"dataTable", "=", 
+      RowBox[{"<|", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"\"\<Sensors\>\"", "\[Rule]", "sensorData"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"\"\<Timestamp\>\"", "\[Rule]", 
+         RowBox[{"TimeZoneConvert", "[", 
+          RowBox[{"isoStringWithTZToDateObject", "[", 
+           RowBox[{"deviceRawData", "[", "\"\<last_check_in_at\>\"", "]"}], 
+           "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"\"\<Position\>\"", "\[Rule]", 
+         RowBox[{"GeoPosition", "[", 
+          RowBox[{"Append", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Interpreter", "[", "\"\<Real\>\"", "]"}], "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"weatherfeed", "[", "\"\<latitude\>\"", "]"}], ",", 
+               RowBox[{"weatherfeed", "[", "\"\<longitude\>\"", "]"}]}], 
+              "}"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{
+              RowBox[{"weatherfeed", "[", "\"\<elevation\>\"", "]"}], ",", 
+              RowBox[{"Switch", "[", 
+               RowBox[{
+                RowBox[{"weatherfeed", "[", "\"\<elevation_unit\>\"", "]"}], 
+                ",", "\"\<ft\>\"", ",", "\"\<Feet\>\"", ",", "\"\<m\>\"", 
+                ",", "\"\<Meters\>\""}], "]"}]}], "]"}]}], "]"}], "]"}]}]}], 
+       "|>"}]}], "]"}]}]}]}]], "Code",
+ CellChangeTimes->{{3.771108349592574*^9, 3.7711084261026697`*^9}, {
+  3.771108505671939*^9, 3.7711085080057487`*^9}, {3.771109618990288*^9, 
+  3.77110964973129*^9}, {3.771110037366558*^9, 3.771110045528029*^9}},
  CellLabel->
-  "In[190]:=",ExpressionUUID->"59dbac41-80ae-4805-b5ae-bb540f7f8ba2"],
+  "In[280]:=",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
 
 Cell[BoxData[
  TemplateBox[{TagBox[
@@ -471,14 +477,14 @@ Cell[BoxData[
            TypeSystem`PackageScope`ElidedShape[1], {"Timestamp"} -> 
            TypeSystem`PackageScope`AtomShape[75], {"Position"} -> 
            TypeSystem`PackageScope`AtomShape[106]], 1], "InitialData" -> 
-        TypeSystem`PackageScope`CacheHandle[1978208416], "Type" -> 
+        TypeSystem`PackageScope`CacheHandle[410613717], "Type" -> 
         TypeSystem`Struct[{"Sensors", "Timestamp", "Position"}, {
            TypeSystem`Vector[
             TypeSystem`Struct[{"Sensor", "Value"}, {
               TypeSystem`Atom[String], TypeSystem`AnyType}], 9], 
            TypeSystem`Atom[DateObject], 
            TypeSystem`Atom[GeoPosition]}], "HandleQ" -> True, "RowTarget" -> 
-        20, "Data" -> TypeSystem`PackageScope`CacheHandle[1978208416]], 
+        20, "Data" -> TypeSystem`PackageScope`CacheHandle[410613717]], 
       TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
       TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
       TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
@@ -510,9 +516,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1992936611][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1685289233][{
                     Key["Sensors"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
                   GeneralUtilities`Slice[
                    Key["Sensors"]]], "Mouse"], Background -> GrayLevel[0.95], 
                 Alignment -> {Left, Baseline}], 
@@ -533,9 +539,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1992936611][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1685289233][{
                     Key["Sensors"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
                   GeneralUtilities`Slice[
                    Key["Sensors"]]], "Mouse"], BaseStyle -> {
                   GrayLevel[0.5]}]}, {
@@ -564,9 +570,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1992936611][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1685289233][{
                     Key["Timestamp"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
                   GeneralUtilities`Slice[
                    Key["Timestamp"]]], "Mouse"], Background -> 
                 GrayLevel[0.95], Alignment -> {Left, Baseline}], 
@@ -574,11 +580,11 @@ Cell[BoxData[
                 Annotation[
                  RawBoxes[
                   StyleBox[
-                  "\"Tue 2 Jul 2019 20:31:06\"", FontColor -> RGBColor[{
+                  "\"Tue 2 Jul 2019 22:36:07\"", FontColor -> RGBColor[{
                     Rational[33, 74], 
                     Rational[27, 74], 
                     Rational[117, 370]}]]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
                   GeneralUtilities`Slice[
                    Key["Timestamp"]]], "Mouse"], 
                 ImageSize -> {{75, Full}, Automatic}, 
@@ -607,9 +613,9 @@ Cell[BoxData[
                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1992936611][{
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1685289233][{
                     Key["Position"]}]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
                   GeneralUtilities`Slice[
                    Key["Position"]]], "Mouse"], Background -> GrayLevel[0.95],
                  Alignment -> {Left, Baseline}], 
@@ -622,7 +628,7 @@ Cell[BoxData[
                     Rational[33, 74], 
                     Rational[27, 74], 
                     Rational[117, 370]}]]], 
-                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
                   GeneralUtilities`Slice[
                    Key["Position"]]], "Mouse"], 
                 ImageSize -> {{106, Full}, Automatic}, 
@@ -655,7 +661,7 @@ Cell[BoxData[
             LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
              ShowAutoStyles -> False]], 
          TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
-         TypeSystem`NestedGrid`PackagePrivate`self = BoxObject[175153]}, 
+         TypeSystem`NestedGrid`PackagePrivate`self = BoxObject[252129]}, 
         Dynamic[
          TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
          TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
@@ -673,7 +679,7 @@ Cell[BoxData[
                 TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                  TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                  TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1992936611][
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1685289233][
                 TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
                Not[
                 FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
@@ -704,14 +710,14 @@ Cell[BoxData[
            TypeSystem`NestedGrid`PackagePrivate`$state$$, 
             TypeSystem`NestedGrid`PackagePrivate`$path$$, 
             TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
-            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1992936611]]]], 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1685289233]]]], 
         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
       TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
         Dynamic[
          Replace[
           MouseAnnotation[Null], {
-          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][Null] -> 
-           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1992936611][
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1685289233][
              Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
               Blank[]]] :> (
             TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
@@ -759,44 +765,76 @@ Cell[BoxData[
   DisplayFunction->(#& ),
   InterpretationFunction->("Dataset[<>]"& )]], "Output",
  CellChangeTimes->{
-  3.771103116651464*^9, 3.771103254177102*^9, 3.771103286469619*^9, 
-   3.7711035390582867`*^9, 3.771103782509119*^9, {3.77110415424039*^9, 
-   3.771104158642457*^9}},
+  3.771108429535398*^9, 3.771109652355192*^9, 3.7711096912939787`*^9, {
+   3.7711099446333323`*^9, 3.771109972631291*^9}, 3.771110302524931*^9},
  CellLabel->
-  "Out[190]=",ExpressionUUID->"6b8d015d-0f79-4edb-9340-f8fd1777851c"]
+  "Out[281]=",ExpressionUUID->"4720201c-7ca3-4601-a296-0e3275d8c62c"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{
     RowBox[{
-    "Give", " ", "the", " ", "string", " ", "of", " ", "weather", " ", "data",
-      " ", "above"}], ",", " ", 
+    "Give", " ", "the", " ", "weather", " ", "Dataset", " ", "above"}], ",", 
+    " ", 
     RowBox[{
-    "find", " ", "its", " ", "hash", " ", "and", " ", "insert", " ", "into", 
-     " ", "the", " ", "Wolfram", " ", "Blockchain"}]}], "*)"}], "\n", 
+    "insert", " ", "its", " ", "hash", " ", "into", " ", "the", " ", 
+     "Wolfram", " ", 
+     RowBox[{"Blockchain", ".", " ", "Then"}], " ", "insert", " ", "the", " ",
+      "table", " ", "itself", " ", "into", " ", "a", " ", "Databin"}]}], 
+   "*)"}], "\n", 
   RowBox[{
-   RowBox[{"Hash", "[", 
-    RowBox[{"expr", ",", " ", "\"\<type\>\"", ",", " ", "\"\<format\>\""}], 
-    "]"}], "\n", 
-   RowBox[{"BlockchainPut", "[", "dataTable", "]"}]}]}]], "Code",
+   RowBox[{"WeatherHash1", "=", 
+    RowBox[{"Hash", "[", 
+     RowBox[{"WeatherEntry", ",", " ", "\"\<SHA256\>\""}], "]"}]}], "\n", 
+   RowBox[{"trxID", "=", 
+    RowBox[{"BlockchainPut", "[", "WeatherHash1", "]"}]}], "\n", 
+   RowBox[{"BlockchainGet", "[", "trxID", "]"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Databin", "[", 
+     RowBox[{"\"\<id\>\"", ",", " ", "range", ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"key1", ",", " ", "key2", ",", " ", 
+        RowBox[{"...", "..."}]}], "}"}]}], "]"}], "*)"}]}]}]], "Code",
  CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
    3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
    3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
    3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
-   3.771098801551036*^9}, 
-   3.7711045429472923`*^9},ExpressionUUID->"3328e4ce-4400-4a1f-9502-\
-1359fb90981f"],
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}},
+ CellLabel->
+  "In[285]:=",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
 
-Cell[BoxData["Databin"], "Input",
- CellChangeTimes->{{3.77110525221054*^9, 
-  3.7711052557051373`*^9}},ExpressionUUID->"90df08dc-cf92-4a75-9a88-\
-70d20fac1e77"]
+Cell[BoxData[\
+"10842955899594944385044017198416273888899857906141741465373999967425683568009\
+9"], "Output",
+ CellChangeTimes->{3.77111031224454*^9, 3.7711103640583773`*^9},
+ CellLabel->
+  "Out[285]=",ExpressionUUID->"abbcb724-4794-468a-b81f-659a20e5ecd6"],
+
+Cell[BoxData["\<\"\
+31fd5934a821a184031ec2b0030f3b28cceaf410895c643b7e95b013eae84507\"\>"], \
+"Output",
+ CellChangeTimes->{3.77111031224454*^9, 3.771110364691216*^9},
+ CellLabel->
+  "Out[286]=",ExpressionUUID->"e29df97a-cad5-43af-bcfd-e22c34debf62"],
+
+Cell[BoxData[\
+"10842955899594944385044017198416273888899857906141741465373999967425683568009\
+9"], "Output",
+ CellChangeTimes->{3.77111031224454*^9, 3.7711103651951323`*^9},
+ CellLabel->
+  "Out[287]=",ExpressionUUID->"b442921b-0c87-4682-ac87-0f2c8d5a0767"]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1124, 748},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{1280, 748},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -828,17 +866,20 @@ Cell[580, 22, 325, 5, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3
 Cell[908, 29, 531, 11, 58, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
 Cell[1442, 42, 438, 9, 35, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
 Cell[1883, 53, 624, 13, 127, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
-Cell[2510, 68, 3091, 65, 319, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
-Cell[5604, 135, 1566, 39, 186, "Code",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
-Cell[7173, 176, 2546, 49, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
-Cell[9722, 227, 5134, 116, 319, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
-Cell[14859, 345, 2498, 64, 178, "Input",ExpressionUUID->"2ecb5f8b-57cb-4eb7-bf7d-2a8949d4f5f9"],
+Cell[2510, 68, 3117, 66, 319, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+Cell[5630, 136, 1639, 41, 186, "Code",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
+Cell[7272, 179, 2546, 49, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+Cell[9821, 230, 5157, 116, 300, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
 Cell[CellGroupData[{
-Cell[17382, 413, 1985, 40, 178, "Input",ExpressionUUID->"59dbac41-80ae-4805-b5ae-bb540f7f8ba2"],
-Cell[19370, 455, 16244, 310, 109, "Output",ExpressionUUID->"6b8d015d-0f79-4edb-9340-f8fd1777851c"]
+Cell[15003, 350, 4568, 109, 281, "Code",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
+Cell[19574, 461, 16219, 309, 109, "Output",ExpressionUUID->"4720201c-7ca3-4601-a296-0e3275d8c62c"]
 }, Open  ]],
-Cell[35629, 768, 943, 21, 91, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
-Cell[36575, 791, 160, 3, 30, "Input",ExpressionUUID->"90df08dc-cf92-4a75-9a88-70d20fac1e77"]
+Cell[CellGroupData[{
+Cell[35830, 775, 1645, 35, 129, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
+Cell[37478, 812, 257, 5, 34, "Output",ExpressionUUID->"abbcb724-4794-468a-b81f-659a20e5ecd6"],
+Cell[37738, 819, 249, 5, 34, "Output",ExpressionUUID->"e29df97a-cad5-43af-bcfd-e22c34debf62"],
+Cell[37990, 826, 257, 5, 34, "Output",ExpressionUUID->"b442921b-0c87-4682-ac87-0f2c8d5a0767"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
