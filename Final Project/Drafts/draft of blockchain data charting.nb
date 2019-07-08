@@ -10,16 +10,427 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    480916,      10047]
-NotebookOptionsPosition[    477120,       9975]
-NotebookOutlinePosition[    477455,       9990]
-CellTagsIndexPosition[    477412,       9987]
+NotebookDataLength[    501207,      10471]
+NotebookOptionsPosition[    496583,      10387]
+NotebookOutlinePosition[    496920,      10402]
+CellTagsIndexPosition[    496877,      10399]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["Ethereum Testnet", "Title",
+ CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
+  3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770629187164171*^9, 
+  3.770629190665093*^9}, {3.771082338636999*^9, 3.7710823642564497`*^9}, {
+  3.7712543348656397`*^9, 3.771254342151402*^9}, {3.771254413823579*^9, 
+  3.771254418647304*^9}, {3.771254531777298*^9, 3.771254532680935*^9}, {
+  3.771255630684341*^9, 
+  3.7712556359328413`*^9}},ExpressionUUID->"3ff730e6-3ba3-441d-83d2-\
+cbbade902671"],
+
+Cell["\<\
+Both the Bitcoin and Ethereum Testnets allow individuals to play around with \
+their platforms without the risk of losing real financial assets. Though \
+Bitcoin is designed to only permit one type of transaction, we can attach a \
+message to this transaction for inclusion on the blockchain. Similarly, \
+Ethereum also has the potential to include brief messages in their \
+transactions. \
+\>", "Text",
+ CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
+   3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
+   3.771084313003523*^9}, {3.77108524061522*^9, 3.7710853136265383`*^9}, {
+   3.771150412019314*^9, 3.771150436640399*^9}, {3.7711528496053457`*^9, 
+   3.7711528619639807`*^9}, {3.7711564202376747`*^9, 3.771156468418681*^9}, {
+   3.7711574850835*^9, 3.771157578473652*^9}, {3.771157655290841*^9, 
+   3.7711576709422283`*^9}, {3.771157834523899*^9, 3.771157837867872*^9}, {
+   3.771158062653474*^9, 3.771158118456168*^9}, {3.7711628920463467`*^9, 
+   3.7711628938290377`*^9}, 3.7711700277771473`*^9, {3.7712544509628963`*^9, 
+   3.771254451737986*^9}, {3.771254931490315*^9, 3.7712550841460323`*^9}, {
+   3.771255945090382*^9, 
+   3.771255945647643*^9}},ExpressionUUID->"a0f65ccd-4233-401b-a7fe-\
+25154bb29c65"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Set", " ", "default", " ", "blockchain", " ", "to", " ", "Bitcoin", " ", 
+    "testnet"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"BlockchainBase", "[", 
+     RowBox[{"\"\<Ethereum\>\"", ",", "\"\<Testnet\>\""}], "]"}], ";"}], "\n",
+    "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Create", " ", "pair", " ", "of", " ", "keys", " ", "for", " ", "Bitcoin",
+      " ", "network"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"ethKeys", "=", 
+     RowBox[{"GenerateAsymmetricKeyPair", "[", 
+      RowBox[{"\"\<Ethereum\>\"", ",", "\"\<Testnet\>\""}], "]"}]}], ";"}], 
+   "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Create", " ", "a", " ", "Bitcoin", " ", "testnet", " ", "address"}], 
+    "*)"}], "\n", 
+   RowBox[{"ethAddress", "=", 
+    RowBox[{"BlockchainKeyEncode", "[", 
+     RowBox[{
+      RowBox[{"ethKeys", "[", "\"\<PublicKey\>\"", "]"}], ",", 
+      "\"\<Address\>\""}], "]"}]}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Get", " ", "some", " ", "fake", " ", "Eth", " ", "from", " ", "the", 
+      " ", "URL", " ", 
+      RowBox[{"https", ":"}]}], "//", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"coinfaucet", ".", "eu"}], "/", "en"}], "/", "btc"}], "-", 
+      RowBox[{
+       RowBox[{"testnet", "/", " ", "and"}], " ", "save", " ", "your", " ", 
+       "transaction", " ", "ID"}]}]}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{
+    "sourceTXID", "=", 
+     "\"\<fdeb0754e9a9e25951979d818bd63bf4487985edf6317de2d8fad71b4dbdfb1a\>\"\
+"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"enter", " ", "trx", " ", "ID", " ", "between", " ", "quotes"}], 
+    "*)"}], "\n", 
+   RowBox[{"sourceTX", "=", 
+    RowBox[{"BlockchainTransactionData", "[", "sourceTXID", "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{"sourceTX", "[", "\"\<Outputs\>\"", "]"}], "\[LeftDoubleBracket]",
+     "2", "\[RightDoubleBracket]"}]}]}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+   3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+   3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
+   3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
+   3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
+   3.771150107480976*^9}, {3.771166361094122*^9, 3.771166361739805*^9}, {
+   3.7711707772375393`*^9, 3.77117077740445*^9}, 3.77117082292105*^9, {
+   3.771170888965871*^9, 3.771170893566082*^9}, {3.771170929324216*^9, 
+   3.771171089707863*^9}, {3.771171133352523*^9, 3.7711712162437487`*^9}, {
+   3.771171321417416*^9, 3.771171336131955*^9}, {3.7711714070538187`*^9, 
+   3.771171445165649*^9}, {3.7711717522769833`*^9, 3.771171757129265*^9}, {
+   3.771171982516374*^9, 3.7711721638786783`*^9}, {3.7711722270791597`*^9, 
+   3.7711722492458353`*^9}, 3.7711722940208282`*^9, {3.771172325574664*^9, 
+   3.7711723913004713`*^9}, {3.7711754385585423`*^9, 
+   3.7711754403342648`*^9}, {3.7711762233417053`*^9, 3.7711762311795063`*^9}, 
+   3.7711762927464457`*^9, {3.771255159994471*^9, 3.771255160970191*^9}, 
+   3.771255196531685*^9, {3.7712557205404673`*^9, 
+   3.77125578742572*^9}},ExpressionUUID->"922c0f91-e957-4ee4-a65a-\
+d121e12abad2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Make", " ", "a", " ", "transaction"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"change", "=", 
+    RowBox[{"UnitConvert", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Lookup", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"sourceTX", "[", "\"\<Outputs\>\"", "]"}], 
+          "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], ",", 
+         "\"\<Amount\>\""}], "]"}], "-", 
+       TemplateBox[{"10000.",RowBox[{"\[VeryThinSpace]", 
+           FormBox["\" sat\"", TraditionalForm]}],"satoshis","\"Satoshis\""},
+        "QuantityPostfix"], "-", 
+       TemplateBox[{"0.01",RowBox[{
+           FormBox["\"\:0e3f\"", TraditionalForm], "\[VeryThinSpace]"}],
+         "bitcoins","\"Bitcoins\""},
+        "QuantityPrefix"]}], ",", "\"\<Bitcoins\>\""}], "]"}]}], "\n", 
+   RowBox[{"tx", "=", 
+    RowBox[{"BlockchainTransaction", "[", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<Inputs\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<TransactionID\>\"", "\[Rule]", "sourceTXID"}], ",", 
+           RowBox[{"\"\<Index\>\"", "\[Rule]", "1"}]}], "|>"}], "}"}]}], ",", 
+       
+       RowBox[{"\"\<Outputs\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<Amount\>\"", "\[Rule]", 
+             TemplateBox[{"0.01",RowBox[{
+                 FormBox["\"\:0e3f\"", TraditionalForm], "\[VeryThinSpace]"}],
+               "bitcoins","\"Bitcoins\""},
+              "QuantityPrefix"]}], ",", 
+            RowBox[{
+            "\"\<Address\>\"", "\[Rule]", 
+             "\"\<2MzEExewcCKYN8q7cKrSiZqHLk8NSbpjh1x\>\""}]}], "|>"}], ",", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<Amount\>\"", "\[Rule]", "change"}], ",", 
+            RowBox[{"\"\<Address\>\"", "\[Rule]", "address"}]}], "|>"}]}], 
+         "}"}]}], ",", 
+       RowBox[{"\"\<BlockchainBase\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Bitcoin\>\"", ",", "\"\<Testnet\>\""}], "}"}]}]}], 
+      "|>"}], "]"}]}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Sign", " ", "the", " ", "trx"}], "*)"}], "\n", 
+   RowBox[{"signedTX", "=", 
+    RowBox[{"BlockchainTransactionSign", "[", 
+     RowBox[{"tx", ",", "btcKeys"}], "]"}]}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Submit", " ", "the", " ", "trx"}], "*)"}], "\n", 
+   RowBox[{"BlockchainTransactionSubmit", "[", "signedTX", "]"}], 
+   "\n"}]}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+   3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+   3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
+   3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
+   3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
+   3.771150107480976*^9}, {3.771166361094122*^9, 3.771166361739805*^9}, {
+   3.7711707772375393`*^9, 3.77117077740445*^9}, 3.77117082292105*^9, {
+   3.771170888965871*^9, 3.771170893566082*^9}, {3.771170929324216*^9, 
+   3.771171089707863*^9}, {3.771171133352523*^9, 3.7711712162437487`*^9}, {
+   3.771171321417416*^9, 3.771171336131955*^9}, {3.7711714070538187`*^9, 
+   3.771171445165649*^9}, {3.7711717522769833`*^9, 3.771171757129265*^9}, {
+   3.771171982516374*^9, 3.7711721638786783`*^9}, {3.7711722270791597`*^9, 
+   3.7711722492458353`*^9}, 3.7711722940208282`*^9, {3.771172325574664*^9, 
+   3.7711723913004713`*^9}, {3.7711754385585423`*^9, 
+   3.7711754403342648`*^9}, {3.7711762233417053`*^9, 3.7711762311795063`*^9}, 
+   3.7711762927464457`*^9, {3.771255159994471*^9, 3.771255160970191*^9}, 
+   3.771255196531685*^9, {3.771255737891943*^9, 
+   3.771255739326509*^9}},ExpressionUUID->"63ec299c-1686-495d-bbe8-\
+2ad20e0ca4a8"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Bitcoin Testnet", "Title",
+ CellChangeTimes->{{3.770055572438499*^9, 3.7700555729498453`*^9}, {
+  3.770055604008165*^9, 3.7700556066618843`*^9}, {3.770629187164171*^9, 
+  3.770629190665093*^9}, {3.771082338636999*^9, 3.7710823642564497`*^9}, {
+  3.7712543348656397`*^9, 3.771254342151402*^9}, {3.771254413823579*^9, 
+  3.771254418647304*^9}, {3.771254531777298*^9, 3.771254532680935*^9}, {
+  3.771255623243396*^9, 
+  3.7712556401309147`*^9}},ExpressionUUID->"895c7d10-769e-4a70-b62e-\
+ab53201b118f"],
+
+Cell["\<\
+While it is not currently possible to embed messages into Bitcoin\
+\[CloseCurlyQuote]s blockchain with a transaction, it is possible to have \
+metadata attached to particular transaction using an online wallet such as \
+offered by blockchain.info. When making a transaction from their website, one \
+can include a \[OpenCurlyDoubleQuote]label\[CloseCurlyDoubleQuote] which \
+could be viewed as subject line in an email.
+
+Both the Bitcoin and Ethereum Testnets allow individuals to play around with \
+their platforms without the risk of losing real financial assets. Though \
+Bitcoin is designed to only permit one type of transaction, we can attach a \
+message to this transaction for inclusion on the blockchain. Similarly, \
+Ethereum also has the potential to include brief messages in their \
+transactions. \
+\>", "Text",
+ CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
+   3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
+   3.771084313003523*^9}, {3.77108524061522*^9, 3.7710853136265383`*^9}, {
+   3.771150412019314*^9, 3.771150436640399*^9}, {3.7711528496053457`*^9, 
+   3.7711528619639807`*^9}, {3.7711564202376747`*^9, 3.771156468418681*^9}, {
+   3.7711574850835*^9, 3.771157578473652*^9}, {3.771157655290841*^9, 
+   3.7711576709422283`*^9}, {3.771157834523899*^9, 3.771157837867872*^9}, {
+   3.771158062653474*^9, 3.771158118456168*^9}, {3.7711628920463467`*^9, 
+   3.7711628938290377`*^9}, 3.7711700277771473`*^9, {3.7712544509628963`*^9, 
+   3.771254451737986*^9}, {3.771254931490315*^9, 3.7712550841460323`*^9}, {
+   3.771255970470613*^9, 3.7712559708688383`*^9}, {3.771359059845317*^9, 
+   3.771359209519895*^9}, {3.7713592499824123`*^9, 
+   3.771359286319023*^9}},ExpressionUUID->"56a8021b-d03b-4169-8db8-\
+6c1f760872dc"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Set", " ", "default", " ", "blockchain", " ", "to", " ", "Bitcoin", " ", 
+    "testnet"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"BlockchainBase", "[", 
+     RowBox[{"\"\<Bitcoin\>\"", ",", "\"\<Testnet\>\""}], "]"}], ";"}], "\n", 
+   "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Create", " ", "pair", " ", "of", " ", "keys", " ", "for", " ", "Bitcoin",
+      " ", "network"}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"btcKeys", "=", 
+     RowBox[{"GenerateAsymmetricKeyPair", "[", "\"\<Bitcoin\>\"", "]"}]}], 
+    ";"}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+    "Create", " ", "a", " ", "Bitcoin", " ", "testnet", " ", "address"}], 
+    "*)"}], "\n", 
+   RowBox[{"btcAddress", "=", 
+    RowBox[{"BlockchainKeyEncode", "[", 
+     RowBox[{
+      RowBox[{"btcKeys", "[", "\"\<PublicKey\>\"", "]"}], ",", 
+      "\"\<Address\>\""}], "]"}]}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "Get", " ", "some", " ", "fake", " ", "BTC", " ", "from", " ", "the", 
+      " ", "URL", " ", 
+      RowBox[{"https", ":"}]}], "//", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"coinfaucet", ".", "eu"}], "/", "en"}], "/", "btc"}], "-", 
+      RowBox[{
+       RowBox[{"testnet", "/", " ", "and"}], " ", "save", " ", "your", " ", 
+       "transaction", " ", "ID"}]}]}], "*)"}], "\n", 
+   RowBox[{
+    RowBox[{
+    "sourceTXID", "=", 
+     "\"\<fdeb0754e9a9e25951979d818bd63bf4487985edf6317de2d8fad71b4dbdfb1a\>\"\
+"}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"enter", " ", "trx", " ", "ID", " ", "between", " ", "quotes"}], 
+    "*)"}], "\n", 
+   RowBox[{"sourceTX", "=", 
+    RowBox[{"BlockchainTransactionData", "[", "sourceTXID", "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{"sourceTX", "[", "\"\<Outputs\>\"", "]"}], "\[LeftDoubleBracket]",
+     "2", "\[RightDoubleBracket]"}]}]}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+   3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+   3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
+   3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
+   3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
+   3.771150107480976*^9}, {3.771166361094122*^9, 3.771166361739805*^9}, {
+   3.7711707772375393`*^9, 3.77117077740445*^9}, 3.77117082292105*^9, {
+   3.771170888965871*^9, 3.771170893566082*^9}, {3.771170929324216*^9, 
+   3.771171089707863*^9}, {3.771171133352523*^9, 3.7711712162437487`*^9}, {
+   3.771171321417416*^9, 3.771171336131955*^9}, {3.7711714070538187`*^9, 
+   3.771171445165649*^9}, {3.7711717522769833`*^9, 3.771171757129265*^9}, {
+   3.771171982516374*^9, 3.7711721638786783`*^9}, {3.7711722270791597`*^9, 
+   3.7711722492458353`*^9}, 3.7711722940208282`*^9, {3.771172325574664*^9, 
+   3.7711723913004713`*^9}, {3.7711754385585423`*^9, 
+   3.7711754403342648`*^9}, {3.7711762233417053`*^9, 3.7711762311795063`*^9}, 
+   3.7711762927464457`*^9, {3.771255159994471*^9, 3.771255160970191*^9}, 
+   3.771255196531685*^9, {3.771255672766287*^9, 3.77125567482859*^9}, {
+   3.771255893707386*^9, 
+   3.7712558965780163`*^9}},ExpressionUUID->"a7aae154-930f-4f40-854d-\
+2e232bb46723"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Make", " ", "a", " ", "transaction"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"change", "=", 
+    RowBox[{"UnitConvert", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Lookup", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"sourceTX", "[", "\"\<Outputs\>\"", "]"}], 
+          "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], ",", 
+         "\"\<Amount\>\""}], "]"}], "-", 
+       TemplateBox[{"10000.",RowBox[{"\[VeryThinSpace]", 
+           FormBox["\" sat\"", TraditionalForm]}],"satoshis","\"Satoshis\""},
+        "QuantityPostfix"], "-", 
+       TemplateBox[{"0.01",RowBox[{
+           FormBox["\"\:0e3f\"", TraditionalForm], "\[VeryThinSpace]"}],
+         "bitcoins","\"Bitcoins\""},
+        "QuantityPrefix"]}], ",", "\"\<Bitcoins\>\""}], "]"}]}], "\n", 
+   RowBox[{"tx", "=", 
+    RowBox[{"BlockchainTransaction", "[", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<Inputs\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<TransactionID\>\"", "\[Rule]", "sourceTXID"}], ",", 
+           RowBox[{"\"\<Index\>\"", "\[Rule]", "1"}]}], "|>"}], "}"}]}], ",", 
+       
+       RowBox[{"\"\<Outputs\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<Amount\>\"", "\[Rule]", 
+             TemplateBox[{"0.01",RowBox[{
+                 FormBox["\"\:0e3f\"", TraditionalForm], "\[VeryThinSpace]"}],
+               "bitcoins","\"Bitcoins\""},
+              "QuantityPrefix"]}], ",", 
+            RowBox[{
+            "\"\<Address\>\"", "\[Rule]", 
+             "\"\<2MzEExewcCKYN8q7cKrSiZqHLk8NSbpjh1x\>\""}]}], "|>"}], ",", 
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<Amount\>\"", "\[Rule]", "change"}], ",", 
+            RowBox[{"\"\<Address\>\"", "\[Rule]", "address"}]}], "|>"}]}], 
+         "}"}]}], ",", 
+       RowBox[{"\"\<BlockchainBase\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Bitcoin\>\"", ",", "\"\<Testnet\>\""}], "}"}]}]}], 
+      "|>"}], "]"}]}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Sign", " ", "the", " ", "trx"}], "*)"}], "\n", 
+   RowBox[{"signedTX", "=", 
+    RowBox[{"BlockchainTransactionSign", "[", 
+     RowBox[{"tx", ",", "btcKeys"}], "]"}]}], "\n", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Submit", " ", "the", " ", "trx"}], "*)"}], "\n", 
+   RowBox[{"BlockchainTransactionSubmit", "[", "signedTX", "]"}], 
+   "\n"}]}]], "Code",
+ CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
+   3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
+   3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
+   3.771097492141831*^9, 3.771097493471736*^9}, {3.7710987890719957`*^9, 
+   3.771098801551036*^9}, 3.7711045429472923`*^9, {3.771109715996643*^9, 
+   3.771109818731124*^9}, {3.77111005060894*^9, 3.7711100551288033`*^9}, {
+   3.771110107752203*^9, 3.771110149013318*^9}, {3.7711102439168777`*^9, 
+   3.771110264020534*^9}, {3.771110359487102*^9, 3.7711103620590878`*^9}, {
+   3.77115002398969*^9, 3.771150050945462*^9}, {3.771150083939055*^9, 
+   3.771150107480976*^9}, {3.771166361094122*^9, 3.771166361739805*^9}, {
+   3.7711707772375393`*^9, 3.77117077740445*^9}, 3.77117082292105*^9, {
+   3.771170888965871*^9, 3.771170893566082*^9}, {3.771170929324216*^9, 
+   3.771171089707863*^9}, {3.771171133352523*^9, 3.7711712162437487`*^9}, {
+   3.771171321417416*^9, 3.771171336131955*^9}, {3.7711714070538187`*^9, 
+   3.771171445165649*^9}, {3.7711717522769833`*^9, 3.771171757129265*^9}, {
+   3.771171982516374*^9, 3.7711721638786783`*^9}, {3.7711722270791597`*^9, 
+   3.7711722492458353`*^9}, 3.7711722940208282`*^9, {3.771172325574664*^9, 
+   3.7711723913004713`*^9}, {3.7711754385585423`*^9, 
+   3.7711754403342648`*^9}, {3.7711762233417053`*^9, 3.7711762311795063`*^9}, 
+   3.7711762927464457`*^9, {3.771255159994471*^9, 3.771255160970191*^9}, 
+   3.771255196531685*^9, {3.77125568330466*^9, 
+   3.7712556846081247`*^9}},ExpressionUUID->"6ca615d9-59d5-4f19-8c10-\
+0149f1110b78"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Databin", "[", 
   RowBox[{"\"\<EM6FHeXi\>\"", ",", " ", "All"}], "]"}]], "Input",
@@ -9972,9 +10383,10 @@ Cell[BoxData[
  CellLabel->
   "Out[269]=",ExpressionUUID->"9145bb93-dcb1-4b0b-a16a-94114d55a9b6"]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{741, 755},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{23, Automatic}, {Automatic, 20}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -9990,64 +10402,76 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 430, 8, 30, "Input",ExpressionUUID->"f715938f-7e0b-4a36-9761-f59121c5ec7b"],
-Cell[1013, 32, 13448, 272, 64, "Output",ExpressionUUID->"a0cfd7a3-34e1-4e90-915b-3b54273ad2c3"]
+Cell[580, 22, 506, 8, 98, "Title",ExpressionUUID->"3ff730e6-3ba3-441d-83d2-cbbade902671"],
+Cell[1089, 32, 1267, 20, 81, "Text",ExpressionUUID->"a0f65ccd-4233-401b-a7fe-25154bb29c65"],
+Cell[2359, 54, 3527, 77, 281, "Code",ExpressionUUID->"922c0f91-e957-4ee4-a65a-d121e12abad2"],
+Cell[5889, 133, 4121, 86, 230, "Code",ExpressionUUID->"63ec299c-1686-495d-bbe8-2ad20e0ca4a8"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10047, 224, 505, 8, 72, "Title",ExpressionUUID->"895c7d10-769e-4a70-b62e-ab53201b118f"],
+Cell[10555, 234, 1788, 28, 219, "Text",ExpressionUUID->"56a8021b-d03b-4169-8db8-6c1f760872dc"],
+Cell[12346, 264, 3535, 77, 281, "Code",ExpressionUUID->"a7aae154-930f-4f40-854d-2e232bb46723"],
+Cell[15884, 343, 4122, 86, 230, "Code",ExpressionUUID->"6ca615d9-59d5-4f19-8c10-0149f1110b78"],
+Cell[CellGroupData[{
+Cell[20031, 433, 430, 8, 30, "Input",ExpressionUUID->"f715938f-7e0b-4a36-9761-f59121c5ec7b"],
+Cell[20464, 443, 13448, 272, 64, "Output",ExpressionUUID->"a0cfd7a3-34e1-4e90-915b-3b54273ad2c3"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14498, 309, 643, 15, 30, "Input",ExpressionUUID->"6769ab2d-05f3-4415-9230-feae135b9fec"],
-Cell[15144, 326, 5355, 97, 1274, "Output",ExpressionUUID->"e2ad7c3c-3b46-4a80-9e23-54d840bce125"]
+Cell[33949, 720, 643, 15, 30, "Input",ExpressionUUID->"6769ab2d-05f3-4415-9230-feae135b9fec"],
+Cell[34595, 737, 5355, 97, 1274, "Output",ExpressionUUID->"e2ad7c3c-3b46-4a80-9e23-54d840bce125"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20536, 428, 776, 15, 30, "Input",ExpressionUUID->"e0e8a24a-29d0-40f4-ad8f-dbda1c708dbb"],
-Cell[21315, 445, 313486, 6427, 505, "Output",ExpressionUUID->"b291ee55-1296-4dd5-a3d9-752e95aa8f15"]
+Cell[39987, 839, 776, 15, 30, "Input",ExpressionUUID->"e0e8a24a-29d0-40f4-ad8f-dbda1c708dbb"],
+Cell[40766, 856, 313486, 6427, 505, "Output",ExpressionUUID->"b291ee55-1296-4dd5-a3d9-752e95aa8f15"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[334838, 6877, 729, 15, 30, "Input",ExpressionUUID->"210328b7-fd4e-4482-8a24-8594869b6208"],
-Cell[335570, 6894, 1687, 49, 60, "Output",ExpressionUUID->"b4e20147-4d13-426e-b607-d0e036e77dbf"]
+Cell[354289, 7288, 729, 15, 30, "Input",ExpressionUUID->"210328b7-fd4e-4482-8a24-8594869b6208"],
+Cell[355021, 7305, 1687, 49, 60, "Output",ExpressionUUID->"b4e20147-4d13-426e-b607-d0e036e77dbf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[337294, 6948, 651, 14, 30, "Input",ExpressionUUID->"7392f962-8def-4f78-85fb-aac8f0b4394e"],
-Cell[337948, 6964, 6206, 148, 166, "Output",ExpressionUUID->"654e1727-2503-4227-85e0-3599f5f5e276"]
+Cell[356745, 7359, 651, 14, 30, "Input",ExpressionUUID->"7392f962-8def-4f78-85fb-aac8f0b4394e"],
+Cell[357399, 7375, 6206, 148, 166, "Output",ExpressionUUID->"654e1727-2503-4227-85e0-3599f5f5e276"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[344191, 7117, 306, 7, 30, "Input",ExpressionUUID->"d239569d-47cc-41b9-a6d8-b0bb43d819eb"],
-Cell[344500, 7126, 186, 4, 45, "Output",ExpressionUUID->"068bc5f2-7ee6-4452-9f2f-b75ebb8d389b"]
+Cell[363642, 7528, 306, 7, 30, "Input",ExpressionUUID->"d239569d-47cc-41b9-a6d8-b0bb43d819eb"],
+Cell[363951, 7537, 186, 4, 45, "Output",ExpressionUUID->"068bc5f2-7ee6-4452-9f2f-b75ebb8d389b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[344723, 7135, 371, 9, 30, "Input",ExpressionUUID->"73613692-2d54-4a2b-908c-2f43c326f851"],
-Cell[345097, 7146, 219, 4, 45, "Output",ExpressionUUID->"c49d1cc5-918d-462e-a13c-254e16941094"]
+Cell[364174, 7546, 371, 9, 30, "Input",ExpressionUUID->"73613692-2d54-4a2b-908c-2f43c326f851"],
+Cell[364548, 7557, 219, 4, 45, "Output",ExpressionUUID->"c49d1cc5-918d-462e-a13c-254e16941094"]
 }, Open  ]],
-Cell[345331, 7153, 152, 3, 30, "Input",ExpressionUUID->"c8170383-db2c-4399-9292-692c542cf4c4"],
+Cell[364782, 7564, 152, 3, 30, "Input",ExpressionUUID->"c8170383-db2c-4399-9292-692c542cf4c4"],
 Cell[CellGroupData[{
-Cell[345508, 7160, 540, 14, 30, "Input",ExpressionUUID->"9dc18c51-6d93-4b73-95c6-21cd4ae48b07"],
-Cell[346051, 7176, 8076, 215, 154, "Echo",ExpressionUUID->"695d4ffd-0027-4fcd-abbb-0ea7adb5d585"],
-Cell[354130, 7393, 3973, 96, 251, "Output",ExpressionUUID->"85e81289-f043-42b2-92eb-19f8dc19cc07"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[358140, 7494, 627, 14, 30, "Input",ExpressionUUID->"aef4ef10-dd2e-46c4-ad1a-7fa84ccc7e78"],
-Cell[358770, 7510, 482, 11, 24, "Message",ExpressionUUID->"74ebd308-45d5-4a78-ab98-c7b3703a0147"],
-Cell[359255, 7523, 2115, 34, 77, "Message",ExpressionUUID->"70e13f75-c4cf-440a-8be0-b23e1584524a"],
-Cell[361373, 7559, 7908, 201, 194, "Output",ExpressionUUID->"cb58db66-f0f8-4b05-9ed3-1a2bb7fa0757"]
+Cell[364959, 7571, 540, 14, 30, "Input",ExpressionUUID->"9dc18c51-6d93-4b73-95c6-21cd4ae48b07"],
+Cell[365502, 7587, 8076, 215, 154, "Echo",ExpressionUUID->"695d4ffd-0027-4fcd-abbb-0ea7adb5d585"],
+Cell[373581, 7804, 3973, 96, 251, "Output",ExpressionUUID->"85e81289-f043-42b2-92eb-19f8dc19cc07"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[369318, 7765, 462, 10, 30, "Input",ExpressionUUID->"e662c078-8254-4167-8004-5c1b5e87dcea"],
-Cell[369783, 7777, 15676, 309, 285, "Output",ExpressionUUID->"8edc4ffc-0237-4b41-9d79-8cccd53ace46"]
+Cell[377591, 7905, 627, 14, 30, "Input",ExpressionUUID->"aef4ef10-dd2e-46c4-ad1a-7fa84ccc7e78"],
+Cell[378221, 7921, 482, 11, 24, "Message",ExpressionUUID->"74ebd308-45d5-4a78-ab98-c7b3703a0147"],
+Cell[378706, 7934, 2115, 34, 77, "Message",ExpressionUUID->"70e13f75-c4cf-440a-8be0-b23e1584524a"],
+Cell[380824, 7970, 7908, 201, 194, "Output",ExpressionUUID->"cb58db66-f0f8-4b05-9ed3-1a2bb7fa0757"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[385496, 8091, 353, 9, 30, "Input",ExpressionUUID->"c6d26bf0-12b7-43e7-b87f-48aaa1ed86c4"],
-Cell[385852, 8102, 22994, 466, 309, "Output",ExpressionUUID->"467b2648-1dc1-412d-873e-ca0583937cc4"]
+Cell[388769, 8176, 462, 10, 30, "Input",ExpressionUUID->"e662c078-8254-4167-8004-5c1b5e87dcea"],
+Cell[389234, 8188, 15676, 309, 285, "Output",ExpressionUUID->"8edc4ffc-0237-4b41-9d79-8cccd53ace46"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[408883, 8573, 356, 9, 30, "Input",ExpressionUUID->"83a9aac3-09d7-430d-87f7-ac8dcb869fd3"],
-Cell[409242, 8584, 23659, 478, 309, "Output",ExpressionUUID->"7f510993-8c12-48b1-b9cd-77cb67f08aa2"]
+Cell[404947, 8502, 353, 9, 30, "Input",ExpressionUUID->"c6d26bf0-12b7-43e7-b87f-48aaa1ed86c4"],
+Cell[405303, 8513, 22994, 466, 343, "Output",ExpressionUUID->"467b2648-1dc1-412d-873e-ca0583937cc4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[432938, 9067, 356, 9, 30, "Input",ExpressionUUID->"b259d7a5-50f2-45bf-978a-0a3df426537d"],
-Cell[433297, 9078, 21513, 427, 309, "Output",ExpressionUUID->"f5aeaf9b-b05d-494f-8e70-de966c6d1330"]
+Cell[428334, 8984, 356, 9, 30, "Input",ExpressionUUID->"83a9aac3-09d7-430d-87f7-ac8dcb869fd3"],
+Cell[428693, 8995, 23659, 478, 309, "Output",ExpressionUUID->"7f510993-8c12-48b1-b9cd-77cb67f08aa2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[454847, 9510, 409, 10, 30, "Input",ExpressionUUID->"93effd1c-5459-4951-83e2-29f88e751031"],
-Cell[455259, 9522, 21845, 450, 309, "Output",ExpressionUUID->"9145bb93-dcb1-4b0b-a16a-94114d55a9b6"]
+Cell[452389, 9478, 356, 9, 30, "Input",ExpressionUUID->"b259d7a5-50f2-45bf-978a-0a3df426537d"],
+Cell[452748, 9489, 21513, 427, 309, "Output",ExpressionUUID->"f5aeaf9b-b05d-494f-8e70-de966c6d1330"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[474298, 9921, 409, 10, 30, "Input",ExpressionUUID->"93effd1c-5459-4951-83e2-29f88e751031"],
+Cell[474710, 9933, 21845, 450, 309, "Output",ExpressionUUID->"9145bb93-dcb1-4b0b-a16a-94114d55a9b6"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
