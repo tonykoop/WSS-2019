@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1141913,      22338]
-NotebookOptionsPosition[   1134909,      22222]
-NotebookOutlinePosition[   1135718,      22249]
-CellTagsIndexPosition[   1135675,      22246]
+NotebookDataLength[   1238503,      24383]
+NotebookOptionsPosition[   1229711,      24236]
+NotebookOutlinePosition[   1230517,      24263]
+CellTagsIndexPosition[   1230474,      24260]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,48 +47,24 @@ Cell["\<\
 The World Meteorological Organization has over 11,000 weather stations around \
 the world. The data from these devices are continuously recorded into public \
 databases and made available for anyone to download and analyze. \
-Meteorologists regularly produce forecasts from this data using Weather, \
-Research & Forecast (WRF) models. publicly available The code below is used \
-to fetch data streaming from a weather station using HTTP requests. \
+Meteorologists regularly inform their viewers with reports produced by \
+Weather, Research & Forecast (WRF) models which analyze aggregated datasets. \
+In addition to the WMO\[CloseCurlyQuote]s stations, there are also civilian \
+owned weather stations that inform platforms like Weather Underground, \
+AcuRite, and Weather Bug. Unfortunately, those companies do not  
+\
 \>", "Text",
  CellChangeTimes->{{3.770629225417316*^9, 3.770629243156436*^9}, {
-  3.770629343594851*^9, 3.770629518239246*^9}, {3.771083300634212*^9, 
-  3.771083301578216*^9}, {3.771083429823304*^9, 3.771083518778612*^9}, {
-  3.771084368954064*^9, 3.7710843707424173`*^9}, {3.7714134940238733`*^9, 
-  3.771413536791483*^9}, {3.771413589309917*^9, 3.7714136123735*^9}, {
-  3.771413643215819*^9, 
-  3.771413698580229*^9}},ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-\
+   3.770629343594851*^9, 3.770629518239246*^9}, {3.771083300634212*^9, 
+   3.771083301578216*^9}, {3.771083429823304*^9, 3.771083518778612*^9}, {
+   3.771084368954064*^9, 3.7710843707424173`*^9}, {3.7714134940238733`*^9, 
+   3.771413536791483*^9}, {3.771413589309917*^9, 3.7714136123735*^9}, {
+   3.771413643215819*^9, 3.771413698580229*^9}, 3.771585012101143*^9, {
+   3.7715857139234247`*^9, 3.771585779557176*^9}, {3.7715868413803253`*^9, 
+   3.7715868904277067`*^9}, {3.771586973263194*^9, 3.771586993094769*^9}, {
+   3.771587035663978*^9, 3.771587035702793*^9}, {3.771587588482164*^9, 
+   3.7715876238105593`*^9}},ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-\
 cca681f25e5e"],
-
-Cell["\<\
-Questions:
-Could someone take a picture of the sky including GPS data and orientation to \
-indicate weather the sky is clear or has certain cloud types??
-Would it be possible to figure out the decay rate of new weather station \
-installations? 
-Why aren\[CloseCurlyQuote]t governments building new official weather stations?
-\[LineSeparator]How can one prove that they published the string of weather \
-data? Proof of Publishing
-How much computing power is being used for weather data? How much more should \
-it be?
-Automatically import weather data every 5 minutes and chart the sensor data. 
-Compare against nearest WMO station data.
-
-10 people sending data, can you keep track of everybody and then distribute \
-credit to them?\
-\>", "Text",
- CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
-   3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
-   3.771084313003523*^9}, {3.77108524061522*^9, 3.7710853136265383`*^9}, {
-   3.771150412019314*^9, 3.771150436640399*^9}, {3.7711528496053457`*^9, 
-   3.7711528619639807`*^9}, {3.7711564202376747`*^9, 3.771156468418681*^9}, {
-   3.7711574850835*^9, 3.771157578473652*^9}, {3.771157655290841*^9, 
-   3.7711576709422283`*^9}, {3.771157834523899*^9, 3.771157837867872*^9}, {
-   3.771158062653474*^9, 3.771158118456168*^9}, {3.7711628920463467`*^9, 
-   3.7711628938290377`*^9}, 3.7711700277771473`*^9, {3.771328536991919*^9, 
-   3.771328555086014*^9}, {3.7713399568653917`*^9, 
-   3.7713399678558197`*^9}},ExpressionUUID->"76323e88-8e60-4739-8cb9-\
-0af2ae696da9"],
 
 Cell[BoxData[
  RowBox[{
@@ -1296,7 +1272,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.771452460360578*^9, 3.771452476982613*^9}},
  EmphasizeSyntaxErrors->
   True,ExpressionUUID->"46c027b8-4be0-4cf4-a418-069816a31292"]
-}, Closed]],
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -1724,9 +1700,12 @@ Cell["Location Mapping", "Title",
 7f64de90106a"],
 
 Cell["\<\
-Compare the data feed from the weather station to the nearest World \
-Meteorological Organization station. Could a BenchTable be used to neatly \
-display all entries?
+Data deserts in the field of meteorology exist in places like northern \
+Canada, inland China, and North Africa. A typical Wold Meteorological \
+Organization weather station costs on the order of One of the largest factors \
+contributing to weather forecasting inaccuracy is th    Compare the data feed \
+from the weather station to the nearest World Meteorological Organization \
+station. Could a BenchTable be used to neatly display all entries?
 
 Take 100 random locations across the US and calculate the average \
 \[OpenCurlyDoubleQuote]proximity value\[CloseCurlyDoubleQuote] for those areas.
@@ -1744,7 +1723,9 @@ Also calculate areas of least density and their proximity value
    3.7711628938290377`*^9}, 3.7711700277771473`*^9, {3.771254486279007*^9, 
    3.771254487110623*^9}, {3.771256018019849*^9, 3.77125606931627*^9}, {
    3.771256237684252*^9, 3.7712562543217173`*^9}, {3.771343644594904*^9, 
-   3.771343682665238*^9}},ExpressionUUID->"e266a274-8a7a-48eb-bc33-\
+   3.771343682665238*^9}, {3.7715830882177877`*^9, 3.771583168265184*^9}, {
+   3.771583225033494*^9, 
+   3.771583244777186*^9}},ExpressionUUID->"e266a274-8a7a-48eb-bc33-\
 b19c22df4198"],
 
 Cell[CellGroupData[{
@@ -21780,6 +21761,8 @@ Cell[BoxData[
   "Out[160]=",ExpressionUUID->"a253dd3e-dc40-450f-899b-3e16f466cc28"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"{", 
@@ -21801,7 +21784,8 @@ Cell[BoxData[
  CellChangeTimes->{3.771260853343608*^9},
  CellLabel->
   "Out[157]//FullForm=",ExpressionUUID->"a63a87f1-6bdc-4ab4-964a-\
-3c4cf66ee623"],
+3c4cf66ee623"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -22050,8 +22034,8 @@ Cell["Data Charting & Visualization", "Title",
 
 Cell["\<\
 Compare the data feed from the weather station to the nearest World \
-Meteorological Organization station. Could a BenchTable be used to neatly \
-display all entries?\
+Meteorological Organization station(WMO12345). Could a BenchTable be used to \
+neatly display all entries?\
 \>", "Text",
  CellChangeTimes->{{3.771070855795401*^9, 3.7710709002616243`*^9}, {
    3.771082948212419*^9, 3.771082954403407*^9}, {3.7710843093850603`*^9, 
@@ -22063,32 +22047,80 @@ display all entries?\
    3.771158062653474*^9, 3.771158118456168*^9}, {3.7711628920463467`*^9, 
    3.7711628938290377`*^9}, 3.7711700277771473`*^9, {3.771254486279007*^9, 
    3.771254487110623*^9}, {3.771256018019849*^9, 3.77125606931627*^9}, {
-   3.771256237684252*^9, 
-   3.7712562543217173`*^9}},ExpressionUUID->"e41bf67e-af63-4499-bb8f-\
+   3.771256237684252*^9, 3.7712562543217173`*^9}, {3.7715341614963293`*^9, 
+   3.771534164486855*^9}},ExpressionUUID->"e41bf67e-af63-4499-bb8f-\
 23c467e8e6f1"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{
    "Collect", " ", "all", " ", "the", " ", "Blockchain", " ", "sumbissions", 
-    " ", "from", " ", "the", " ", "weather", " ", "station"}], "*)"}], "  ", 
-  "\n", 
+    " ", "from", " ", "the", " ", "weather", " ", "station", " ", "and", " ", 
+    "chart", " ", "the", " ", "temperature", " ", "over", " ", "time"}], 
+   "*)"}], "  ", "\n", 
   RowBox[{
-   RowBox[{"Databin", "[", 
-    RowBox[{"\"\<EM6FHeXi\>\"", ",", " ", 
-     RowBox[{"-", "10"}]}], "]"}], "\n", 
-   RowBox[{"mostRecent5", "=", 
-    RowBox[{"Normal", "[", 
+   RowBox[{
+    RowBox[{"Databin", "[", 
+     RowBox[{"\"\<EM6FHeXi\>\"", ",", " ", "All"}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"recentHashes", "=", 
+     RowBox[{
+      RowBox[{"Normal", "[", 
+       RowBox[{"Dataset", "[", 
+        RowBox[{"Databin", "[", 
+         RowBox[{"\"\<EM6FHeXi\>\"", ",", " ", 
+          RowBox[{"-", "10"}]}], "]"}], "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "1", ",", 
+        RowBox[{"-", "1"}]}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"data", "=", 
      RowBox[{"Dataset", "[", 
-      RowBox[{"Databin", "[", 
-       RowBox[{"\"\<EM6FHeXi\>\"", ",", " ", 
-        RowBox[{"-", "5"}]}], "]"}], "]"}], "]"}]}], "\n", 
-   RowBox[{"mostRecent5", "[", 
-    RowBox[{"[", 
-     RowBox[{"All", ",", "1", ",", 
-      RowBox[{"-", "1"}]}], "]"}], "]"}], "\n", "\n", "\n", 
-   RowBox[{"BlockchainGet", "[", "]"}]}]}]], "Code",
+      RowBox[{"BlockchainGet", "[", "recentHashes", "]"}], "]"}]}], ";"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{"times", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "2"}], "]"}], "]"}], "//",
+       "Normal"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temps", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "1", ",", "1", ",", "2"}],
+         "]"}], "]"}], "//", "Normal"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"myTempsTimeSeries", "=", 
+     RowBox[{"TimeSeries", "[", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"times", ",", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"MapAt", "[", 
+            RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+          "temps"}]}], "}"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"wmoTempsTimeSeries", "=", 
+     RowBox[{"TimeSeries", "[", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"times", ",", " ", 
+         RowBox[{"AirTemperatureData", "[", 
+          RowBox[{"\"\<KBED\>\"", ",", " ", "times"}], "]"}]}], "}"}], "]"}], 
+      "]"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"{", 
+     RowBox[{"myTempsTimeSeries", ",", "wmoTempsTimeSeries"}], "}"}], 
+    "]"}]}]}]], "Code",
  CellChangeTimes->{{3.7711512358562727`*^9, 3.771151261943162*^9}, {
    3.7711513833660107`*^9, 3.771151446134646*^9}, {3.771151800179934*^9, 
    3.771151806678307*^9}, {3.7711518649122257`*^9, 3.771151866096449*^9}, 
@@ -22102,36 +22134,275 @@ Cell[BoxData[
    3.77134381838582*^9}, {3.7713438902419*^9, 3.7713438938438807`*^9}, {
    3.771344005148756*^9, 3.7713440293477097`*^9}, {3.771344406960024*^9, 
    3.7713444077298927`*^9}, {3.7713593085653887`*^9, 3.771359396321581*^9}, {
-   3.77150453075852*^9, 
-   3.77150457501711*^9}},ExpressionUUID->"6cfe96ca-915e-4879-b72a-\
-997d78645739"],
+   3.77150453075852*^9, 3.77150457501711*^9}, {3.771579900483294*^9, 
+   3.7715799028771544`*^9}, {3.77158004507526*^9, 3.771580116210493*^9}, {
+   3.771580171829248*^9, 3.771580203296941*^9}, {3.7715803028025923`*^9, 
+   3.771580327337286*^9}, {3.771580427470365*^9, 3.771580432270439*^9}, {
+   3.7715805279639997`*^9, 3.7715805292176733`*^9}, 3.771581107773435*^9, {
+   3.7715812962884893`*^9, 3.7715813171905193`*^9}, {3.771581399748575*^9, 
+   3.7715814232201843`*^9}, 3.771581493400528*^9, {3.771581539775226*^9, 
+   3.771581539854323*^9}, 3.77158163840687*^9, {3.771582433330282*^9, 
+   3.7715824337554073`*^9}},
+ CellLabel->
+  "In[359]:=",ExpressionUUID->"6cfe96ca-915e-4879-b72a-997d78645739"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], 
+      LineBox[{{3.771533767*^9, 62.2}, {3.771537367*^9, 61.3}, {
+       3.771540966*^9, 60.1}, {3.771544567*^9, 60.8}, {3.771548167*^9, 61.}, {
+       3.771551767*^9, 60.3}, {3.771555366*^9, 59.}, {3.771558966*^9, 66.}, {
+       3.771562566*^9, 71.1}, {3.771566168*^9, 74.1}}]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], 
+      LineBox[{{3.771533767*^9, 76.}, {3.771537367*^9, 71.}, {3.771540966*^9, 
+       67.}, {3.771544567*^9, 65.}, {3.771548167*^9, 64.}, {3.771551767*^9, 
+       61.}, {3.771555366*^9, 59.}, {3.771558966*^9, 60.}, {3.771562566*^9, 
+       58.}, {3.771566168*^9, 58.}}]}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}, {}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}, {}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.771533767*^9, 57.00000000000001},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->FrontEndValueCache[{{Automatic, Automatic}, {
+      Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}], 
+      Charting`DateTicksFunction[
+      Automatic, DateTicksFormat -> {Automatic}, "TickLabels" -> None]}}, {{
+     Automatic, Automatic}, {{{3.7715328*^9, 
+        FormBox[
+         StyleBox["\"00:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.77154*^9, 
+        FormBox[
+         StyleBox["\"02:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         StyleBox["\"04:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715544*^9, 
+        FormBox[
+         StyleBox["\"06:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         StyleBox["\"08:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715688*^9, 
+        FormBox[
+         StyleBox["\"10:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}, {{3.7715328*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.77154*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715544*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715688*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}}}],
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "NoShowPlotTheme" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{3.771533767*^9, 3.771566168*^9}, {57.00000000000001, 76.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{{}, Automatic}]], "Output",
+ CellChangeTimes->{3.7715803707964993`*^9, 3.7715806152196093`*^9, 
+  3.771581151561948*^9, 3.771581466588787*^9, 3.771581565627458*^9, 
+  3.771582466077818*^9},
+ CellLabel->
+  "Out[366]=",ExpressionUUID->"c5f83fba-4f8f-448b-a984-f49f0447f896"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WeatherData", "[", 
+  RowBox[{"\"\<KBED\>\"", ",", "\"\<Humidity\>\"", ",", 
+   RowBox[{"Take", "[", 
+    RowBox[{"times", ",", "3"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.771581822831057*^9, 3.771581840880744*^9}, {
+  3.771582054409018*^9, 3.7715820676301517`*^9}, {3.771586317775258*^9, 
+  3.771586322137025*^9}, {3.771586363891397*^9, 3.771586396869894*^9}},
+ CellLabel->
+  "In[388]:=",ExpressionUUID->"7b087df7-b59f-4adf-bae8-abd1c2295607"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "WeatherData","notsubprop",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"{{2019, 7, 8, 0, 16, 7.}, {2019, 7, 8, 1, \
+16, 7.}, {2019, 7, 8, 2, 16, 6.}}\\\\\\\"\\\"}]\\) is not a known subproperty \
+of \\!\\(\\*RowBox[{\\\"WeatherData\\\"}]\\). Use subproperty \
+\\\"Properties\\\" for a list of subproperties.\"",2,388,68,
+   31027639945701919067,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.771586397510469*^9},
+ CellLabel->
+  "During evaluation of \
+In[388]:=",ExpressionUUID->"551e81e7-a84b-4571-9591-cd8660fed57d"],
+
+Cell[BoxData[
+ RowBox[{"WeatherData", "[", 
+  RowBox[{"\<\"KBED\"\>", ",", "\<\"Humidity\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 00:16:07\"", 
+         StyleBox[
+          RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+             False]}], FontColor -> GrayLevel[0.5]]}],
+       RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             
+             RowBox[{"2019", ",", "7", ",", "8", ",", "0", ",", "16", ",", 
+               "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+           
+           RowBox[{"-", "4.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 01:16:07\"", 
+         StyleBox[
+          RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+             False]}], FontColor -> GrayLevel[0.5]]}],
+       RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             
+             RowBox[{"2019", ",", "7", ",", "8", ",", "1", ",", "16", ",", 
+               "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+           
+           RowBox[{"-", "4.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 02:16:06\"", 
+         StyleBox[
+          RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+             False]}], FontColor -> GrayLevel[0.5]]}],
+       RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             
+             RowBox[{"2019", ",", "7", ",", "8", ",", "2", ",", "16", ",", 
+               "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+           
+           RowBox[{"-", "4.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False]}], "}"}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.7715818428567142`*^9, {3.771582056862623*^9, 3.77158206860109*^9}, 
+   3.771586323086576*^9, {3.771586364980854*^9, 3.7715863975205584`*^9}},
+ CellLabel->
+  "Out[388]=",ExpressionUUID->"c7d8832e-afa1-47ad-9dad-1369f2d0abae"]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"Chart", " ", "the", " ", "weather", " ", 
-    RowBox[{"station", "'"}], "s", " ", "Temperature"}], "*)"}], 
-  "\n"}]], "Code",
- CellChangeTimes->{{3.7711512358562727`*^9, 3.771151261943162*^9}, {
-   3.7711513833660107`*^9, 3.771151446134646*^9}, {3.771151800179934*^9, 
-   3.771151806678307*^9}, {3.7711518649122257`*^9, 3.771151866096449*^9}, 
-   3.771151905347271*^9, {3.7711519621761703`*^9, 3.771152023025317*^9}, {
-   3.771155894744893*^9, 3.771155916490822*^9}, {3.771167208445356*^9, 
-   3.7711672097393913`*^9}, {3.771167494485771*^9, 3.771167523281292*^9}, 
-   3.771167576814872*^9, {3.7711676074786463`*^9, 3.771167628993681*^9}, {
-   3.7711676608778276`*^9, 3.771167664521062*^9}, {3.771167750763229*^9, 
-   3.771167760414373*^9}, {3.77116805016222*^9, 3.7711680509346113`*^9}, {
-   3.771256078282567*^9, 3.771256111144414*^9}, {3.7713437978211937`*^9, 
-   3.77134381838582*^9}, {3.7713438902419*^9, 
-   3.7713438938438807`*^9}},ExpressionUUID->"cac46f6d-fa2f-4462-859b-\
-d275b88966c0"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"Chart", " ", "the", " ", "weather", " ", 
-    RowBox[{"station", "'"}], "s", " ", "Humidity"}], "*)"}], "\n"}]], "Code",\
-
+    RowBox[{"station", "'"}], "s", " ", "Humidity"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"humidity", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "1", ",", "2", ",", "2"}],
+         "]"}], "]"}], "//", "Normal"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"times", ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"MapAt", "[", 
+          RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+        "humidity"}]}], "}"}], "]"}], "]"}], "\n", "\n", 
+   RowBox[{"myHumidityTimeSeries", "=", 
+    RowBox[{"TimeSeries", "[", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{"times", ",", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"MapAt", "[", 
+           RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+         "humidity"}]}], "}"}], "]"}], "]"}]}], "\n", 
+   RowBox[{
+    RowBox[{"wmoHumidityTimeSeries", "=", 
+     RowBox[{"TimeSeries", "[", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"times", ",", " ", 
+         RowBox[{"WeatherData", "[", 
+          RowBox[{
+          "\"\<KBED\>\"", ",", " ", "\"\<Humidity\>\"", ",", " ", "times"}], 
+          "]"}]}], "}"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"{", 
+     RowBox[{"myHumidityTimeSeries", ",", "wmoHumidityTimeSeries"}], "}"}], 
+    "]"}]}]}]], "Code",
  CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
    3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
    3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
@@ -22159,15 +22430,1416 @@ Cell[BoxData[
    3.771259346200286*^9, 3.771259401087356*^9}, {3.771259607020257*^9, 
    3.771259786133214*^9}, {3.771259818789844*^9, 3.771259829414867*^9}, {
    3.771343801372179*^9, 3.771343858837853*^9}, {3.771343897242053*^9, 
-   3.771343901731298*^9}, 
-   3.771343936041019*^9},ExpressionUUID->"bbcf9eb6-eed3-4738-9d35-\
-618bbcd23084"],
+   3.771343901731298*^9}, 3.771343936041019*^9, {3.7715352450298977`*^9, 
+   3.771535261679233*^9}, {3.7715360365104322`*^9, 3.77153605839124*^9}, {
+   3.7715366946017237`*^9, 3.771536708638118*^9}, {3.77153679037502*^9, 
+   3.771536790811282*^9}, {3.7715377538840437`*^9, 3.771537759918851*^9}, {
+   3.771580478111024*^9, 3.771580558771967*^9}, {3.771580659869228*^9, 
+   3.771580690633213*^9}, {3.7715816967410316`*^9, 3.771581759830165*^9}, {
+   3.771581863356174*^9, 3.7715818975589857`*^9}},
+ CellLabel->
+  "In[379]:=",ExpressionUUID->"bbcf9eb6-eed3-4738-9d35-618bbcd23084"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], 
+      LineBox[{{3.771533767*^9, 89.}, {3.771537367*^9, 92.}, {3.771540966*^9, 
+       96.}, {3.771544567*^9, 92.}, {3.771548167*^9, 77.}, {3.771551767*^9, 
+       76.}, {3.771555366*^9, 84.}, {3.771558966*^9, 66.}, {3.771562566*^9, 
+       56.}, {3.771566168*^9, 50.}}]}}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.771533767*^9, 47.44444444444445},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->FrontEndValueCache[{{Automatic, Automatic}, {
+      Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}], 
+      Charting`DateTicksFunction[
+      Automatic, DateTicksFormat -> {Automatic}, "TickLabels" -> None]}}, {{
+     Automatic, Automatic}, {{{3.7715328*^9, 
+        FormBox[
+         StyleBox["\"00:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.77154*^9, 
+        FormBox[
+         StyleBox["\"02:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         StyleBox["\"04:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715544*^9, 
+        FormBox[
+         StyleBox["\"06:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         StyleBox["\"08:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715688*^9, 
+        FormBox[
+         StyleBox["\"10:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}, {{3.7715328*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.77154*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715544*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715688*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}}}],
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "NoShowPlotTheme" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{3.771533767*^9, 3.771566168*^9}, {47.44444444444445, 96.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{{}, Automatic}]], "Output",
+ CellChangeTimes->{3.7715862619227047`*^9},
+ CellLabel->
+  "Out[380]=",ExpressionUUID->"90ecff24-87aa-4a9b-8c1a-a46cc5f7470a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TimeSeries",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquarePlusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{{}, {{}, {}, {
+                GrayLevel[0.5], 
+                PointSize[0.125], 
+                AbsoluteThickness[1.5], 
+                StyleBox[
+                 LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAmIQDQEf7Fl11LwinD7aQwUcXn2Jtl8b9ArK53Bw3utt
+q3f4M5Qv4CC+Otg/K43RAcIXcfi+f0F40nsYX8JBX1jtBbsrL5Qv45DtoBvW
+xcwP5Ss4NFwMEp60GWafksOc359Whf/9BeWrOARoR64NnnwNyldzMHERNjG5
++no/hK/hIKRdVZBY8w3K13LIMJWbeIH9L5Sv4zDLV7txKvsXKF/PoWzi1MhL
+TFwHIHwDB/cgkWNzBTmgfEOHQ2p/W4VucUL5Rg7G79Iu8t1mg/KNHcrd9WVC
+ixmhfBOHrX+2zedZ8B9qvqnDPJ3j61kKGKDyZg5FiwwE9lTA7DN3qN+4vmmS
+siiUb+HAtbzy3bJ4ISjf0oFzYux88dMCUL6VQ5zaARf5axJQvrWDmCZL36VN
+UlC+jYPfBC+BlBJxKN/WoX+K14Vt8jJQvp3DgYTiXbPeiUD59g48fy+4bYoW
+g/IdHL4IXz2XEgqVb3BwONa2ilHOixsq7+jg3yuU9L5AECrv6NBaqXjidDLM
+vU4OTZOznfNi2KHyTg4WG+6H/hWBhY+zQ5qveFfD7s+Q8Glwdviw+EOTxY2j
+0Ph0cVj18NqRC96XIfwGF4dlb2fpWLbB0perwzqzL3Nnz/wElXd1YCgOSXoi
+cRUq7+ZgkHHN7dvHG1Dz3RxO/X996GnXG2h8uDusTTv5fqPlTai8u4O3Uoqa
+3YkrUP0eDlu+ZYpfimJwgMh7OPwpNvZ9PpcDwmfwdPgt/Kj+tbigAwD0Q951
+
+                  "]], FontFamily -> "Arial", StripOnInput -> False]}}, {}}, 
+             AspectRatio -> 1, Axes -> {False, False}, 
+             AxesLabel -> {None, None}, AxesOrigin -> {0., 0.}, Background -> 
+             GrayLevel[0.93], BaseStyle -> {FontFamily -> "Arial"}, 
+             DisplayFunction -> Identity, 
+             Frame -> {{True, True}, {True, True}}, 
+             FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}}, 
+             GridLines -> {None, None}, GridLinesStyle -> Directive[
+               GrayLevel[0.5, 0.4]], ImageSize -> {Automatic, 
+               Dynamic[
+               3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])]}, LabelStyle -> {FontFamily -> "Arial"}, 
+             Method -> {"ScalingFunctions" -> None}, 
+             PlotRange -> {{0., 50.}, {-7.030970816185017, 
+              4.273359296964368}}, PlotRangeClipping -> True, 
+             PlotRangePadding -> {{1, 1}, {1, 1}}, 
+             Ticks -> {Automatic, Automatic}], 
+            GridBox[{{
+               TagBox[
+                TemplateBox[{
+                  RowBox[{
+                    TagBox["\"Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 00:16:07\"", "SummaryItem"]}], 
+                  RowBox[{
+                    TagBox["\" to \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 09:16:08\"", "SummaryItem"]}]}, 
+                 "RowDefault"], "SummaryItem"], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Data points: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["10", "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource[
+               "FEBitmaps", "SquareMinusIconMedium"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              Evaluator -> Automatic, Method -> "Preemptive"], 
+             Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}]], 
+            GraphicsBox[{{}, {{}, {}, {
+                GrayLevel[0.5], 
+                PointSize[0.125], 
+                AbsoluteThickness[1.5], 
+                StyleBox[
+                 LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAmIQDQEf7Fl11LwinD7aQwUcXn2Jtl8b9ArK53Bw3utt
+q3f4M5Qv4CC+Otg/K43RAcIXcfi+f0F40nsYX8JBX1jtBbsrL5Qv45DtoBvW
+xcwP5Ss4NFwMEp60GWafksOc359Whf/9BeWrOARoR64NnnwNyldzMHERNjG5
++no/hK/hIKRdVZBY8w3K13LIMJWbeIH9L5Sv4zDLV7txKvsXKF/PoWzi1MhL
+TFwHIHwDB/cgkWNzBTmgfEOHQ2p/W4VucUL5Rg7G79Iu8t1mg/KNHcrd9WVC
+ixmhfBOHrX+2zedZ8B9qvqnDPJ3j61kKGKDyZg5FiwwE9lTA7DN3qN+4vmmS
+siiUb+HAtbzy3bJ4ISjf0oFzYux88dMCUL6VQ5zaARf5axJQvrWDmCZL36VN
+UlC+jYPfBC+BlBJxKN/WoX+K14Vt8jJQvp3DgYTiXbPeiUD59g48fy+4bYoW
+g/IdHL4IXz2XEgqVb3BwONa2ilHOixsq7+jg3yuU9L5AECrv6NBaqXjidDLM
+vU4OTZOznfNi2KHyTg4WG+6H/hWBhY+zQ5qveFfD7s+Q8Glwdviw+EOTxY2j
+0Ph0cVj18NqRC96XIfwGF4dlb2fpWLbB0perwzqzL3Nnz/wElXd1YCgOSXoi
+cRUq7+ZgkHHN7dvHG1Dz3RxO/X996GnXG2h8uDusTTv5fqPlTai8u4O3Uoqa
+3YkrUP0eDlu+ZYpfimJwgMh7OPwpNvZ9PpcDwmfwdPgt/Kj+tbigAwD0Q951
+
+                  "]], FontFamily -> "Arial", StripOnInput -> False]}}, {}}, 
+             AspectRatio -> 1, Axes -> {False, False}, 
+             AxesLabel -> {None, None}, AxesOrigin -> {0., 0.}, Background -> 
+             GrayLevel[0.93], BaseStyle -> {FontFamily -> "Arial"}, 
+             DisplayFunction -> Identity, 
+             Frame -> {{True, True}, {True, True}}, 
+             FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+             Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}}, 
+             GridLines -> {None, None}, GridLinesStyle -> Directive[
+               GrayLevel[0.5, 0.4]], ImageSize -> {Automatic, 
+               Dynamic[
+               3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])]}, LabelStyle -> {FontFamily -> "Arial"}, 
+             Method -> {"ScalingFunctions" -> None}, 
+             PlotRange -> {{0., 50.}, {-7.030970816185017, 
+              4.273359296964368}}, PlotRangeClipping -> True, 
+             PlotRangePadding -> {{1, 1}, {1, 1}}, 
+             Ticks -> {Automatic, Automatic}], 
+            GridBox[{{
+               TagBox[
+                TemplateBox[{
+                  RowBox[{
+                    TagBox["\"Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 00:16:07\"", "SummaryItem"]}], 
+                  RowBox[{
+                    TagBox["\" to \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 09:16:08\"", "SummaryItem"]}]}, 
+                 "RowDefault"], "SummaryItem"], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Data points: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["10", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Regular: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["False", "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Output dimension: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["1", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Metadata: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["None", "SummaryItem"]}], 
+               RowBox[{
+                 TagBox["\"Minimum increment: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  RowBox[{"{", 
+                    RowBox[{
+                    FractionBox["3599", "86400"], ",", "\"Day\""}], "}"}], 
+                  "SummaryItem"]}]}, {
+               TagBox["\"\"", "SummaryItem"], 
+               RowBox[{
+                 TagBox["\"Resampling: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["\"LinearInterpolation\"", "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TemporalData[TimeSeries, {{
+     StructuredArray[QuantityArray, {10}, 
+      StructuredArray`StructuredData[
+      QuantityArray, {89, 92, 96, 92, 77, 76, 84, 66, 56, 50}, "Percent", {{
+       1}}]]}, {{{3771533767, 3771537367, 3771540966, 3771544567, 3771548167, 
+    3771551767, 3771555366, 3771558966, 3771562566, 3771566168}}}, 1, {
+    "Continuous", 1}, {"Discrete", 1}, 1, {
+    ValueDimensions -> 1, DateFunction -> Automatic, 
+     ResamplingMethod -> {"Interpolation", InterpolationOrder -> 1}}}, True, 
+   12.],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.771586261951955*^9},
+ CellLabel->
+  "Out[381]=",ExpressionUUID->"8f640dd5-397d-4872-ad16-0018c7c0e675"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "WeatherData","notsubprop",
+   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"{{2019, 7, 8, 0, 16, 7.}, {2019, 7, 8, 1, \
+16, 7.}, {2019, 7, 8, 2, 16, 6.}, {2019, 7, 8, 3, 16, 7.}, {2019, 7, 8, 4, \
+16, 7.}, {2019, 7, 8, 5, 16, 7.}, {2019, 7, 8, 6, 16, 6.}, {2019, 7, 8, 7, \
+16, 6.}, {2019, 7, 8, 8, 16, 6.}, {2019, 7, 8, 9, 16, 8.}}\\\\\\\"\\\"}]\\) \
+is not a known subproperty of \\!\\(\\*RowBox[{\\\"WeatherData\\\"}]\\). Use \
+subproperty \\\"Properties\\\" for a list of subproperties.\"",2,382,64,
+   31027639945701919067,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.771586261964604*^9},
+ CellLabel->
+  "During evaluation of \
+In[379]:=",ExpressionUUID->"0f6b609f-c5d5-46e1-9c2f-f9e22c96e457"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Transpose","nmtx",
+   "\"The first two levels of \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"DateObject\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \
+\\\",\\\", \\\"8\\\", \\\",\\\", \\\"0\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \
+\\\"7.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\
+\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"1\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"7.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"2\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"3\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"7.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"4\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"7.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"6\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"9\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"8.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\) \
+cannot be transposed.\"",2,382,65,31027639945701919067,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7715862619775476`*^9},
+ CellLabel->
+  "During evaluation of \
+In[379]:=",ExpressionUUID->"44f7c716-01f3-40e5-a6e8-8f31b640c868"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DateListPlot","ldata",
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{InterpretationBox[RowBox[{TagBox[\\\
+\"TimeSeries\\\", \\\"SummaryHead\\\"], \\\"[\\\", \
+DynamicModuleBox[{Typeset`open$$ = False, Set[Typeset`embedState$$, \\\"Ready\
+\\\"]}, TemplateBox[List[PaneSelectorBox[List[Rule[False, \
+GridBox[List[List[PaneBox[ButtonBox[DynamicBox[FEPrivate`FrontEndResource[\\\"\
+FEBitmaps\\\", \\\"SquarePlusIconMedium\\\"]], RuleDelayed[ButtonFunction, \
+Set[Typeset`open$$, True]], Rule[Appearance, None], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], Rule[Alignment, List[Center, \
+Center]], Rule[ImageSize, Dynamic[List[Automatic, Times[3.5`, CurrentValue[\\\
+\"FontCapHeight\\\"], Power[AbsoluteCurrentValue[Magnification], -1]]]]]], \
+GraphicsBox[List[List[], List[List[], List[], List[GrayLevel[0.5`], \
+PointSize[0.125`], AbsoluteThickness[1.5`], StyleBox[LineBox[List[List[1.`, \
+1.0786974808168008`], List[2.`, 0.8225923764690866`], List[3.`, \
+1.2351515192384148`], List[4.`, 2.175007457486014`], List[5.`, \
+2.2418867917949643`], List[6.`, 3.6587064873332547`], List[7.`, \
+3.8767286999282553`], List[8.`, 1.1063404803108767`], List[9.`, \
+1.686851184625744`], List[10.`, 0.35274211815401646`], List[11.`, \
+-0.869775869092456`], List[12.`, -1.4053663629189868`], List[13.`, \
+-1.814407889239499`], List[14.`, -1.2518515630407365`], List[15.`, \
+-3.2513777731675715`], List[16.`, -3.00860171079174`], List[17.`, \
+-3.2314806430702854`], List[18.`, -2.856961856797875`], List[19.`, \
+-2.1813146783760504`], List[20.`, -1.9765745390757676`], List[21.`, \
+-2.0546964390428704`], List[22.`, -3.30895245216771`], List[23.`, \
+-5.284738580678435`], List[24.`, -4.593410230803565`], List[25.`, \
+-4.198332300268029`], List[26.`, -6.20910365507879`], List[27.`, \
+-6.674631327632843`], List[28.`, -5.86366296248532`], List[29.`, \
+-7.030970816185017`], List[30.`, -5.233012116710768`], List[31.`, \
+-5.5895472588592945`], List[32.`, -5.083392364268537`], List[33.`, \
+-3.411190045372538`], List[34.`, -4.360288174040149`], List[35.`, \
+-4.597457053225644`], List[36.`, -2.920132185669389`], List[37.`, \
+-2.1352488240136402`], List[38.`, -1.2332768816166548`], List[39.`, \
+0.1706610335689045`], List[40.`, 0.3015024111041621`], List[41.`, \
+1.220269369353312`], List[42.`, 1.1625019235683953`], List[43.`, \
+0.32964429476287194`], List[44.`, -0.38976818959929727`], List[45.`, \
+-0.8919552619045075`], List[46.`, -0.39414642731353916`], List[47.`, \
+0.32472184895644735`], List[48.`, 2.0443460301601935`], List[49.`, \
+3.077101328976367`], List[50.`, 4.273359296964368`]]], Rule[FontFamily, \
+\\\"Arial\\\"], Rule[StripOnInput, False]]]], List[]], Rule[AspectRatio, 1], \
+Rule[Axes, List[False, False]], Rule[AxesLabel, List[None, None]], \
+Rule[AxesOrigin, List[0.`, 0.`]], Rule[Background, GrayLevel[0.93`]], \
+Rule[BaseStyle, List[Rule[FontFamily, \\\"Arial\\\"]]], Rule[DisplayFunction, \
+Identity], Rule[Frame, List[List[True, True], List[True, True]]], \
+Rule[FrameLabel, List[List[None, None], List[None, None]]], Rule[FrameStyle, \
+Directive[Thickness[Tiny], GrayLevel[0.7`]]], Rule[FrameTicks, \
+List[List[None, None], List[None, None]]], Rule[GridLines, List[None, None]], \
+Rule[GridLinesStyle, Directive[GrayLevel[0.5`, 0.4`]]], Rule[ImageSize, \
+List[Automatic, Dynamic[Times[3.5`, \
+Times[CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]], Rule[LabelStyle, \
+List[Rule[FontFamily, \\\"Arial\\\"]]], Rule[Method, \
+List[Rule[\\\"ScalingFunctions\\\", None]]], Rule[PlotRange, List[List[0.`, \
+50.`], List[-7.030970816185017`, 4.273359296964368`]]], \
+Rule[PlotRangeClipping, True], Rule[PlotRangePadding, List[List[1, 1], \
+List[1, 1]]], Rule[Ticks, List[Automatic, Automatic]]], \
+GridBox[List[List[TagBox[TemplateBox[List[RowBox[List[TagBox[\\\"\\\\\\\"Time:\
+ \\\\\\\"\\\", \\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"\\\\\\\"08 Jul 2019 00:16:07\\\\\\\"\\\", \\\"SummaryItem\\\"]]], \
+RowBox[List[TagBox[\\\"\\\\\\\" to \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\
+\\\"08 Jul 2019 09:16:08\\\\\\\"\\\", \\\"SummaryItem\\\"]]]], \\\"RowDefault\
+\\\"], \\\"SummaryItem\\\"], \\\"\\\\[SpanFromLeft]\\\"], \
+List[RowBox[List[TagBox[\\\"\\\\\\\"Data points: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"10\\\
+\", \\\"SummaryItem\\\"]]], \\\"\\\\[SpanFromLeft]\\\"]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
+Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
+\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
+False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
+Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
+List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
+GridBox[List[List[PaneBox[ButtonBox[DynamicBox[FEPrivate`FrontEndResource[\\\"\
+FEBitmaps\\\", \\\"SquareMinusIconMedium\\\"]], RuleDelayed[ButtonFunction, \
+Set[Typeset`open$$, False]], Rule[Appearance, None], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], Rule[Alignment, List[Center, \
+Center]], Rule[ImageSize, Dynamic[List[Automatic, Times[3.5`, CurrentValue[\\\
+\"FontCapHeight\\\"], Power[AbsoluteCurrentValue[Magnification], -1]]]]]], \
+GraphicsBox[List[List[], List[List[], List[], List[GrayLevel[0.5`], \
+PointSize[0.125`], AbsoluteThickness[1.5`], StyleBox[LineBox[List[List[1.`, \
+1.0786974808168008`], List[2.`, 0.8225923764690866`], List[3.`, \
+1.2351515192384148`], List[4.`, 2.175007457486014`], List[5.`, \
+2.2418867917949643`], List[6.`, 3.6587064873332547`], List[7.`, \
+3.8767286999282553`], List[8.`, 1.1063404803108767`], List[9.`, \
+1.686851184625744`], List[10.`, 0.35274211815401646`], List[11.`, \
+-0.869775869092456`], List[12.`, -1.4053663629189868`], List[13.`, \
+-1.814407889239499`], List[14.`, -1.2518515630407365`], List[15.`, \
+-3.2513777731675715`], List[16.`, -3.00860171079174`], List[17.`, \
+-3.2314806430702854`], List[18.`, -2.856961856797875`], List[19.`, \
+-2.1813146783760504`], List[20.`, -1.9765745390757676`], List[21.`, \
+-2.0546964390428704`], List[22.`, -3.30895245216771`], List[23.`, \
+-5.284738580678435`], List[24.`, -4.593410230803565`], List[25.`, \
+-4.198332300268029`], List[26.`, -6.20910365507879`], List[27.`, \
+-6.674631327632843`], List[28.`, -5.86366296248532`], List[29.`, \
+-7.030970816185017`], List[30.`, -5.233012116710768`], List[31.`, \
+-5.5895472588592945`], List[32.`, -5.083392364268537`], List[33.`, \
+-3.411190045372538`], List[34.`, -4.360288174040149`], List[35.`, \
+-4.597457053225644`], List[36.`, -2.920132185669389`], List[37.`, \
+-2.1352488240136402`], List[38.`, -1.2332768816166548`], List[39.`, \
+0.1706610335689045`], List[40.`, 0.3015024111041621`], List[41.`, \
+1.220269369353312`], List[42.`, 1.1625019235683953`], List[43.`, \
+0.32964429476287194`], List[44.`, -0.38976818959929727`], List[45.`, \
+-0.8919552619045075`], List[46.`, -0.39414642731353916`], List[47.`, \
+0.32472184895644735`], List[48.`, 2.0443460301601935`], List[49.`, \
+3.077101328976367`], List[50.`, 4.273359296964368`]]], Rule[FontFamily, \
+\\\"Arial\\\"], Rule[StripOnInput, False]]]], List[]], Rule[AspectRatio, 1], \
+Rule[Axes, List[False, False]], Rule[AxesLabel, List[None, None]], \
+Rule[AxesOrigin, List[0.`, 0.`]], Rule[Background, GrayLevel[0.93`]], \
+Rule[BaseStyle, List[Rule[FontFamily, \\\"Arial\\\"]]], Rule[DisplayFunction, \
+Identity], Rule[Frame, List[List[True, True], List[True, True]]], \
+Rule[FrameLabel, List[List[None, None], List[None, None]]], Rule[FrameStyle, \
+Directive[Thickness[Tiny], GrayLevel[0.7`]]], Rule[FrameTicks, \
+List[List[None, None], List[None, None]]], Rule[GridLines, List[None, None]], \
+Rule[GridLinesStyle, Directive[GrayLevel[0.5`, 0.4`]]], Rule[ImageSize, \
+List[Automatic, Dynamic[Times[3.5`, \
+Times[CurrentValue[\\\"FontCapHeight\\\"], \
+Power[AbsoluteCurrentValue[Magnification], -1]]]]]], Rule[LabelStyle, \
+List[Rule[FontFamily, \\\"Arial\\\"]]], Rule[Method, \
+List[Rule[\\\"ScalingFunctions\\\", None]]], Rule[PlotRange, List[List[0.`, \
+50.`], List[-7.030970816185017`, 4.273359296964368`]]], \
+Rule[PlotRangeClipping, True], Rule[PlotRangePadding, List[List[1, 1], \
+List[1, 1]]], Rule[Ticks, List[Automatic, Automatic]]], \
+GridBox[List[List[TagBox[TemplateBox[List[RowBox[List[TagBox[\\\"\\\\\\\"Time:\
+ \\\\\\\"\\\", \\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"\\\\\\\"08 Jul 2019 00:16:07\\\\\\\"\\\", \\\"SummaryItem\\\"]]], \
+RowBox[List[TagBox[\\\"\\\\\\\" to \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\
+\\\"08 Jul 2019 09:16:08\\\\\\\"\\\", \\\"SummaryItem\\\"]]]], \\\"RowDefault\
+\\\"], \\\"SummaryItem\\\"], \\\"\\\\[SpanFromLeft]\\\"], \
+List[RowBox[List[TagBox[\\\"\\\\\\\"Data points: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"10\\\
+\", \\\"SummaryItem\\\"]]], \\\"\\\\[SpanFromLeft]\\\"], \
+List[RowBox[List[TagBox[\\\"\\\\\\\"Regular: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"False\\\", \\\"SummaryItem\\\"]]], \
+RowBox[List[TagBox[\\\"\\\\\\\"Output dimension: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[\\\"1\\\", \\\"SummaryItem\\\"]]]], List[RowBox[List[TagBox[\\\"\\\\\\\
+\"Metadata: \\\\\\\"\\\", \\\"SummaryItemAnnotation\\\"], \
+\\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"None\\\", \\\"SummaryItem\\\"]]], \
+RowBox[List[TagBox[\\\"\\\\\\\"Minimum increment: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[RowBox[List[\\\"{\\\", RowBox[List[FractionBox[\\\"3599\\\", \\\"86400\
+\\\"], \\\",\\\", \\\"\\\\\\\"Day\\\\\\\"\\\"]], \\\"}\\\"]], \\\"SummaryItem\
+\\\"]]]], List[TagBox[\\\"\\\\\\\"\\\\\\\"\\\", \\\"SummaryItem\\\"], \
+RowBox[List[TagBox[\\\"\\\\\\\"Resampling: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\
+\\\"LinearInterpolation\\\\\\\"\\\", \\\"SummaryItem\\\"]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Columns\\\", List[List[Left]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[AutoDelete, False], \
+Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", List[List[Automatic]]], \
+Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\
+\\\"Columns\\\", List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaseStyle, List[Rule[ShowStringCharacters, False], Rule[NumberMarks, \
+False], Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
+Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
+List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
+Rule[ImageSize, Automatic]]], \\\"SummaryPanel\\\"], \
+RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
+TemporalData[TimeSeries, List[List[StructuredArray[QuantityArray, List[10], \
+StructuredArray`StructuredData[QuantityArray, List[89, 92, 96, 92, 77, 76, \
+84, 66, 56, 50], \\\"Percent\\\", List[List[1]]]]], \
+List[List[List[3771533767, 3771537367, 3771540966, 3771544567, 3771548167, \
+3771551767, 3771555366, 3771558966, 3771562566, 3771566168]]], 1, \
+List[\\\"Continuous\\\", 1], List[\\\"Discrete\\\", 1], 1, \
+List[Rule[ValueDimensions, 1], Rule[DateFunction, Automatic], \
+Rule[ResamplingMethod, List[\\\"Interpolation\\\", Rule[InterpolationOrder, \
+1]]]]], True, 12.`], Rule[Selectable, False], Rule[Editable, False], \
+Rule[SelectWithContents, True]], \\\",\\\", RowBox[{\\\"TimeSeries\\\", \\\"[\
+\\\", RowBox[{\\\"Transpose\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"DateObject\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \
+\\\",\\\", \\\"8\\\", \\\",\\\", \\\"0\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \
+\\\"7.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\
+\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"1\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"7.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"2\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"3\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"7.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\
+\\\", \\\"\[RightSkeleton]\\\"}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"6\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", \
+RowBox[{\\\"DateObject\\\", \\\"[\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"2019\\\", \\\",\\\", \\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \
+\\\"8\\\", \\\",\\\", \\\"16\\\", \\\",\\\", \\\"6.`\\\"}], \\\"}\\\"}], \
+\\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", RowBox[{\\\"-\\\", \
+\\\"4.`\\\"}]}], \\\"]\\\"}], \\\",\\\", RowBox[{\\\"DateObject\\\", \
+\\\"[\\\", RowBox[{RowBox[{\\\"{\\\", RowBox[{\\\"2019\\\", \\\",\\\", \
+\\\"7\\\", \\\",\\\", \\\"8\\\", \\\",\\\", \\\"9\\\", \\\",\\\", \\\"16\\\", \
+\\\",\\\", \\\"8.`\\\"}], \\\"}\\\"}], \\\",\\\", \\\"\\\\\\\"Instant\\\\\\\"\
+\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"4.`\\\"}]}], \\\"]\\\"}]}], \\\"}\\\"}], \\\",\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}]}], \
+\\\"}\\\"}], \\\"]\\\"}], \\\"]\\\"}]}], \\\"}\\\"}]\\) is not a valid \
+dataset or list of datasets.\"",2,383,66,31027639945701919067,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.771586262083*^9},
+ CellLabel->
+  "During evaluation of \
+In[379]:=",ExpressionUUID->"fc2cf295-6586-478b-9415-39fef7906c6f"],
+
+Cell[BoxData[
+ RowBox[{"DateListPlot", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    InterpretationBox[
+     RowBox[{
+      TagBox["TimeSeries",
+       "SummaryHead"], "[", 
+      DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+       "Ready"}, 
+       TemplateBox[{PaneSelectorBox[{False -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SquarePlusIconMedium"]], 
+                 ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                 None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                   AbsoluteCurrentValue[Magnification]}]], 
+               GraphicsBox[{{}, {{}, {}, {
+                   GrayLevel[0.5], 
+                   PointSize[0.125], 
+                   AbsoluteThickness[1.5], 
+                   StyleBox[
+                    LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAmIQDQEf7Fl11LwinD7aQwUcXn2Jtl8b9ArK53Bw3utt
+q3f4M5Qv4CC+Otg/K43RAcIXcfi+f0F40nsYX8JBX1jtBbsrL5Qv45DtoBvW
+xcwP5Ss4NFwMEp60GWafksOc359Whf/9BeWrOARoR64NnnwNyldzMHERNjG5
++no/hK/hIKRdVZBY8w3K13LIMJWbeIH9L5Sv4zDLV7txKvsXKF/PoWzi1MhL
+TFwHIHwDB/cgkWNzBTmgfEOHQ2p/W4VucUL5Rg7G79Iu8t1mg/KNHcrd9WVC
+ixmhfBOHrX+2zedZ8B9qvqnDPJ3j61kKGKDyZg5FiwwE9lTA7DN3qN+4vmmS
+siiUb+HAtbzy3bJ4ISjf0oFzYux88dMCUL6VQ5zaARf5axJQvrWDmCZL36VN
+UlC+jYPfBC+BlBJxKN/WoX+K14Vt8jJQvp3DgYTiXbPeiUD59g48fy+4bYoW
+g/IdHL4IXz2XEgqVb3BwONa2ilHOixsq7+jg3yuU9L5AECrv6NBaqXjidDLM
+vU4OTZOznfNi2KHyTg4WG+6H/hWBhY+zQ5qveFfD7s+Q8Glwdviw+EOTxY2j
+0Ph0cVj18NqRC96XIfwGF4dlb2fpWLbB0perwzqzL3Nnz/wElXd1YCgOSXoi
+cRUq7+ZgkHHN7dvHG1Dz3RxO/X996GnXG2h8uDusTTv5fqPlTai8u4O3Uoqa
+3YkrUP0eDlu+ZYpfimJwgMh7OPwpNvZ9PpcDwmfwdPgt/Kj+tbigAwD0Q951
+
+                    "]], FontFamily -> "Arial", StripOnInput -> False]}}, {}},
+                 AspectRatio -> 1, Axes -> {False, False}, 
+                AxesLabel -> {None, None}, AxesOrigin -> {0., 0.}, Background -> 
+                GrayLevel[0.93], BaseStyle -> {FontFamily -> "Arial"}, 
+                DisplayFunction -> Identity, 
+                Frame -> {{True, True}, {True, True}}, 
+                FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+                Directive[
+                  Thickness[Tiny], 
+                  GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}},
+                 GridLines -> {None, None}, GridLinesStyle -> Directive[
+                  GrayLevel[0.5, 0.4]], ImageSize -> {Automatic, 
+                  Dynamic[
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])]}, LabelStyle -> {FontFamily -> "Arial"}, 
+                Method -> {"ScalingFunctions" -> None}, 
+                PlotRange -> {{0., 50.}, {-7.030970816185017, 
+                 4.273359296964368}}, PlotRangeClipping -> True, 
+                PlotRangePadding -> {{1, 1}, {1, 1}}, 
+                Ticks -> {Automatic, Automatic}], 
+               GridBox[{{
+                  TagBox[
+                   TemplateBox[{
+                    RowBox[{
+                    TagBox["\"Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 00:16:07\"", "SummaryItem"]}], 
+                    RowBox[{
+                    TagBox["\" to \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 09:16:08\"", "SummaryItem"]}]}, 
+                    "RowDefault"], "SummaryItem"], "\[SpanFromLeft]"}, {
+                  RowBox[{
+                    TagBox["\"Data points: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["10", "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}], True -> GridBox[{{
+               PaneBox[
+                ButtonBox[
+                 DynamicBox[
+                  FEPrivate`FrontEndResource[
+                  "FEBitmaps", "SquareMinusIconMedium"]], 
+                 ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                 None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                Alignment -> {Center, Center}, ImageSize -> 
+                Dynamic[{
+                  Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                   AbsoluteCurrentValue[Magnification]}]], 
+               GraphicsBox[{{}, {{}, {}, {
+                   GrayLevel[0.5], 
+                   PointSize[0.125], 
+                   AbsoluteThickness[1.5], 
+                   StyleBox[
+                    LineBox[CompressedData["
+1:eJxTTMoPSmViYGAwAmIQDQEf7Fl11LwinD7aQwUcXn2Jtl8b9ArK53Bw3utt
+q3f4M5Qv4CC+Otg/K43RAcIXcfi+f0F40nsYX8JBX1jtBbsrL5Qv45DtoBvW
+xcwP5Ss4NFwMEp60GWafksOc359Whf/9BeWrOARoR64NnnwNyldzMHERNjG5
++no/hK/hIKRdVZBY8w3K13LIMJWbeIH9L5Sv4zDLV7txKvsXKF/PoWzi1MhL
+TFwHIHwDB/cgkWNzBTmgfEOHQ2p/W4VucUL5Rg7G79Iu8t1mg/KNHcrd9WVC
+ixmhfBOHrX+2zedZ8B9qvqnDPJ3j61kKGKDyZg5FiwwE9lTA7DN3qN+4vmmS
+siiUb+HAtbzy3bJ4ISjf0oFzYux88dMCUL6VQ5zaARf5axJQvrWDmCZL36VN
+UlC+jYPfBC+BlBJxKN/WoX+K14Vt8jJQvp3DgYTiXbPeiUD59g48fy+4bYoW
+g/IdHL4IXz2XEgqVb3BwONa2ilHOixsq7+jg3yuU9L5AECrv6NBaqXjidDLM
+vU4OTZOznfNi2KHyTg4WG+6H/hWBhY+zQ5qveFfD7s+Q8Glwdviw+EOTxY2j
+0Ph0cVj18NqRC96XIfwGF4dlb2fpWLbB0perwzqzL3Nnz/wElXd1YCgOSXoi
+cRUq7+ZgkHHN7dvHG1Dz3RxO/X996GnXG2h8uDusTTv5fqPlTai8u4O3Uoqa
+3YkrUP0eDlu+ZYpfimJwgMh7OPwpNvZ9PpcDwmfwdPgt/Kj+tbigAwD0Q951
+
+                    "]], FontFamily -> "Arial", StripOnInput -> False]}}, {}},
+                 AspectRatio -> 1, Axes -> {False, False}, 
+                AxesLabel -> {None, None}, AxesOrigin -> {0., 0.}, Background -> 
+                GrayLevel[0.93], BaseStyle -> {FontFamily -> "Arial"}, 
+                DisplayFunction -> Identity, 
+                Frame -> {{True, True}, {True, True}}, 
+                FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> 
+                Directive[
+                  Thickness[Tiny], 
+                  GrayLevel[0.7]], FrameTicks -> {{None, None}, {None, None}},
+                 GridLines -> {None, None}, GridLinesStyle -> Directive[
+                  GrayLevel[0.5, 0.4]], ImageSize -> {Automatic, 
+                  Dynamic[
+                  3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])]}, LabelStyle -> {FontFamily -> "Arial"}, 
+                Method -> {"ScalingFunctions" -> None}, 
+                PlotRange -> {{0., 50.}, {-7.030970816185017, 
+                 4.273359296964368}}, PlotRangeClipping -> True, 
+                PlotRangePadding -> {{1, 1}, {1, 1}}, 
+                Ticks -> {Automatic, Automatic}], 
+               GridBox[{{
+                  TagBox[
+                   TemplateBox[{
+                    RowBox[{
+                    TagBox["\"Time: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 00:16:07\"", "SummaryItem"]}], 
+                    RowBox[{
+                    TagBox["\" to \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"08 Jul 2019 09:16:08\"", "SummaryItem"]}]}, 
+                    "RowDefault"], "SummaryItem"], "\[SpanFromLeft]"}, {
+                  RowBox[{
+                    TagBox["\"Data points: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["10", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                  RowBox[{
+                    TagBox["\"Regular: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["False", "SummaryItem"]}], 
+                  RowBox[{
+                    TagBox["\"Output dimension: \"", "SummaryItemAnnotation"],
+                     "\[InvisibleSpace]", 
+                    TagBox["1", "SummaryItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Metadata: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["None", "SummaryItem"]}], 
+                  RowBox[{
+                    TagBox[
+                    "\"Minimum increment: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{
+                    FractionBox["3599", "86400"], ",", "\"Day\""}], "}"}], 
+                    "SummaryItem"]}]}, {
+                  TagBox["\"\"", "SummaryItem"], 
+                  RowBox[{
+                    TagBox["\"Resampling: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"LinearInterpolation\"", "SummaryItem"]}]}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                False, GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                GridBoxSpacings -> {
+                 "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                BaseStyle -> {
+                 ShowStringCharacters -> False, NumberMarks -> False, 
+                  PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+             GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+             GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             BaselinePosition -> {1, 1}]}, 
+          Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+        "SummaryPanel"],
+       DynamicModuleValues:>{}], "]"}],
+     TemporalData[TimeSeries, {{
+        StructuredArray[QuantityArray, {10}, 
+         StructuredArray`StructuredData[
+         QuantityArray, {89, 92, 96, 92, 77, 76, 84, 66, 56, 50}, 
+          "Percent", {{1}}]]}, {{{3771533767, 3771537367, 3771540966, 
+       3771544567, 3771548167, 3771551767, 3771555366, 3771558966, 3771562566,
+        3771566168}}}, 1, {"Continuous", 1}, {"Discrete", 1}, 1, {
+       ValueDimensions -> 1, DateFunction -> Automatic, 
+        ResamplingMethod -> {"Interpolation", InterpolationOrder -> 1}}}, 
+      True, 12.],
+     Editable->False,
+     SelectWithContents->True,
+     Selectable->False], ",", 
+    RowBox[{"TimeSeries", "[", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 00:16:07\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "0", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 01:16:07\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "1", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 02:16:06\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "2", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 03:16:07\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "3", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 04:16:07\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "4", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 05:16:07\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "5", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 06:16:06\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "6", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 07:16:06\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "7", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 08:16:06\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "8", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False], ",", 
+          TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 09:16:08\"", 
+              StyleBox[
+               RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                 StyleBox[
+                  RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                  False]}], FontColor -> GrayLevel[0.5]]}],
+            RowBox[{"DateObject", "[", 
+              RowBox[{
+                RowBox[{"{", 
+                  
+                  RowBox[{
+                   "2019", ",", "7", ",", "8", ",", "9", ",", "16", ",", 
+                    "8.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                ",", 
+                RowBox[{"-", "4.`"}]}], "]"}]},
+           "DateObject",
+           Editable->False]}], "}"}], ",", 
+        RowBox[{"WeatherData", "[", 
+         RowBox[{"\<\"KBED\"\>", ",", "\<\"Humidity\"\>", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 00:16:07\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "0", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 01:16:07\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "1", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 02:16:06\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "2", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 03:16:07\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "3", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 04:16:07\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "4", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 05:16:07\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "5", ",", "16", ",", 
+                    "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 06:16:06\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "6", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 07:16:06\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "7", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 08:16:06\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "8", ",", "16", ",", 
+                    "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False], ",", 
+            TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 09:16:08\"", 
+                StyleBox[
+                 RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                   StyleBox[
+                    RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}],
+              RowBox[{"DateObject", "[", 
+                RowBox[{
+                  RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2019", ",", "7", ",", "8", ",", "9", ",", "16", ",", 
+                    "8.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                  ",", 
+                  RowBox[{"-", "4.`"}]}], "]"}]},
+             "DateObject",
+             Editable->False]}], "}"}]}], "]"}]}], "}"}], "]"}], "]"}]}], 
+   "}"}], "]"}]], "Output",
+ CellChangeTimes->{3.771586262154001*^9},
+ CellLabel->
+  "Out[383]=",ExpressionUUID->"b83f60cc-1417-4313-ade0-a550da463da7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["times"], "Input",
+ CellChangeTimes->{{3.771586225950685*^9, 3.771586227418541*^9}},
+ CellLabel->
+  "In[378]:=",ExpressionUUID->"eb514a8a-7e9e-457b-a50f-a6897bca426f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 00:16:07\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "0", ",", "16", ",", 
+             "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 01:16:07\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "1", ",", "16", ",", 
+             "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 02:16:06\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "2", ",", "16", ",", 
+             "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 03:16:07\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "3", ",", "16", ",", 
+             "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 04:16:07\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "4", ",", "16", ",", 
+             "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 05:16:07\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "5", ",", "16", ",", 
+             "7.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 06:16:06\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "6", ",", "16", ",", 
+             "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 07:16:06\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "7", ",", "16", ",", 
+             "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 08:16:06\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "8", ",", "16", ",", 
+             "6.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 8 Jul 2019 09:16:08\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{"-", "4.`"}], NumberMarks -> False, StripOnInput -> 
+           False]}], FontColor -> GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           
+           RowBox[{"2019", ",", "7", ",", "8", ",", "9", ",", "16", ",", 
+             "8.`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "4.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",
+ CellChangeTimes->{3.771586227969904*^9},
+ CellLabel->
+  "Out[378]=",ExpressionUUID->"ea9a7a98-0ea9-4c8b-87a9-0a33432982ff"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"WeatherData", "[", 
+   RowBox[{"\"\<KBED\>\"", ",", " ", "\"\<Humidity\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.771586207466852*^9, 3.771586215962178*^9}},
+ CellLabel->
+  "In[377]:=",ExpressionUUID->"56f813e6-3f6d-4b1a-a1d1-5900b7e74509"],
+
+Cell[BoxData["0.466`"], "Output",
+ CellChangeTimes->{
+  3.7715861317985277`*^9, {3.771586212546466*^9, 3.771586216982176*^9}},
+ CellLabel->
+  "Out[377]=",ExpressionUUID->"3135e43a-5edd-4875-bf5c-52ceb2224b9a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"Chart", " ", "the", " ", "weather", " ", 
-    RowBox[{"station", "'"}], "s", " ", "Rain"}], "*)"}], "\n"}]], "Code",
+    RowBox[{"station", "'"}], "s", " ", "Rain"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"rain", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "1", ",", "8", ",", "2"}],
+         "]"}], "]"}], "//", "Normal"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"times", ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"MapAt", "[", 
+          RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+        "rain"}]}], "}"}], "]"}], "]"}], "\n", "\n", "\n", "\n", 
+   RowBox[{"WeatherData", "[", 
+    RowBox[{"\"\<KBED\>\"", ",", " ", "\"\<Humidity\>\"", ",", " ", "Now"}], 
+    "]"}], "\n", 
+   RowBox[{"WeatherData", "[", 
+    RowBox[{
+    "\"\<KBED\>\"", ",", " ", "\"\<PrecipitationRate\>\"", ",", " ", "Now"}], 
+    "]"}]}]}]], "Code",
  CellChangeTimes->{{3.7710849506615877`*^9, 3.7710849962975063`*^9}, {
    3.771085179449616*^9, 3.771085213754734*^9}, {3.7710854046266212`*^9, 
    3.7710854065993137`*^9}, {3.771085515566758*^9, 3.771085535084083*^9}, {
@@ -22182,15 +23854,147 @@ Cell[BoxData[
    3.771152788513624*^9}, {3.771154860539383*^9, 3.771154924408267*^9}, {
    3.771256159971274*^9, 3.771256172592243*^9}, {3.7712602698409758`*^9, 
    3.771260278974019*^9}, 3.7713438302363787`*^9, {3.771343864146*^9, 
-   3.7713438683805857`*^9}, {3.77134390520969*^9, 
-   3.771343937522427*^9}},ExpressionUUID->"bb6de14d-8e93-4df9-9f92-\
+   3.7713438683805857`*^9}, {3.77134390520969*^9, 3.771343937522427*^9}, {
+   3.7715353491832743`*^9, 3.771535357959641*^9}, {3.7715372110769176`*^9, 
+   3.771537235473815*^9}, {3.7715376086582127`*^9, 3.771537642531472*^9}, {
+   3.771580714587791*^9, 3.77158079689968*^9}, {3.771582089939425*^9, 
+   3.771582090816636*^9}},ExpressionUUID->"bb6de14d-8e93-4df9-9f92-\
 5b6fb27a6db6"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], LineBox[CompressedData["
+
+1:eJxTTMoPSmViYGAQAWIQzcBw4FGv5BtHBjg4sKQfhc+QPhGVrzkZlf96Cgr/
+wZppqPy8Gah8g1mo/E+zUflb5qLyy+aj8i0WovJ/LUJ1/54lqPJ1y1D5DitQ
++UyrUPUfWY3Kb1uLyvdYj8QHAI3uQFo=
+       "]]}}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6]}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.771494166*^9, 0},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->FrontEndValueCache[{{Automatic, Automatic}, {
+      Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}], 
+      Charting`DateTicksFunction[
+      Automatic, DateTicksFormat -> {Automatic}, "TickLabels" -> None]}}, {{
+     Automatic, Automatic}, {{{3.7714896*^9, 
+        FormBox[
+         StyleBox["\"12:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.771504*^9, 
+        FormBox[
+         StyleBox["\"16:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715184*^9, 
+        FormBox[
+         StyleBox["\"20:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715328*^9, 
+        FormBox[
+         StyleBox["\"00:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         StyleBox["\"04:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         StyleBox["\"08:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}, {{3.7714896*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.771504*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715184*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715328*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}}}],
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "NoShowPlotTheme" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{3.771494166*^9, 3.771562566*^9}, {-1., 1.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{{}, Automatic}]], "Output",
+ CellChangeTimes->{3.771580894615583*^9, 3.7715809749193687`*^9},
+ CellLabel->
+  "Out[283]=",ExpressionUUID->"96a9ac0e-076c-4ed9-bb51-b2e2757bbb9e"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"Chart", " ", "the", " ", "weather", " ", 
-    RowBox[{"station", "'"}], "s", " ", "Wind"}], "*)"}], "\n"}]], "Code",
+    RowBox[{"station", "'"}], "s", " ", "Wind", " ", "Speed"}], "*)"}], "\n", 
+  
+  RowBox[{
+   RowBox[{
+    RowBox[{"windSpeed", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "1", ",", "3", ",", "2"}],
+         "]"}], "]"}], "//", "Normal"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"times", ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"MapAt", "[", 
+          RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+        "windSpeed"}]}], "}"}], "]"}], "]"}], "\n", 
+   RowBox[{"WindSpeedData", "[", 
+    RowBox[{"\"\<KBED\>\"", ",", " ", "Now"}], "]"}]}]}]], "Code",
  CellChangeTimes->{{3.7711629837911787`*^9, 3.77116300501744*^9}, {
    3.771163081277701*^9, 3.7711631914888887`*^9}, {3.771166215598968*^9, 
    3.771166311852632*^9}, {3.771256533853778*^9, 3.771256563651372*^9}, {
@@ -22199,29 +24003,239 @@ Cell[BoxData[
    3.7712609678693237`*^9, 3.771260985586069*^9}, {3.771261047054192*^9, 
    3.771261099161778*^9}, {3.7712611366067457`*^9, 3.771261154867279*^9}, 
    3.771343832317637*^9, {3.771343873193815*^9, 3.771343875732236*^9}, {
-   3.771343912587102*^9, 
-   3.771343940346446*^9}},ExpressionUUID->"b277b14f-8929-4ca4-9aa7-\
+   3.771343912587102*^9, 3.771343940346446*^9}, {3.771533638344863*^9, 
+   3.771533644407318*^9}, {3.771535134791013*^9, 3.77153514398435*^9}, {
+   3.771536725605236*^9, 3.771536728202702*^9}, {3.771536819703017*^9, 
+   3.771536830832966*^9}, {3.771537415386517*^9, 3.771537415815495*^9}, {
+   3.771580808470529*^9, 3.7715808222932158`*^9}, {3.771580862280716*^9, 
+   3.771580944246586*^9}, {3.771581009595358*^9, 3.771581011971262*^9}, {
+   3.771584637597104*^9, 
+   3.77158468361392*^9}},ExpressionUUID->"b277b14f-8929-4ca4-9aa7-\
 ae7c98711137"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"Chart", " ", "the", " ", "weather", " ", 
-    RowBox[{"station", "'"}], "s", " ", "Pressure"}], "*)"}], "\n"}]], "Code",\
+    RowBox[{"station", "'"}], "s", " ", "Wind", " ", "Direction"}], "*)"}], 
+  "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"windDirection", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "1", ",", "4", ",", "2"}],
+         "]"}], "]"}], "//", "Normal"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"times", ",", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"MapAt", "[", 
+          RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+        "windDirection"}]}], "}"}], "]"}], "]"}], "\n", 
+   RowBox[{"WindDirectionData", "[", 
+    RowBox[{"\"\<KBED\>\"", ",", " ", "Now"}], "]"}]}]}]], "Code",
+ CellChangeTimes->{{3.7711629837911787`*^9, 3.77116300501744*^9}, {
+   3.771163081277701*^9, 3.7711631914888887`*^9}, {3.771166215598968*^9, 
+   3.771166311852632*^9}, {3.771256533853778*^9, 3.771256563651372*^9}, {
+   3.771260451065427*^9, 3.771260458699974*^9}, {3.7712606154221983`*^9, 
+   3.771260618026935*^9}, {3.771260908214225*^9, 3.771260910987853*^9}, {
+   3.7712609678693237`*^9, 3.771260985586069*^9}, {3.771261047054192*^9, 
+   3.771261099161778*^9}, {3.7712611366067457`*^9, 3.771261154867279*^9}, 
+   3.771343832317637*^9, {3.771343873193815*^9, 3.771343875732236*^9}, {
+   3.771343912587102*^9, 3.771343940346446*^9}, {3.771533638344863*^9, 
+   3.771533644407318*^9}, {3.771535134791013*^9, 3.77153514398435*^9}, {
+   3.771536725605236*^9, 3.771536728202702*^9}, {3.771536819703017*^9, 
+   3.771536830832966*^9}, {3.771537415386517*^9, 3.771537415815495*^9}, {
+   3.771580808470529*^9, 3.7715808222932158`*^9}, {3.771580862280716*^9, 
+   3.771580944246586*^9}, {3.771581009595358*^9, 3.771581011971262*^9}, {
+   3.771584654207409*^9, 
+   3.771584682061534*^9}},ExpressionUUID->"bc76f132-67b8-453c-a5d8-\
+0df3fd8eed45"],
 
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Chart", " ", "the", " ", "weather", " ", 
+    RowBox[{"station", "'"}], "s", " ", "Pressure"}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"pressure", "=", 
+     RowBox[{
+      RowBox[{"data", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"1", ";;", "All"}], ",", "2", ",", "1", ",", "7", ",", "2"}],
+         "]"}], "]"}], "//", "Normal"}]}], ";"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{"myPressureTimeSeries", "=", 
+     RowBox[{"TimeSeries", "[", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"times", ",", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"MapAt", "[", 
+            RowBox[{"ToExpression", ",", "#", ",", "1"}], "]"}], "&"}], "/@", 
+          "pressure"}]}], "}"}], "]"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"wmoPressureTimeSeries", "=", 
+     RowBox[{"TimeSeries", "[", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"times", ",", " ", 
+         RowBox[{"AirPressureData", "[", 
+          RowBox[{"\"\<KBED\>\"", ",", " ", "times"}], "]"}]}], "}"}], "]"}], 
+      "]"}]}], ";"}], "\n", 
+   RowBox[{"DateListPlot", "[", 
+    RowBox[{"{", 
+     RowBox[{"myPressureTimeSeries", ",", "wmoPressureTimeSeries"}], "}"}], 
+    "]"}]}]}]], "Code",
  CellChangeTimes->{{3.7711629837911787`*^9, 3.77116300501744*^9}, {
    3.771163081277701*^9, 3.7711631914888887`*^9}, {3.771166215598968*^9, 
    3.771166311852632*^9}, {3.771256533853778*^9, 3.771256563651372*^9}, {
    3.771260451065427*^9, 3.771260458699974*^9}, {3.7712606154221983`*^9, 
    3.771260618026935*^9}, {3.771260908214225*^9, 3.771260910987853*^9}, 
    3.771343834156744*^9, {3.771343879372261*^9, 3.771343880476164*^9}, {
-   3.771343925378796*^9, 
-   3.77134394270652*^9}},ExpressionUUID->"560ea581-c759-4bf7-89d6-\
-ae74fce9b18d"]
+   3.771343925378796*^9, 3.77134394270652*^9}, {3.771535197687689*^9, 
+   3.771535202442745*^9}, 3.771536833720825*^9, {3.7715808309533253`*^9, 
+   3.7715808520779457`*^9}, {3.771580949732156*^9, 3.7715809556725073`*^9}, 
+   3.771581046876307*^9, {3.7715823223577423`*^9, 3.7715823613471527`*^9}, {
+   3.771582403688324*^9, 3.7715824185855713`*^9}},
+ CellLabel->
+  "In[367]:=",ExpressionUUID->"560ea581-c759-4bf7-89d6-ae74fce9b18d"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, {}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], 
+      LineBox[{{3.771533767*^9, 29.75}, {3.771537367*^9, 29.75}, {
+       3.771540966*^9, 29.76}, {3.771544567*^9, 29.75}, {3.771548167*^9, 
+       29.75}, {3.771551767*^9, 29.76}, {3.771555366*^9, 29.77}, {
+       3.771558966*^9, 29.78}, {3.771562566*^9, 29.78}, {3.771566168*^9, 
+       29.78}}]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6], 
+      LineBox[{{3.771533767*^9, 29.900000000000002`}, {3.771537367*^9, 30.}, {
+       3.771540966*^9, 30.}, {3.771544567*^9, 30.}, {3.771548167*^9, 30.}, {
+       3.771551767*^9, 30.}, {3.771555366*^9, 30.}, {3.771558966*^9, 30.}, {
+       3.771562566*^9, 30.}, {3.771566168*^9, 30.}}]}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}, {}, {}}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, 
+     {RGBColor[0.880722, 0.611041, 0.142051], PointSize[
+      0.012833333333333334`], AbsoluteThickness[1.6]}, {}, {}, {}}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.771533767*^9, 29.73611111111111},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->FrontEndValueCache[{{Automatic, Automatic}, {
+      Charting`DateTicksFunction[Automatic, DateTicksFormat -> {Automatic}], 
+      Charting`DateTicksFunction[
+      Automatic, DateTicksFormat -> {Automatic}, "TickLabels" -> None]}}, {{
+     Automatic, Automatic}, {{{3.7715328*^9, 
+        FormBox[
+         StyleBox["\"00:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.77154*^9, 
+        FormBox[
+         StyleBox["\"02:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         StyleBox["\"04:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715544*^9, 
+        FormBox[
+         StyleBox["\"06:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         StyleBox["\"08:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715688*^9, 
+        FormBox[
+         StyleBox["\"10:00\"", 
+          Directive[], {}, StripOnInput -> False], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}, {{3.7715328*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.77154*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715472*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715544*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715616*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}, {3.7715688*^9, 
+        FormBox[
+         TemplateBox[{0., 0.}, "Spacer2"], TraditionalForm], {
+        0.013888888888888888`, 0.}, 
+        Directive[]}}}}],
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "NoShowPlotTheme" -> Automatic, "OptimizePlotMarkers" -> True, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{3.771533767*^9, 3.771566168*^9}, {29.73611111111111, 30.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{{}, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.77153683572685*^9, {3.771581043322401*^9, 3.771581047305087*^9}, 
+   3.77158237043167*^9, 3.771583871678459*^9},
+ CellLabel->
+  "Out[370]=",ExpressionUUID->"396b0fda-bf26-4753-8f09-e7c3ecb9f2a2"]
 }, Open  ]]
+}, Closed]]
 },
-WindowSize->{1222, 755},
-WindowMargins->{{Automatic, -419}, {Automatic, 0}},
+WindowSize->{1248, 755},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 DockedCells->{
   Cell[
    TextData[{
@@ -22251,95 +24265,126 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 533, 8, 98, "Title",ExpressionUUID->"49ab34ee-bfd5-49f5-beef-400d3cc456dd"],
 Cell[1116, 32, 531, 11, 58, "Text",ExpressionUUID->"94536f76-3fd2-4bf6-b228-fa93ec9acae9"],
-Cell[1650, 45, 936, 15, 81, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
-Cell[2589, 62, 1558, 28, 265, "Text",ExpressionUUID->"76323e88-8e60-4739-8cb9-0af2ae696da9"],
-Cell[4150, 92, 3289, 67, 319, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
-Cell[7442, 161, 1730, 41, 186, "Code",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
-Cell[9175, 204, 2622, 49, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
-Cell[11800, 255, 152, 3, 30, "Input",ExpressionUUID->"77eaa523-37e2-4c3f-8645-4c6f459600eb"],
+Cell[1650, 45, 1362, 21, 127, "Text",ExpressionUUID->"972131f0-7ddc-4ecb-a5a8-cca681f25e5e"],
+Cell[3015, 68, 3289, 67, 319, "Code",ExpressionUUID->"6f6d6f81-9861-478a-b041-80bfc39edb92"],
+Cell[6307, 137, 1730, 41, 186, "Code",ExpressionUUID->"4fd67fd1-04f7-4573-b972-cf4d0bbcaeaa"],
+Cell[8040, 180, 2622, 49, 167, "Code",ExpressionUUID->"2614d193-01b2-416b-ac9a-e7b8c11e22a0"],
+Cell[10665, 231, 152, 3, 30, "Input",ExpressionUUID->"77eaa523-37e2-4c3f-8645-4c6f459600eb"],
 Cell[CellGroupData[{
-Cell[11977, 262, 5296, 115, 357, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
-Cell[17276, 379, 3228, 72, 88, "Output",ExpressionUUID->"430b10f5-9f87-4977-a27b-9f10de1106ed"]
+Cell[10842, 238, 5296, 115, 357, "Code",ExpressionUUID->"41d28179-da58-4c8f-8823-03a3b422baec"],
+Cell[16141, 355, 3228, 72, 88, "Output",ExpressionUUID->"430b10f5-9f87-4977-a27b-9f10de1106ed"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20541, 456, 4696, 110, 281, "Code",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
-Cell[25240, 568, 4425, 100, 125, "Output",ExpressionUUID->"082bd2d5-37e6-4030-9807-df8fb7ef72d6"]
+Cell[19406, 432, 4696, 110, 281, "Code",ExpressionUUID->"d9f61cf0-fdb9-4e5a-b889-a7fed36fba8f"],
+Cell[24105, 544, 4425, 100, 125, "Output",ExpressionUUID->"082bd2d5-37e6-4030-9807-df8fb7ef72d6"]
 }, Open  ]],
-Cell[29680, 671, 1764, 38, 167, "Code",ExpressionUUID->"0f17ac41-04e0-4163-84d9-150b6c681b9a",
+Cell[28545, 647, 1764, 38, 167, "Code",ExpressionUUID->"0f17ac41-04e0-4163-84d9-150b6c681b9a",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[31469, 713, 345, 6, 30, "Input",ExpressionUUID->"80a52022-f254-414a-9a6a-51b5ce0d8157"],
-Cell[31817, 721, 2807, 65, 132, "Output",ExpressionUUID->"80e02062-91ab-4f74-8ab8-8131c38b07cf"]
+Cell[30334, 689, 345, 6, 30, "Input",ExpressionUUID->"80a52022-f254-414a-9a6a-51b5ce0d8157"],
+Cell[30682, 697, 2807, 65, 98, "Output",ExpressionUUID->"80e02062-91ab-4f74-8ab8-8131c38b07cf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34661, 791, 3533, 70, 224, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
-Cell[38197, 863, 341, 5, 34, "Output",ExpressionUUID->"3e4e1b04-f1f2-432f-9160-5da841bb7068"]
+Cell[33526, 767, 3533, 70, 224, "Code",ExpressionUUID->"3328e4ce-4400-4a1f-9502-1359fb90981f"],
+Cell[37062, 839, 341, 5, 34, "Output",ExpressionUUID->"3e4e1b04-f1f2-432f-9160-5da841bb7068"]
 }, Open  ]],
-Cell[38553, 871, 22580, 426, 93, InheritFromParent,ExpressionUUID->"46c027b8-4be0-4cf4-a418-069816a31292"]
+Cell[37418, 847, 22580, 426, 93, InheritFromParent,ExpressionUUID->"46c027b8-4be0-4cf4-a418-069816a31292"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[60035, 1278, 505, 8, 98, "Title",ExpressionUUID->"895c7d10-769e-4a70-b62e-ab53201b118f"],
+Cell[60543, 1288, 1788, 28, 150, "Text",ExpressionUUID->"56a8021b-d03b-4169-8db8-6c1f760872dc"],
+Cell[62334, 1318, 3544, 78, 281, "Code",ExpressionUUID->"a7aae154-930f-4f40-854d-2e232bb46723"],
+Cell[65881, 1398, 4122, 86, 230, "Code",ExpressionUUID->"6ca615d9-59d5-4f19-8c10-0149f1110b78"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[61170, 1302, 505, 8, 72, "Title",ExpressionUUID->"895c7d10-769e-4a70-b62e-ab53201b118f"],
-Cell[61678, 1312, 1788, 28, 127, "Text",ExpressionUUID->"56a8021b-d03b-4169-8db8-6c1f760872dc"],
-Cell[63469, 1342, 3544, 78, 281, "Code",ExpressionUUID->"a7aae154-930f-4f40-854d-2e232bb46723"],
-Cell[67016, 1422, 4122, 86, 230, "Code",ExpressionUUID->"6ca615d9-59d5-4f19-8c10-0149f1110b78"]
+Cell[70040, 1489, 506, 8, 72, "Title",ExpressionUUID->"3ff730e6-3ba3-441d-83d2-cbbade902671"],
+Cell[70549, 1499, 1267, 20, 58, "Text",ExpressionUUID->"a0f65ccd-4233-401b-a7fe-25154bb29c65"],
+Cell[71819, 1521, 3536, 78, 281, "Code",ExpressionUUID->"922c0f91-e957-4ee4-a65a-d121e12abad2"],
+Cell[75358, 1601, 4121, 86, 230, "Code",ExpressionUUID->"63ec299c-1686-495d-bbe8-2ad20e0ca4a8"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[71175, 1513, 506, 8, 72, "Title",ExpressionUUID->"3ff730e6-3ba3-441d-83d2-cbbade902671"],
-Cell[71684, 1523, 1267, 20, 58, "Text",ExpressionUUID->"a0f65ccd-4233-401b-a7fe-25154bb29c65"],
-Cell[72954, 1545, 3536, 78, 281, "Code",ExpressionUUID->"922c0f91-e957-4ee4-a65a-d121e12abad2"],
-Cell[76493, 1625, 4121, 86, 230, "Code",ExpressionUUID->"63ec299c-1686-495d-bbe8-2ad20e0ca4a8"]
-}, Closed]],
+Cell[79516, 1692, 457, 7, 72, "Title",ExpressionUUID->"f3ee99a9-79e0-4294-b63d-7f64de90106a"],
+Cell[79976, 1701, 1684, 27, 173, "Text",ExpressionUUID->"e266a274-8a7a-48eb-bc33-b19c22df4198"],
 Cell[CellGroupData[{
-Cell[80651, 1716, 457, 7, 72, "Title",ExpressionUUID->"f3ee99a9-79e0-4294-b63d-7f64de90106a"],
-Cell[81111, 1725, 1301, 22, 150, "Text",ExpressionUUID->"e266a274-8a7a-48eb-bc33-b19c22df4198"],
-Cell[CellGroupData[{
-Cell[82437, 1751, 1524, 30, 91, "Code",ExpressionUUID->"3bf79fe0-8370-4e9f-b1b0-453e1bc7ed7b"],
-Cell[83964, 1783, 624239, 10256, 684, "Output",ExpressionUUID->"54ec7368-1e63-4db8-8c80-40742d73134f"]
+Cell[81685, 1732, 1524, 30, 91, "Code",ExpressionUUID->"3bf79fe0-8370-4e9f-b1b0-453e1bc7ed7b"],
+Cell[83212, 1764, 624239, 10256, 731, "Output",ExpressionUUID->"54ec7368-1e63-4db8-8c80-40742d73134f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[708240, 12044, 3467, 68, 243, "Code",ExpressionUUID->"00db7aec-1251-4df3-a258-878e49fb1416"],
-Cell[711710, 12114, 401336, 9597, 227, "Output",ExpressionUUID->"05ac5dde-ff94-499c-b48f-216c0949dbbf"]
+Cell[707488, 12025, 3467, 68, 243, "Code",ExpressionUUID->"00db7aec-1251-4df3-a258-878e49fb1416"],
+Cell[710958, 12095, 401336, 9597, 227, "Output",ExpressionUUID->"05ac5dde-ff94-499c-b48f-216c0949dbbf"]
 }, Open  ]],
-Cell[1113061, 21714, 1656, 29, 91, "Code",ExpressionUUID->"6baad303-6bd7-48c0-97c6-0df1358a412c"],
+Cell[1112309, 21695, 1656, 29, 91, "Code",ExpressionUUID->"6baad303-6bd7-48c0-97c6-0df1358a412c"],
 Cell[CellGroupData[{
-Cell[1114742, 21747, 403, 10, 52, "Input",ExpressionUUID->"e0b53584-4e97-4941-b603-6bd81e18c473"],
-Cell[1115148, 21759, 511, 11, 24, "Message",ExpressionUUID->"9b0b2e3e-6af9-4de5-a624-94fb151590d0"],
-Cell[1115662, 21772, 292, 7, 34, "Output",ExpressionUUID->"a253dd3e-dc40-450f-899b-3e16f466cc28"]
-}, Open  ]],
-Cell[1115969, 21782, 289, 7, 30, InheritFromParent,ExpressionUUID->"f96b4d68-2611-4c55-9097-486473908fc1"],
-Cell[1116261, 21791, 376, 12, 45, "Output",ExpressionUUID->"a63a87f1-6bdc-4ab4-964a-3c4cf66ee623"],
-Cell[CellGroupData[{
-Cell[1116662, 21807, 560, 13, 30, "Input",ExpressionUUID->"d28acb47-7625-4569-ad96-3371c7bdbf4d"],
-Cell[1117225, 21822, 381, 9, 24, "Message",ExpressionUUID->"9f095816-2ae9-4646-9804-2f78f573f434"],
-Cell[1117609, 21833, 275, 7, 34, "Output",ExpressionUUID->"687e15cc-259e-49e1-964a-e19fe30fc51f"]
-}, Open  ]],
-Cell[1117899, 21843, 1379, 29, 115, "Input",ExpressionUUID->"d1134ee7-bd55-4017-89e4-0f0255bab134"],
-Cell[CellGroupData[{
-Cell[1119303, 21876, 406, 10, 52, "Input",ExpressionUUID->"745c0392-c021-4ddb-b842-5a5fab9f5b2d"],
-Cell[1119712, 21888, 454, 14, 45, "Output",ExpressionUUID->"c6b2e93d-90dc-49dd-9d4c-15b62884cd07"]
+Cell[1113990, 21728, 403, 10, 52, "Input",ExpressionUUID->"e0b53584-4e97-4941-b603-6bd81e18c473"],
+Cell[1114396, 21740, 511, 11, 24, "Message",ExpressionUUID->"9b0b2e3e-6af9-4de5-a624-94fb151590d0"],
+Cell[1114910, 21753, 292, 7, 34, "Output",ExpressionUUID->"a253dd3e-dc40-450f-899b-3e16f466cc28"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1120203, 21907, 1761, 40, 148, "Code",ExpressionUUID->"4943cf99-74ba-4506-854c-f4dbbb430ed6"],
-Cell[1121967, 21949, 400, 10, 34, "Output",ExpressionUUID->"87f39f7c-973c-4836-a132-6e53f0803ce5"],
-Cell[1122370, 21961, 327, 7, 36, "Output",ExpressionUUID->"3bb5de38-e2e5-45fa-bb0b-88721bff58db"]
+Cell[1115239, 21765, 289, 7, 30, "Input",ExpressionUUID->"f96b4d68-2611-4c55-9097-486473908fc1"],
+Cell[1115531, 21774, 376, 12, 45, "Output",ExpressionUUID->"a63a87f1-6bdc-4ab4-964a-3c4cf66ee623"]
 }, Open  ]],
-Cell[1122712, 21971, 1403, 31, 148, "Code",ExpressionUUID->"d90473fc-866a-4324-8f70-0b4e90d604e5"],
 Cell[CellGroupData[{
-Cell[1124140, 22006, 378, 9, 30, "Input",ExpressionUUID->"bb8701ee-7ffb-45cc-a9a0-ad4d15902671"],
-Cell[1124521, 22017, 405, 9, 24, "Message",ExpressionUUID->"8970b59d-b8ef-4f8f-a48d-0d29f3711980"],
-Cell[1124929, 22028, 299, 7, 34, "Output",ExpressionUUID->"eddc9111-4d9d-4712-8e21-08f8100bb06c"]
+Cell[1115944, 21791, 560, 13, 30, "Input",ExpressionUUID->"d28acb47-7625-4569-ad96-3371c7bdbf4d"],
+Cell[1116507, 21806, 381, 9, 24, "Message",ExpressionUUID->"9f095816-2ae9-4646-9804-2f78f573f434"],
+Cell[1116891, 21817, 275, 7, 34, "Output",ExpressionUUID->"687e15cc-259e-49e1-964a-e19fe30fc51f"]
+}, Open  ]],
+Cell[1117181, 21827, 1379, 29, 73, "Input",ExpressionUUID->"d1134ee7-bd55-4017-89e4-0f0255bab134"],
+Cell[CellGroupData[{
+Cell[1118585, 21860, 406, 10, 30, "Input",ExpressionUUID->"745c0392-c021-4ddb-b842-5a5fab9f5b2d"],
+Cell[1118994, 21872, 454, 14, 45, "Output",ExpressionUUID->"c6b2e93d-90dc-49dd-9d4c-15b62884cd07"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1119485, 21891, 1761, 40, 148, "Code",ExpressionUUID->"4943cf99-74ba-4506-854c-f4dbbb430ed6"],
+Cell[1121249, 21933, 400, 10, 34, "Output",ExpressionUUID->"87f39f7c-973c-4836-a132-6e53f0803ce5"],
+Cell[1121652, 21945, 327, 7, 36, "Output",ExpressionUUID->"3bb5de38-e2e5-45fa-bb0b-88721bff58db"]
+}, Open  ]],
+Cell[1121994, 21955, 1403, 31, 148, "Code",ExpressionUUID->"d90473fc-866a-4324-8f70-0b4e90d604e5"],
+Cell[CellGroupData[{
+Cell[1123422, 21990, 378, 9, 30, "Input",ExpressionUUID->"bb8701ee-7ffb-45cc-a9a0-ad4d15902671"],
+Cell[1123803, 22001, 405, 9, 24, "Message",ExpressionUUID->"8970b59d-b8ef-4f8f-a48d-0d29f3711980"],
+Cell[1124211, 22012, 299, 7, 34, "Output",ExpressionUUID->"eddc9111-4d9d-4712-8e21-08f8100bb06c"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[1125277, 22041, 470, 7, 72, "Title",ExpressionUUID->"97b4b132-b49a-41a8-a5ec-620edf5f8e9a"],
-Cell[1125750, 22050, 1041, 17, 35, "Text",ExpressionUUID->"e41bf67e-af63-4499-bb8f-23c467e8e6f1"],
-Cell[1126794, 22069, 1839, 37, 167, "Code",ExpressionUUID->"6cfe96ca-915e-4879-b72a-997d78645739"],
-Cell[1128636, 22108, 1050, 18, 72, "Code",ExpressionUUID->"cac46f6d-fa2f-4462-859b-d275b88966c0"],
-Cell[1129689, 22128, 2274, 35, 72, "Code",ExpressionUUID->"bbcf9eb6-eed3-4738-9d35-618bbcd23084"],
-Cell[1131966, 22165, 1336, 21, 72, "Code",ExpressionUUID->"bb6de14d-8e93-4df9-9f92-5b6fb27a6db6"],
-Cell[1133305, 22188, 865, 15, 72, "Code",ExpressionUUID->"b277b14f-8929-4ca4-9aa7-ae7c98711137"],
-Cell[1134173, 22205, 720, 14, 72, "Code",ExpressionUUID->"560ea581-c759-4bf7-89d6-ae74fce9b18d"]
+Cell[1124559, 22025, 470, 7, 72, "Title",ExpressionUUID->"97b4b132-b49a-41a8-a5ec-620edf5f8e9a"],
+Cell[1125032, 22034, 1099, 17, 35, "Text",ExpressionUUID->"e41bf67e-af63-4499-bb8f-23c467e8e6f1"],
+Cell[CellGroupData[{
+Cell[1126156, 22055, 3978, 91, 205, "Code",ExpressionUUID->"6cfe96ca-915e-4879-b72a-997d78645739"],
+Cell[1130137, 22148, 5132, 118, 251, "Output",ExpressionUUID->"c5f83fba-4f8f-448b-a984-f49f0447f896"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1135306, 22271, 479, 9, 30, "Input",ExpressionUUID->"7b087df7-b59f-4adf-bae8-abd1c2295607"],
+Cell[1135788, 22282, 565, 12, 24, "Message",ExpressionUUID->"551e81e7-a84b-4571-9591-cd8660fed57d"],
+Cell[1136356, 22296, 2295, 57, 44, "Output",ExpressionUUID->"c7d8832e-afa1-47ad-9dad-1369f2d0abae"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1138688, 22358, 4200, 82, 167, "Code",ExpressionUUID->"bbcf9eb6-eed3-4738-9d35-618bbcd23084"],
+Cell[1142891, 22442, 4263, 104, 251, "Output",ExpressionUUID->"90ecff24-87aa-4a9b-8c1a-a46cc5f7470a"],
+Cell[1147157, 22548, 10524, 209, 64, "Output",ExpressionUUID->"8f640dd5-397d-4872-ad16-0018c7c0e675"],
+Cell[1157684, 22759, 744, 14, 42, "Message",ExpressionUUID->"0f6b609f-c5d5-46e1-9c2f-f9e22c96e457"],
+Cell[1158431, 22775, 4085, 61, 77, "Message",ExpressionUUID->"44f7c716-01f3-40e5-a6e8-8f31b640c868"],
+Cell[1162519, 22838, 16018, 232, 122, "Message",ExpressionUUID->"fc2cf295-6586-478b-9415-39fef7906c6f"],
+Cell[1178540, 23072, 26352, 563, 222, "Output",ExpressionUUID->"b83f60cc-1417-4313-ade0-a550da463da7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1204929, 23640, 180, 3, 30, "Input",ExpressionUUID->"eb514a8a-7e9e-457b-a50f-a6897bca426f"],
+Cell[1205112, 23645, 6008, 145, 75, "Output",ExpressionUUID->"ea9a7a98-0ea9-4c8b-87a9-0a33432982ff"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1211157, 23795, 286, 6, 30, "Input",ExpressionUUID->"56f813e6-3f6d-4b1a-a1d1-5900b7e74509"],
+Cell[1211446, 23803, 209, 4, 34, "Output",ExpressionUUID->"3135e43a-5edd-4875-bf5c-52ceb2224b9a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1211692, 23812, 2439, 49, 186, "Code",ExpressionUUID->"bb6de14d-8e93-4df9-9f92-5b6fb27a6db6"],
+Cell[1214134, 23863, 4179, 105, 245, "Output",ExpressionUUID->"96a9ac0e-076c-4ed9-bb51-b2e2757bbb9e"]
+}, Open  ]],
+Cell[1218328, 23971, 1993, 42, 110, "Code",ExpressionUUID->"b277b14f-8929-4ca4-9aa7-ae7c98711137"],
+Cell[1220324, 24015, 2010, 42, 110, "Code",ExpressionUUID->"bc76f132-67b8-453c-a5d8-0df3fd8eed45"],
+Cell[CellGroupData[{
+Cell[1222359, 24061, 2177, 50, 148, "Code",ExpressionUUID->"560ea581-c759-4bf7-89d6-ae74fce9b18d"],
+Cell[1224539, 24113, 5144, 119, 242, "Output",ExpressionUUID->"396b0fda-bf26-4753-8f09-e7c3ecb9f2a2"]
 }, Open  ]]
+}, Closed]]
 }
 ]
 *)
