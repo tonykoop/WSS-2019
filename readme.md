@@ -8,6 +8,9 @@ In 2018 and 2019 I was traveling to technology conferences, including Cleantech 
 
 At the summer school, with help from mentors and other incredibly smart people, I built an early prototype that connected live weather-station data to a privately operated blockchain using Wolfram technologies. This repo captures the point where Wrfcoin stopped being only a pitch and became something real.
 
+![Wolfram Summer School 2019 group photo](images/wolfram-summer-school-2019-group-photo.jpg)
+*One of the Wolfram Summer School 2019 group photos in Waltham. The technical work mattered, but so did the community around it: mentors, peers, and the shared feeling of building strange ambitious things together.*
+
 ## What is in this repository
 
 - [Final Project](./Final%20Project) contains the notebook `Automating Weather Data Storage on the Wolfram Blockchain - FinalProject.nb`, plus drafts and presentation materials. The project explores IoT connectivity, weather-station density, proximity to neighboring stations, data visualization, and cloud-deployed scheduled tasks.
