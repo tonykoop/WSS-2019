@@ -1,59 +1,34 @@
-This is a sample student repository for the Wolfram Summer School, you should clone or fork this repository to get started.
+# WSS-2019
 
-## GETTING STARTED
+**Wolfram Summer School 2019 archive and an early public origin point for Wrfcoin**
 
-### Create a GitHub account
-https://github.com/join
+This repository preserves the work I completed at Wolfram Summer School in 2019 in Waltham, Massachusetts.
 
-### Create a repo to submit your work
-fork this repo, clone local copy, and push your updates to GitHub.com (see below for more details)
+In 2018 and 2019 I was traveling to technology conferences, including Cleantech Open, Web Summit in Lisbon, and Collision in Toronto, trying to get the Wrfcoin idea seen and taken seriously. At Collision 2019, Stephen Wolfram heard about the project and invited me to attend Wolfram Summer School. That invitation became a foundational moment in my professional development.
 
-### Give your instructor write permissions
-you need to give write permission to that repo to your tutor and to @WolframSummerSchoolProjects. Additionally please give write permissions to @kylekeane and @swedewhite for organizational purposes (you can revoke these at the end of school).
+At the summer school, with help from mentors and other incredibly smart people, I built an early prototype that connected live weather-station data to a privately operated blockchain using Wolfram technologies. This repo captures the point where Wrfcoin stopped being only a pitch and became something real.
 
-## CONTENT
+## What is in this repository
 
-### "Final Project" folder
-the place to submit your entire final project, including draft work if you want. There are templates and instructions in the subdirectories described in the readme.md of the "Final Project" folder.
+- [Final Project](./Final%20Project) contains the notebook `Automating Weather Data Storage on the Wolfram Blockchain - FinalProject.nb`, plus drafts and presentation materials. The project explores IoT connectivity, weather-station density, proximity to neighboring stations, data visualization, and cloud-deployed scheduled tasks.
+- [Homework](./Homework) contains `Properties of a Native American Flute.nb`, a computational essay on flute geometry, acoustics, and automated dimension and hole-pattern design.
+- [Contributions](./Contributions) preserves the original submission structure for extra notebooks and repository contributions from the program.
+- [Wolfram Community Post](./Wolfram%20Community%20Post) holds materials related to the school's public write-up process.
 
-### "Homework" folder
-the place to submit your homework assignment (computational essay). There are templates and instructions in the subdirectories described in the readme.md of the "Homework" folder.
+## Why this repo matters in my portfolio
 
-### "Contributions" folder
-the place to store extra work products such as draft submissions to the data repo, function repo, neural net repo, and notebook archive. Follow the conventions described in the readme.md of that directory. There are instructions in the readme.md of the "Contributions" folder.
+- It documents an early technical prototype in the Wrfcoin lineage.
+- It shows the overlap between my physical-world engineering interests and computational systems thinking.
+- It also reflects a theme that keeps showing up across my work: instruments, sensing, geometry, data, and engineering all informing each other.
 
-### "Wolfram Community Post" folder
-the place to save versions of your community post so you can collaborate with your mentor if needed. There are instructions in the readme.md of the "Wolfram Community Post" folder.
+## Notes for visitors
 
-## MORE INFO ABOUT USING GITHUB
+- This repo intentionally preserves the original 2019 Wolfram Summer School folder structure, so some subfolder READMEs still read like class-template instructions.
+- The top-level README is the main orientation page; the notebooks are the primary deliverables.
+- This is best read as a historical project archive, not as an actively maintained software package.
 
-### Download and install a Git UI
-*On OSX / Wndows*:  
-Download and install github desktop:  
-https://desktop.github.com  
+## Related links
 
-*On Ubuntu*:  
-Download and install git kraken:  
-https://www.gitkraken.com  
-Login and authenticate with GitHub  
-https://support.gitkraken.com/integrations/github
-
-### Install command line utility (optional)
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
-### Clone the repo locally
-by clicking on the button CLONE OR DOWNLOAD and then to OPEN IN DESKTOP
-
-### Edit your files locally
-work on your computer and push to the cloud when you are ready to save your work
-
-### Write/edit readme files using MarkDown
-a nice cheatsheet can be found here: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-the readme should contain:
-1. what your project is about
-2. how to run your code
-3. examples, code documentation, etc
-
-
-testing changes
+- [Wrfcoin](https://www.wrfcoin.com)
+- [Tony Koop GitHub profile](https://github.com/tonykoop)
 
