@@ -11,6 +11,17 @@ At the summer school, with help from mentors and other incredibly smart people, 
 ![Wolfram Summer School 2019 group photo](images/wolfram-summer-school-2019-group-photo.jpg)
 *One of the Wolfram Summer School 2019 group photos in Waltham. The technical work mattered, but so did the community around it: mentors, peers, and the shared feeling of building strange ambitious things together.*
 
+## Technical summary
+
+The final-project prototype was a small end-to-end weather-data pipeline built in the Wolfram ecosystem. In rough terms, the architecture was:
+
+1. collect live weather-station data
+2. analyze station density, proximity, and data structure in Wolfram notebooks
+3. use Wolfram Cloud scheduling and notebook automation to prepare recurring updates
+4. write structured weather records into a privately operated Wolfram-based blockchain
+
+That is the technical bridge between "Wrfcoin as an idea" and "Wrfcoin as something that can ingest live environmental data on a recurring basis."
+
 ## What is in this repository
 
 - [Final Project](./Final%20Project) contains the notebook `Automating Weather Data Storage on the Wolfram Blockchain - FinalProject.nb`, plus drafts and presentation materials. The project explores IoT connectivity, weather-station density, proximity to neighboring stations, data visualization, and cloud-deployed scheduled tasks.
@@ -18,11 +29,18 @@ At the summer school, with help from mentors and other incredibly smart people, 
 - [Contributions](./Contributions) preserves the original submission structure for extra notebooks and repository contributions from the program.
 - [Wolfram Community Post](./Wolfram%20Community%20Post) holds materials related to the school's public write-up process.
 
+![Flute key-pattern table from the Wolfram computational essay](Homework/Drafts/FluteKeys.png)
+*One artifact from the homework computational essay on Native American flute geometry: a key-pattern table mapping fingering combinations across the playable range. This notebook now has a direct engineering counterpart in the public [`flutes`](https://github.com/tonykoop/flutes) repository.*
+
 ## Why this repo matters in my portfolio
 
 - It documents an early technical prototype in the Wrfcoin lineage.
 - It shows the overlap between my physical-world engineering interests and computational systems thinking.
 - It also reflects a theme that keeps showing up across my work: instruments, sensing, geometry, data, and engineering all informing each other.
+
+## Cross-repo bridge — Native American flute geometry
+
+The homework notebook `Properties of a Native American Flute.nb` is the clearest bridge from my Wolfram work to my instrument-engineering repos. It treats Native American flute geometry as a computational essay problem; [`flutes`](https://github.com/tonykoop/flutes) treats the same instrument family as a parametric design-table, build-registry, and shop-process problem. The two repos strengthen each other because they show the same engineering instinct expressed in two different mediums.
 
 ## Notes for visitors
 
@@ -33,5 +51,6 @@ At the summer school, with help from mentors and other incredibly smart people, 
 ## Related links
 
 - [Wrfcoin](https://www.wrfcoin.com)
+- [Flutes](https://github.com/tonykoop/flutes)
 - [Tony Koop GitHub profile](https://github.com/tonykoop)
 
